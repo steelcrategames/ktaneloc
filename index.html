@@ -44,14 +44,14 @@
 		<script type="text/javascript" charset="utf-8">
 		
 		var lastLang = "";
+		var shortLang = "en";
 		function changeLang(lang) {
 			if (history.pushState) {
 				var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?&lang=' + lang;
 				window.history.pushState({path:newurl},'',newurl);
 			}
-						lastLang = lang;
+					
 			langHandler(lang);
-
 		}
 		
 		function refreshLang() {
@@ -59,9 +59,36 @@
 		}
 			
 		function langHandler(lang) {
+			lastLang = lang;	
 			var showTerms = GET["showTerms"]
-		  // Run the localization function with the chosen language
-		  $("[data-localize]").localize("https://script.google.com/macros/s/AKfycbzCoMHUnq9_RQsU518ito33Gq03py8YgzcgLnvBeoW5pctQZgk/exec", { language: lang, showTerms: showTerms });
+			// Run the localization function with the chosen language
+			$("[data-localize]").localize("https://script.google.com/macros/s/AKfycbzCoMHUnq9_RQsU518ito33Gq03py8YgzcgLnvBeoW5pctQZgk/exec", { language: lang, showTerms: showTerms });
+
+			if 		(lastLang == "English") { shortLang = "en"; }
+			else if	(lastLang == "French") 	{ shortLang = "fr"; }
+			else if	(lastLang == "Japanese"){ shortLang = "ja"; }
+			
+			overrideImgs();
+		}
+		
+		function overrideImgs() {
+			//Replace all img paths
+			if (shortLang != "" && shortLang != null)
+			{
+				$('img').each(function() {
+					var $img = $(this);
+					var imgsrc = $img.attr('src');
+					
+					var origSrc = imgsrc.replace(/overrides\/language\/[a-z]{2}\//, "");
+					var overrideSrc = origSrc.replace("img/", "img/overrides/language/" + shortLang + "/");
+					
+					$img.attr('src', overrideSrc);
+					$img.on("error", function(){
+						$img.on("error", "");
+						$img.attr('src', origSrc);
+						});
+				});
+			}	
 		}
 			
 		//allow ?lang=<lang> in URL
@@ -88,6 +115,8 @@
 			else
 			{
 				setStatus("Showing default Manual");
+				shortLang = "en";
+				overrideImgs();
 			}
 		}
 		
@@ -159,7 +188,7 @@
 			
             
             <h3 data-localize="intro.strikes">Strikes</h3>
-			<div class="timer-diagram"><span data-localize="intro.labelstrike">Strike Indicator</span><br /><img src="img/TimerComponent.svg"/></div>
+			<div class="timer-diagram"><span data-localize="intro.labelstrike">Strike Indicator</span><br /><img src="img/module-icons/TimerComponent.svg"/></div>
             <p data-localize="intro.mistake">When the Defuser makes a mistake the bomb will record a strike which will be displayed on the indicator above the countdown timer. Bombs with a strike indicator will explode upon the third strike. The timer will begin to count down faster after a strike has been recorded.</p>
 			<p data-localize="intro.nostrikeindicator">If no strike indicator is present above the countdown timer, the bomb will explode upon the first strike, leaving no room for error.</p>
 
@@ -178,7 +207,7 @@
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
             <div class="vertical-spacer"></div>
-		    <img src="img/Component.svg" class="diagram" />
+		    <img src="img/module-icons/Component.svg" class="diagram" />
 			<div class="new-block-formatting-context">
 				<h1 data-localize="section1.title">Section 1: Modules</h1>
 				<p data-localize="section1.instruction1">Modules can be identified by an LED in the top right corner. When this LED is lit green the module has been disarmed.</p>
@@ -195,7 +224,7 @@
 		</div>
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
-    	    <img src="img/WireComponent.svg" class="diagram" />
+    	    <img src="img/module-icons/WireComponent.svg" class="diagram" />
             <h2 data-localize="wires.title">On the Subject of Wires</h2>
             <p data-localize="wires.flavour" class="flavour-text">
                 Wires are the lifeblood of electronics! Wait, no, electricity is the lifeblood. Wires are more like the arteries. The veins? No matter…</p>
@@ -249,7 +278,7 @@
 		</div>
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
-    	    <img src="img/ButtonComponent.svg" class="diagram" />
+    	    <img src="img/module-icons/ButtonComponent.svg" class="diagram" />
             <h2 data-localize="bigbutton.title">On the Subject of The Button</h2>
             <p data-localize="bigbutton.flavour" class="flavour-text">You might think that a button telling you to press it is pretty straightforward. That’s the kind of thinking that gets people exploded.</p>
             <p class="appendix-reference"><span data-localize="appendix.refa">See Appendix A for indicator identification reference.</span><br /><span data-localize="appendix.refb">See Appendix B for battery identification reference.</span></p>
@@ -282,7 +311,7 @@
 		</div>
 	    <div class="page-footer absolute-footer"></div>
 	    <div class="page-content">
-		    <img src="img/KeypadComponent.svg" class="diagram" />
+		    <img src="img/module-icons/KeypadComponent.svg" class="diagram" />
 		    <h2 data-localize="keypad.title">On the Subject of Keypads</h2>
 		    <p data-localize="keypad.flavour" class="flavour-text">
 			    I'm not sure what these symbols are, but I suspect they have something to do with occult.
@@ -298,7 +327,7 @@
 			<br/>
 			<br/>
 			<table class="keypad-table">
-				<tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/28-balloon.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/16-euro.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/1-copyright.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/11-six.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/24-pitchfork.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/11-six.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/13-at.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/28-balloon.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/8-pumpkin.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/21-paragraph.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/4-smileyface.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/16-euro.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/30-upsidedowny.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/23-leftc.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/26-cursive.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/31-bt.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/31-bt.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/27-tracks.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/12-squigglyn.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/26-cursive.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/5-doublek.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/7-squidknife.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/22-rightc.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/14-ae.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/7-squidknife.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/3-hollowstar.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/15-meltedthree.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/5-doublek.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/21-paragraph.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/24-pitchfork.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/9-hookn.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/9-hookn.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/30-upsidedowny.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/20-questionmark.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/19-dragon.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/18-nwithhat.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/23-leftc.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/20-questionmark.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/3-hollowstar.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/4-smileyface.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/2-filledstar.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/symbols/6-omega.png"></td></tr>			</table>
+				<tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/28-balloon.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/16-euro.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/1-copyright.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/11-six.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/24-pitchfork.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/11-six.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/13-at.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/28-balloon.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/8-pumpkin.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/21-paragraph.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/4-smileyface.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/16-euro.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/30-upsidedowny.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/23-leftc.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/26-cursive.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/31-bt.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/31-bt.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/27-tracks.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/12-squigglyn.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/26-cursive.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/5-doublek.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/7-squidknife.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/22-rightc.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/14-ae.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/7-squidknife.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/3-hollowstar.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/15-meltedthree.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/5-doublek.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/21-paragraph.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/24-pitchfork.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/9-hookn.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/9-hookn.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/30-upsidedowny.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/20-questionmark.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/19-dragon.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/18-nwithhat.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/23-leftc.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/20-questionmark.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/3-hollowstar.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/4-smileyface.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/2-filledstar.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/6-omega.png"></td></tr>			</table>
 	    </div>
         <div class="page-footer relative-footer"></div>
     </div>
@@ -310,7 +339,7 @@
 		</div>
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
-    	    <img src="img/SimonComponent.svg" class="diagram" />
+    	    <img src="img/module-icons/SimonComponent.svg" class="diagram" />
             <h2 data-localize="simon.title">On the Subject of Simon Says</h2>
             <p data-localize="simon.flavour" class="flavour-text">This is like one of those toys you played with as a kid where you have to match the pattern that appears, except this one is a knockoff that was probably purchased at a dollar store.</p>
             
@@ -320,7 +349,7 @@
 				<li data-localize="simon.instruction3">The original button will flash, followed by another. Repeat this sequence in order using the color mapping.</li>
 				<li data-localize="simon.instruction4">The sequence will lengthen by one each time you correctly enter a sequence until the module is disarmed.</li>
 			</ol>
-		    <img src="img/SimonComponent_ColourLegend.svg" style="height: 9em; margin: 1em auto; display: block;" alt="Top: Blue, Left: Red, Right: Yellow, Bottom: Green" />
+		    <img src="img/modules/simon/SimonComponent_ColourLegend.svg" style="height: 9em; margin: 1em auto; display: block;" alt="Top: Blue, Left: Red, Right: Yellow, Bottom: Green" />
 
 			<p data-localize="simon.instructionvowel">If the serial number contains a vowel:</p>
                         <table class="repeaters-table">
@@ -361,7 +390,7 @@
 		</div>
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
-    	    <img src="img/WhosOnFirstComponent.svg" class="diagram" />
+    	    <img src="img/module-icons/WhosOnFirstComponent.svg" class="diagram" />
             <h2 data-localize="whosonfirst.title">On the Subject of Who’s on First</h2>
             <p data-localize="whosonfirst.flavour" class="flavour-text">This contraption is like something out of a sketch comedy routine, which might be funny if it wasn't connected to a bomb. I’ll keep this brief, as words only complicate matters.</p>
 		    <ol>
@@ -374,61 +403,61 @@
 			<table class="whos-on-first-step1-table">
 			<tr><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY1" class="whos-on-first-look-at-display" colspan="2">YES</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY2" class="whos-on-first-look-at-display" colspan="2">FIRST</th></tr>
-<tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
+<tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY3" class="whos-on-first-look-at-display" colspan="2">DISPLAY</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY4" class="whos-on-first-look-at-display" colspan="2">OKAY</th></tr>
-<tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
+<tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY5" class="whos-on-first-look-at-display" colspan="2">SAYS</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY6" class="whos-on-first-look-at-display" colspan="2">NOTHING</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td></tr><tr><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td></tr><tr><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY7" class="whos-on-first-look-at-display" colspan="2"></br></th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY8" class="whos-on-first-look-at-display" colspan="2">BLANK</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY9" class="whos-on-first-look-at-display" colspan="2">NO</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY10" class="whos-on-first-look-at-display" colspan="2">LED</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY11" class="whos-on-first-look-at-display" colspan="2">LEAD</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY12" class="whos-on-first-look-at-display" colspan="2">READ</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td></tr><tr><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td></tr><tr><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY13" class="whos-on-first-look-at-display" colspan="2">RED</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY14" class="whos-on-first-look-at-display" colspan="2">REED</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY15" class="whos-on-first-look-at-display" colspan="2">LEED</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY16" class="whos-on-first-look-at-display" colspan="2">HOLD ON</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY17" class="whos-on-first-look-at-display" colspan="2">YOU</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY18" class="whos-on-first-look-at-display" colspan="2">YOU ARE</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td></tr><tr><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td></tr><tr><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY19" class="whos-on-first-look-at-display" colspan="2">YOUR</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY20" class="whos-on-first-look-at-display" colspan="2">YOU'RE</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY21" class="whos-on-first-look-at-display" colspan="2">UR</th></tr>
-<tr><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
+<tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY22" class="whos-on-first-look-at-display" colspan="2">THERE</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY23" class="whos-on-first-look-at-display" colspan="2">THEY'RE</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY24" class="whos-on-first-look-at-display" colspan="2">THEIR</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td></tr><tr><td></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td></tr><tr><td></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY25" class="whos-on-first-look-at-display" colspan="2">THEY ARE</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY26" class="whos-on-first-look-at-display" colspan="2">SEE</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY27" class="whos-on-first-look-at-display" colspan="2">C</th></tr>
-<tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
+<tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
 <tr><th data-localize="WhosOnFirst/rule_DISPLAY28" class="whos-on-first-look-at-display" colspan="2">CEE</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td>			</table>
+<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td>			</table>
         </div>
         <div class="page-footer relative-footer"></div>
     </div>
@@ -511,7 +540,7 @@
 		</div>
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
-    	    <img src="img/MemoryComponent.svg" class="diagram" />
+    	    <img src="img/module-icons/MemoryComponent.svg" class="diagram" />
             <h2 data-localize="memory.title">On the Subject of Memory</h2>
 		    <p  data-localize="memory.flavour" class="flavour-text">Memory is a fragile thing but so is everything else when a bomb goes off, so pay attention!</p>
 		    <ul>
@@ -533,7 +562,7 @@
 		</div>
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
-    	    <img src="img/MorseCodeComponent.svg" class="diagram" />
+    	    <img src="img/module-icons/MorseCodeComponent.svg" class="diagram" />
             <h2 data-localize="morse.title">On the Subject of Morse Code</h2>
 		        <p  data-localize="morse.flavour" class="flavour-text">An antiquated form of naval communication? What next? At least it's genuine Morse Code, so pay attention and you might just learn something.</p>
 				<ul>
@@ -542,7 +571,7 @@
 					<li data-localize="morse.instruction3">Once the word is identified, set the corresponding frequency and press the transmit (TX) button.</li>
 				</ul>
 			
-		    <img id="morseCodeChart" src="img/MorseCode/International_Morse_Code.svg"/>	
+		    <img id="morseCodeChart" src="img/modules/morsecode/International_Morse_Code.svg"/>	
 					
 		    <table>
 			    <tr>
@@ -562,7 +591,7 @@
 		</div>
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
-    	    <img src="img/VennWireComponent.svg" class="diagram" />
+    	    <img src="img/module-icons/VennWireComponent.svg" class="diagram" />
             <h2 data-localize="venn.title">On the Subject of Complicated Wires</h2>
 		        <p data-localize="venn.flavour" class="flavour-text">These wires aren't like the others. Some have stripes! That makes them completely different. The good news is that we've found a concise set of instructions on what to do about it! Maybe too concise...</p>
 			    <ul>
@@ -574,10 +603,10 @@
 			
 		    
 		    <div>
-			    <object id="venndiagram" width="100%" height="100%" data="img/gen/venn/venndiagram.svg" type="image/svg+xml"></object>
+			    <object id="venndiagram" width="100%" height="100%" data="img/modules/venn/venndiagram.svg" type="image/svg+xml"></object>
 		    </div>
 		    <div>
-			    <object width="100%" height="100%" id="vennlegend" data="img/gen/venn/legend.svg" type="image/svg+xml"></object>
+			    <object width="100%" height="100%" id="vennlegend" data="img/modules/venn/legend.svg" type="image/svg+xml"></object>
 			    <table id="venntable">
 				    <tr>
 						<th data-localize="venn.tableheaderletter">Letter</th>
@@ -603,7 +632,7 @@
 		</div>
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
-            <img src="img/WireSequenceComponent.svg" class="diagram" />
+            <img src="img/module-icons/WireSequenceComponent.svg" class="diagram" />
             <h2 data-localize="wiresequence.title">On the Subject of Wire Sequences</h2>
             <p data-localize="wiresequence.flavour" class="flavour-text">It's hard to say how this mechanism works. The engineering is pretty impressive, but there must have been an easier way to manage nine wires.</p>
 			<ul>
@@ -660,7 +689,7 @@
 		</div>
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
-    	    <img src="img/MazeComponent.svg" class="diagram" />
+    	    <img src="img/module-icons/MazeComponent.svg" class="diagram" />
             <h2 data-localize="maze.title">On the Subject of Mazes</h2>
             <p data-localize="maze.flavour" class="flavour-text">This seems to be some kind of maze, probably stolen off of a restaurant placemat.</p>
             <ul>
@@ -668,15 +697,15 @@
                 <li data-localize="maze.instruction2">The defuser must navigate the white light to the red triangle using the arrow buttons.</li>
                 <li data-localize="maze.instruction3"><strong>Warning:</strong> Do not cross the lines shown in the maze. These lines are invisible on the bomb.</li>
 		    </ul>
-            <img class="maze" src="img/gen/maze/maze0.svg"/>
-            <img class="maze" src="img/gen/maze/maze1.svg"/>
-            <img class="maze" src="img/gen/maze/maze2.svg"/>
-            <img class="maze" src="img/gen/maze/maze3.svg"/>
-            <img class="maze" src="img/gen/maze/maze4.svg"/>
-            <img class="maze" src="img/gen/maze/maze5.svg"/>
-            <img class="maze" src="img/gen/maze/maze6.svg"/>
-            <img class="maze" src="img/gen/maze/maze7.svg"/>
-		    <img class="maze" src="img/gen/maze/maze8.svg"/>
+            <img class="maze" src="img/modules/maze/maze0.svg"/>
+            <img class="maze" src="img/modules/maze/maze1.svg"/>
+            <img class="maze" src="img/modules/maze/maze2.svg"/>
+            <img class="maze" src="img/modules/maze/maze3.svg"/>
+            <img class="maze" src="img/modules/maze/maze4.svg"/>
+            <img class="maze" src="img/modules/maze/maze5.svg"/>
+            <img class="maze" src="img/modules/maze/maze6.svg"/>
+            <img class="maze" src="img/modules/maze/maze7.svg"/>
+		    <img class="maze" src="img/modules/maze/maze8.svg"/>
         </div>
         <div class="page-footer relative-footer"></div>
     </div>
@@ -689,7 +718,7 @@
 		</div>
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
-    	    <img src="img/PasswordComponent.svg" class="diagram" />
+    	    <img src="img/module-icons/PasswordComponent.svg" class="diagram" />
             <h2 data-localize="password.title">On the Subject of Passwords</h2>
             <p data-localize="password.flavour" class="flavour-text">Fortunately this password doesn't seem to meet standard government security requirements: 22 characters, mixed case, numbers in random order without any palindromes above length 3.</p>
 			<ul>
@@ -712,7 +741,7 @@
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
             <div class="vertical-spacer"></div>
-	        <img src="img/NeedyComponent.svg" class="diagram" />
+	        <img src="img/module-icons/NeedyComponent.svg" class="diagram" />
 			<div class="new-block-formatting-context">
 				<h1 data-localize="section2.title">Section 2: Needy Modules</h1>
 				<p data-localize="section2.instruction1">Needy modules cannot be disarmed, but pose a recurrent hazard.</p>
@@ -731,7 +760,7 @@
 		</div>
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
-    	    <img src="img/NeedyVentComponent.svg" class="diagram" />
+    	    <img src="img/module-icons/NeedyVentComponent.svg" class="diagram" />
             <h2 data-localize="needygas.title">On the Subject of Venting Gas</h2>
             <p data-localize="needygas.flavour" class="flavour-text">Computer hacking is hard work! Well, it usually is. This job could probably be performed by a simple drinking bird pressing the same key over and over again.</p>
 			<ul>
@@ -749,7 +778,7 @@
 		</div>
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
-    	    <img src="img/NeedyDischargeComponent.svg" class="diagram" />
+    	    <img src="img/module-icons/NeedyDischargeComponent.svg" class="diagram" />
             <h2 data-localize="needycap.title">On the Subject of Capacitor Discharge</h2>
             <p data-localize="needycap.flavour" class="flavour-text">I'm going to guess that this is just meant to occupy your attention, because otherwise this is some shoddy electronics work.</p>
             <ul>
@@ -767,7 +796,7 @@
 		</div>
         <div class="page-footer absolute-footer"></div>
         <div class="page-content">
-    	    <img src="img/NeedyKnobComponent.svg" class="diagram" />
+    	    <img src="img/module-icons/NeedyKnobComponent.svg" class="diagram" />
             <h2 data-localize="needyknob.title">On the Subject of Knobs</h2>
             <p data-localize="needyknob.flavour" class="flavour-text">Needlessly complicated and endlessly needy. Imagine if such expertise were used to make something other than diabolical puzzles.</p>
 			<ul>
@@ -795,7 +824,7 @@
         <div class="page-content">
             <h2 data-localize="indicators.title">Appendix A: Indicator Identification Reference</h2>
             <p data-localize="indicators.description">Labelled indicator lights can be found on the sides of the bomb casing.</p>
-            <img src="img/IndicatorWidget.svg" style="height: 5em; display:block; margin: .6em 0 0;" />
+            <img src="img/appendix/indicators/IndicatorWidget.svg" style="height: 5em; display:block; margin: .6em 0 0;" />
             <h3 data-localize="indicators.headercommon">Common Indicators</h3>
 			<ul>
                 <li data-localize="indicators.label1">SND</li>
@@ -828,10 +857,10 @@
 					<th data-localize="batteries.headerbattery">Battery</th>
 					<th data-localize="batteries.headertype">Type</th>
 				</tr>
-				<tr><td><img src="img/appendix-batteries/Battery-AA.svg" style="width: 4.09375em; height: 6.18125em;"></td>
+				<tr><td><img src="img/appendix/batteries/Battery-AA.svg" style="width: 4.09375em; height: 6.18125em;"></td>
 				<td data-localize="batteries.labelAA">AA</td>
 				</tr> 
-				<tr><td><img src="img/appendix-batteries/Battery-D.svg" style="width: 4.09375em; height: 5.553125em;"></td>
+				<tr><td><img src="img/appendix/batteries/Battery-D.svg" style="width: 4.09375em; height: 5.553125em;"></td>
 				<td data-localize="batteries.labelD">D</td>
 				</tr> 
 			</table>
@@ -839,7 +868,7 @@
         <div class="page-footer relative-footer"></div>
     </div>
 </div><div class="section">
-    <div class="page appendix-ports">
+    <div class="page appendix/ports">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.appendixc">Appendix C</span>
@@ -855,25 +884,25 @@
 				</tr>
 				
 				<tr>
-					<td><img src="img/appendix-ports/DVI.svg" style="width: 10.15em;"></td>
+					<td><img src="img/appendix/ports/DVI.svg" style="width: 10.15em;"></td>
 					<td data-localize="ports.labeldvid">DVI-D</td>
 				</tr>	
 				<tr>
-					<td><img src="img/appendix-ports/Parallel.svg" style="width: 16.1em;"></td>
+					<td><img src="img/appendix/ports/Parallel.svg" style="width: 16.1em;"></td>
 					<td data-localize="ports.labelparallel">Parallel</td>
 				</tr>
 				<tr>
-					<td><img src="img/appendix-ports/PS2.svg" style="width: 5.55em;"></td>
+					<td><img src="img/appendix/ports/PS2.svg" style="width: 5.55em;"></td>
 					<td data-localize="ports.labelps2">PS/2</td></tr>
 				<tr>
-					<td><img src="img/appendix-ports/RJ45.svg" style="width: 5.2em;"></td>
+					<td><img src="img/appendix/ports/RJ45.svg" style="width: 5.2em;"></td>
 					<td data-localize="ports.labelrj45">RJ-45</td></tr>
 				<tr>
-					<td><img src="img/appendix-ports/Serial.svg" style="width: 8.35em;"></td>
+					<td><img src="img/appendix/ports/Serial.svg" style="width: 8.35em;"></td>
 					<td data-localize="ports.labelserial">Serial</td>
 				</tr>
 				<tr>
-					<td><img src="img/appendix-ports/StereoRCA.svg" style="width: 5em;"></td>
+					<td><img src="img/appendix/ports/StereoRCA.svg" style="width: 5em;"></td>
 					<td data-localize="ports.labelrca">Stereo RCA</td>
 				</tr>
 			</table>

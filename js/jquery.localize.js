@@ -160,7 +160,7 @@ http://keith-wood.name/localisation.html
 	  
 	  if (errorCount > 0)
 	  {
-		setStatus("Localize complete (" + lang + ") [" + errorCount + " missing strings]");
+		setStatus("Localize complete (" + lang + ") [<span class=\"error-highlight\">" + errorCount + " missing strings</span>]");
 	  }
 	  else
 	  {
