@@ -1,4 +1,10 @@
+/*
+Modified version of jquery.localize that pulls from a URL and expects to receive JSON.
+JSON at the url is provided by a Google Apps script which dynamically pulls from Google Sheets.
 
+This is "runtime" string substitution that is useful DURING DEVELOPMENT ONLY (by localizers).
+
+For "final" baked localization, see the PHP equivalent localization function.
 /*
 Copyright (c) Jim Garvin (http://github.com/coderifous), 2008.
 Dual licensed under the GPL (http://dev.jquery.com/browser/trunk/jquery/GPL-LICENSE.txt) and MIT (http://dev.jquery.com/browser/trunk/jquery/MIT-LICENSE.txt) licenses.
@@ -148,12 +154,21 @@ http://keith-wood.name/localisation.html
         value = valueForKey(key, data, elem);
         if (value != null) {
 		  elem.removeClass("error-highlight");
+		  
+		  //Special I2Loc empty string handling
+		  if (value == "---")
+		  {
+			  value = "";
+		  }
+		  
           return localizeElement(elem, key, value);
         }
 		else {
 			console.log("No string found for " + key);
+			value = "[MISSING: " + key + "]";
 			elem.addClass("error-highlight");
 			errorCount = errorCount + 1;
+			return localizeElement(elem, key, value);
 		}
       });
 	  console.log("Localize complete.");

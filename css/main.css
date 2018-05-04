@@ -699,9 +699,15 @@ td, th {
 	height: 60px;
 	background: #F0F8FF;
 	position: fixed;
+	z-index: 9999;
 	padding: 5px;
 	top: 0;
 }
+
+#ManualContent {
+	padding-top: 60px;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

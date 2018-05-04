@@ -1,21 +1,5 @@
-	<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Bomb Defusal Manual for the video game Keep Talking and Nobody Explodes">
-    <title>Keep Talking and Nobody Explodes v1</title>
-    <meta name="viewport" content="initial-scale=1"> 
-
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
-	<link rel="icon" href="favicon.ico" type="image/png">
-	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
-		<script>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="description" content="Bomb Defusal Manual for the video game Keep Talking and Nobody Explodes"><title>Keep Talking and Nobody Explodes v1</title><meta name="viewport" content="initial-scale=1"><link rel="stylesheet" type="text/css" href="css/normalize.css"><link rel="stylesheet" type="text/css" href="css/main.css"><link rel="stylesheet" type="text/css" href="css/en.css" id="languageCSS"><link href="http://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet" type="text/css"><link rel="icon" href="favicon.ico" type="image/png"><link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"><script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -24,25 +8,17 @@
 	  ga('create', 'UA-48421906-2', 'auto');
 	  ga('send', 'pageview');
 
-	</script>
-		
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-    <script src="js/main.js"></script>
-</head>
-<body>
-    <div id="ManualContent">
-    <div class="localize-header">
-		<button onclick="changeLang('English')">English</button>
-		<button onclick="changeLang('French')">Fran&#231;ais</button>
-		<button onclick="changeLang('Japanese')">Japanese</button>
-		<button onclick="refreshLang()">Reload Current Language</button>
-		<div>
-			<p>Status: <span id="localize-status"></span></p>
-		</div>
-		<script src="./js/jquery.localize.js"></script> 
-		<script type="text/javascript" charset="utf-8">
-		
+	</script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script></head><body>
+	<div class="localize-header">
+	
+	<button onclick="changeLang('English')">English</button>
+	<button onclick="changeLang('French')">Fran&ccedil;ais</button>
+	<button onclick="changeLang('Japanese')">Japanese</button>
+	<button onclick="refreshLang()">Reload Current Language</button>
+	<div>
+		<p>Status: <span id="localize-status"></span></p>
+	</div>
+	<script src="./js/jquery.localize.js"></script><script type="text/javascript" charset="utf-8">
 		var lastLang = "";
 		var shortLang = "en";
 		function changeLang(lang) {
@@ -67,6 +43,8 @@
 			if 		(lastLang == "English") { shortLang = "en"; }
 			else if	(lastLang == "French") 	{ shortLang = "fr"; }
 			else if	(lastLang == "Japanese"){ shortLang = "ja"; }
+			
+			$('#languageCSS').attr('href', "css/" + shortLang + '.css');
 			
 			overrideImgs();
 		}
@@ -125,62 +103,55 @@
 		}
 		
 		window.onload = onLoad;
-		</script>
-</div>
-<div class="section">
+	</script></div>
+    <div id="ManualContent">
+    <div class="section">
     
-    <div class="page section-title">
+    <div class="page section-title page-bg-01">
 		<div style="position:relative; height:0;">&nbsp;</div> 
 					<div data-localize="title.revision" data-args="revision=3" class="page-footer absolute-footer no-auto-footer">Revision 3</div>
 		        <div class="page-content">
-			<img src="img/ktane-logo.png" alt="Keep Talking and Nobody Explodes" style="margin: 1em auto .2em; width: 42em;" />
-			
-			<div class="title">
+			<img src="img/ktane-logo.png" alt="Keep Talking and Nobody Explodes" style="margin: 1em auto .2em; width: 42em;"><div class="title">
 								<h1 style="font-size: 1em; font-weight: normal; margin: 3.85em auto 0;">
-				<span data-localize="title.line1" style="font-size: 13.6em; line-height: 1.13em;">BOMB</span><br />
-				<span data-localize="title.line2" style="font-size: 7.9em; line-height: 0em;">DEFUSAL</span><br />
-				<span data-localize="title.line3" style="font-size: 9.2em; line-height: 1.1em;">MANUAL</span></h1>
+				<span data-localize="title.line1" class="title1">BOMB</span><br><span data-localize="title.line2" class="title2">DEFUSAL</span><br><span data-localize="title.line3" class="title3">MANUAL</span></h1>
 			</div>
 			
-							<h2 class="versioning"><span data-localize="title.version" data-args="version=1" >Version 1</span>
-				<br/>
-				<span data-localize="title.verificationcode" data-args="verificationCode=241" class="verification-code">Verification Code: 241</span>
+							<h2 class="versioning"><span data-localize="title.version" data-args="version=1">Version 1</span>
+				<br><span data-localize="title.verificationcode" data-args="verificationCode=241" class="verification-code">Verification Code: 241</span>
 				</h2>
 						
         </div>
 					<div data-localize="title.revision" data-args="revision=3" class="page-footer relative-footer no-auto-footer">Revision 3</div>
 		    </div>
 </div><div class="section">
-    <div class="page section-title">
+    <div class="page section-title page-bg-02">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.introduction">Introduction</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=2;pageCount=23">Page 2 of 23</div>
         <div class="page-content">
             <div class="vertical-spacer"></div>
             
             <p style="font-style:italic;" data-localize="intro.welcome">Welcome to the dangerous and challenging world of bomb defusing.</p>
-            <p style="font-style:italic;" data-localize="intro.studycarefully">Study this manual carefully; <em style="font-style:italic;">you are the expert</em>. In these pages you will find everything you need to know to defuse even the most insidious of bombs.<br />And remember — One small oversight and it could all be over!</p>
+            <p style="font-style:italic;" data-localize="intro.studycarefully">Study this manual carefully; <em style="font-style:italic;">you are the expert</em>. In these pages you will find everything you need to know to defuse even the most insidious of bombs.<br>And remember &mdash; One small oversight and it could all be over!</p>
         </div>
-        <div class="page-footer relative-footer"></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=2;pageCount=23">Page 2 of 23</div>
     </div>
 
-    <div class="page">
+    <div class="page page-bg-03">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="intro.header-defusing-bombs">Defusing Bombs</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=3;pageCount=23">Page 3 of 23</div>
         <div class="page-content">
             <h1 data-localize="intro.defusingbombs">Defusing Bombs</h1>
             
 			<p data-localize="intro.abombwillexplode">A bomb will explode when its countdown timer reaches 0:00 or when too many strikes have been recorded. The only way to defuse a bomb is to disarm all of its modules before its countdown timer expires.</p>
 			
 			<div class="bomb-diagram">
-				<span data-localize="intro.label-example-bomb" class="diagram-label">Example Bomb</span><br />
-				<table><tr><td><img src="img/Bomb.svg" class="bomb-diagram-front" /><br /><span data-localize="intro.label-front">Front</span></td><td><img src="img/BombSide.svg" class="bomb-diagram-side" /><br /><span data-localize="intro.label-side">Side</span></td></tr></table>
-			</div>
+				<span data-localize="intro.label-example-bomb" class="diagram-label">Example Bomb</span><br><table><tr><td><img src="img/Bomb.svg" class="bomb-diagram-front"><br><span data-localize="intro.label-front">Front</span></td><td><img src="img/BombSide.svg" class="bomb-diagram-side"><br><span data-localize="intro.label-side">Side</span></td></tr></table></div>
 			
 			<h3 data-localize="intro.modules">Modules</h3>
 			<p data-localize="intro.eachbomb">Each bomb will include up to 11 modules that must be disarmed. Each module is discrete and can be disarmed in any order.</p>
@@ -188,727 +159,404 @@
 			
             
             <h3 data-localize="intro.strikes">Strikes</h3>
-			<div class="timer-diagram"><span data-localize="intro.labelstrike">Strike Indicator</span><br /><img src="img/module-icons/TimerComponent.svg"/></div>
+			<div class="timer-diagram"><span data-localize="intro.labelstrike">Strike Indicator</span><br><img src="img/module-icons/TimerComponent.svg"></div>
             <p data-localize="intro.mistake">When the Defuser makes a mistake the bomb will record a strike which will be displayed on the indicator above the countdown timer. Bombs with a strike indicator will explode upon the third strike. The timer will begin to count down faster after a strike has been recorded.</p>
 			<p data-localize="intro.nostrikeindicator">If no strike indicator is present above the countdown timer, the bomb will explode upon the first strike, leaving no room for error.</p>
 
 			<h3 data-localize="intro.gatheringinfo">Gathering Information</h3>
 			<p data-localize="intro.someinstructions">Some disarming instructions will require specific information about the bomb, such as the serial number. This type of information can typically be found on the top, bottom, or sides of the bomb casing. See Appendix A, B, and C for identification instructions that will be useful in disarming certain modules.</p>
         </div>
-        <div class="page-footer relative-footer"></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=3;pageCount=23">Page 3 of 23</div>
     </div>
 </div>
 <div class="section">
-    <div class="page section-title">
+    <div class="page section-title page-bg-04">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.section1">Section 1: Modules</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=4;pageCount=23">Page 4 of 23</div>
         <div class="page-content">
             <div class="vertical-spacer"></div>
-		    <img src="img/module-icons/Component.svg" class="diagram" />
-			<div class="new-block-formatting-context">
+		    <img src="img/module-icons/Component.svg" class="diagram"><div class="new-block-formatting-context">
 				<h1 data-localize="section1.title">Section 1: Modules</h1>
 				<p data-localize="section1.instruction1">Modules can be identified by an LED in the top right corner. When this LED is lit green the module has been disarmed.</p>
 				<p data-localize="section1.instruction2">All modules must be disarmed to defuse the bomb.</p>
 			</div>
         </div>
-        <div class="page-footer relative-footer"></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=4;pageCount=23">Page 4 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page">
+    <div class="page page-bg-05">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.wires">Wires</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=5;pageCount=23">Page 5 of 23</div>
         <div class="page-content">
-    	    <img src="img/module-icons/WireComponent.svg" class="diagram" />
-            <h2 data-localize="wires.title">On the Subject of Wires</h2>
-            <p data-localize="wires.flavour" class="flavour-text">
-                Wires are the lifeblood of electronics! Wait, no, electricity is the lifeblood. Wires are more like the arteries. The veins? No matter…</p>
+    	    <img src="img/module-icons/WireComponent.svg" class="diagram"><h2 data-localize="wires.title">On the Subject of Wires</h2>
+            <p data-localize="wires.flavour" class="flavour-text">Wires are the lifeblood of electronics! Wait, no, electricity is the lifeblood. Wires are more like the arteries. The veins? No matter&hellip;</p>
 
-			<ul>
-				<li data-localize="wires.instruction1">A wire module can have 3-6 wires on it.</li>
-				<li data-localize="wires.instruction2">Only the <em>one</em> correct wire needs to be cut to disarm the module.</li>
-				
-				<li data-localize="wires.instruction3">Wire ordering begins with the first on the top.</li>
-			</ul>
-
-			<table>
-				<tr>
-<td><span data-localize="wires.numwires" data-args="numWires=3" class="wire-header">3 wires:</span>
-<br /><span data-localize="Manual/wires.3wiresrule_1">If there are no red wires, cut the second wire.</span>
-<br /><span data-localize="Manual/wires.3wiresrule_2">Otherwise, if the last wire is white, cut the last wire.</span>
-<br /><span data-localize="Manual/wires.3wiresrule_3">Otherwise, if there is more than one blue wire, cut the last blue wire.</span>
-<br /><span data-localize="Manual/wires.3wiresrule_4">Otherwise, cut the last wire.</span>
-</td></tr>
-<tr>
-<td><span data-localize="wires.numwires" data-args="numWires=4" class="wire-header">4 wires:</span>
-<br /><span data-localize="Manual/wires.4wiresrule_1">If there is more than one red wire and the last digit of the serial number is odd, cut the last red wire.</span>
-<br /><span data-localize="Manual/wires.4wiresrule_2">Otherwise, if the last wire is yellow and there are no red wires, cut the first wire.</span>
-<br /><span data-localize="Manual/wires.4wiresrule_3">Otherwise, if there is exactly one blue wire, cut the first wire.</span>
-<br /><span data-localize="Manual/wires.4wiresrule_4">Otherwise, if there is more than one yellow wire, cut the last wire.</span>
-<br /><span data-localize="Manual/wires.4wiresrule_5">Otherwise, cut the second wire.</span>
-</td></tr>
-<tr>
-<td><span data-localize="wires.numwires" data-args="numWires=5" class="wire-header">5 wires:</span>
-<br /><span data-localize="Manual/wires.5wiresrule_1">If the last wire is black and the last digit of the serial number is odd, cut the fourth wire.</span>
-<br /><span data-localize="Manual/wires.5wiresrule_2">Otherwise, if there is exactly one red wire and there is more than one yellow wire, cut the first wire.</span>
-<br /><span data-localize="Manual/wires.5wiresrule_3">Otherwise, if there are no black wires, cut the second wire.</span>
-<br /><span data-localize="Manual/wires.5wiresrule_4">Otherwise, cut the first wire.</span>
-</td></tr>
-<tr>
-<td><span data-localize="wires.numwires" data-args="numWires=6" class="wire-header">6 wires:</span>
-<br /><span data-localize="Manual/wires.6wiresrule_1">If there are no yellow wires and the last digit of the serial number is odd, cut the third wire.</span>
-<br /><span data-localize="Manual/wires.6wiresrule_2">Otherwise, if there is exactly one yellow wire and there is more than one white wire, cut the fourth wire.</span>
-<br /><span data-localize="Manual/wires.6wiresrule_3">Otherwise, if there are no red wires, cut the last wire.</span>
-<br /><span data-localize="Manual/wires.6wiresrule_4">Otherwise, cut the fourth wire.</span>
-</td></tr>
-			</table>
-        </div>
-        <div class="page-footer relative-footer"></div>
+			<ul><li data-localize="wires.instruction1">A wire module can have 3-6 wires on it.</li><li data-localize="wires.instruction2">Only the <em>one</em> correct wire needs to be cut to disarm the module.</li><li data-localize="wires.instruction3">Wire ordering begins with the first on the top.</li></ul><table><tr><td><span data-localize="wires.numwires" data-args="numWires=3" class="wire-header">3 wires:</span>
+<br><span data-localize="Manual/wires.3wiresrule_1">If there are no red wires, cut the second wire.</span>
+<br><span data-localize="Manual/wires.3wiresrule_2">Otherwise, if the last wire is white, cut the last wire.</span>
+<br><span data-localize="Manual/wires.3wiresrule_3">Otherwise, if there is more than one blue wire, cut the last blue wire.</span>
+<br><span data-localize="Manual/wires.3wiresrule_4">Otherwise, cut the last wire.</span>
+</td></tr><tr><td><span data-localize="wires.numwires" data-args="numWires=4" class="wire-header">4 wires:</span>
+<br><span data-localize="Manual/wires.4wiresrule_1">If there is more than one red wire and the last digit of the serial number is odd, cut the last red wire.</span>
+<br><span data-localize="Manual/wires.4wiresrule_2">Otherwise, if the last wire is yellow and there are no red wires, cut the first wire.</span>
+<br><span data-localize="Manual/wires.4wiresrule_3">Otherwise, if there is exactly one blue wire, cut the first wire.</span>
+<br><span data-localize="Manual/wires.4wiresrule_4">Otherwise, if there is more than one yellow wire, cut the last wire.</span>
+<br><span data-localize="Manual/wires.4wiresrule_5">Otherwise, cut the second wire.</span>
+</td></tr><tr><td><span data-localize="wires.numwires" data-args="numWires=5" class="wire-header">5 wires:</span>
+<br><span data-localize="Manual/wires.5wiresrule_1">If the last wire is black and the last digit of the serial number is odd, cut the fourth wire.</span>
+<br><span data-localize="Manual/wires.5wiresrule_2">Otherwise, if there is exactly one red wire and there is more than one yellow wire, cut the first wire.</span>
+<br><span data-localize="Manual/wires.5wiresrule_3">Otherwise, if there are no black wires, cut the second wire.</span>
+<br><span data-localize="Manual/wires.5wiresrule_4">Otherwise, cut the first wire.</span>
+</td></tr><tr><td><span data-localize="wires.numwires" data-args="numWires=6" class="wire-header">6 wires:</span>
+<br><span data-localize="Manual/wires.6wiresrule_1">If there are no yellow wires and the last digit of the serial number is odd, cut the third wire.</span>
+<br><span data-localize="Manual/wires.6wiresrule_2">Otherwise, if there is exactly one yellow wire and there is more than one white wire, cut the fourth wire.</span>
+<br><span data-localize="Manual/wires.6wiresrule_3">Otherwise, if there are no red wires, cut the last wire.</span>
+<br><span data-localize="Manual/wires.6wiresrule_4">Otherwise, cut the fourth wire.</span>
+</td></tr></table></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=5;pageCount=23">Page 5 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page">
+    <div class="page page-bg-06">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.bigbutton">The Button</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=6;pageCount=23">Page 6 of 23</div>
         <div class="page-content">
-    	    <img src="img/module-icons/ButtonComponent.svg" class="diagram" />
-            <h2 data-localize="bigbutton.title">On the Subject of The Button</h2>
-            <p data-localize="bigbutton.flavour" class="flavour-text">You might think that a button telling you to press it is pretty straightforward. That’s the kind of thinking that gets people exploded.</p>
-            <p class="appendix-reference"><span data-localize="appendix.refa">See Appendix A for indicator identification reference.</span><br /><span data-localize="appendix.refb">See Appendix B for battery identification reference.</span></p>
+    	    <img src="img/module-icons/ButtonComponent.svg" class="diagram"><h2 data-localize="bigbutton.title">On the Subject of The Button</h2>
+            <p data-localize="bigbutton.flavour" class="flavour-text">You might think that a button telling you to press it is pretty straightforward. That&rsquo;s the kind of thinking that gets people exploded.</p>
+            <p class="appendix-reference"><span data-localize="appendix.refa">See Appendix A for indicator identification reference.</span><br><span data-localize="appendix.refb">See Appendix B for battery identification reference.</span></p>
 		    <p data-localize="bigbutton.instruction">Follow these rules in the order they are listed. Perform the first action that applies:</p>
-		    <ol>
-		    	<li data-localize="Manual/bigbutton.rule1">If the button is blue and the button says "Abort", hold the button and refer to "Releasing a Held Button".</li>
-<li data-localize="Manual/bigbutton.rule2">If there is more than 1 battery on the bomb and the button says "Detonate", press and immediately release the button.</li>
-<li data-localize="Manual/bigbutton.rule3">If the button is white and there is a lit indicator with label CAR, hold the button and refer to "Releasing a Held Button".</li>
-<li data-localize="Manual/bigbutton.rule4">If there are more than 2 batteries on the bomb and there is a lit indicator with label FRK, press and immediately release the button.</li>
-<li data-localize="Manual/bigbutton.rule5">If the button is yellow, hold the button and refer to "Releasing a Held Button".</li>
-<li data-localize="Manual/bigbutton.rule6">If the button is red and the button says "Hold", press and immediately release the button.</li>
-<li data-localize="Manual/bigbutton.rule7">If none of the above apply, hold the button and refer to "Releasing a Held Button".</li>
-            </ol>
-		    <h3 data-localize="bigbutton.releasingheader">Releasing a Held Button</h3>
+		    <ol><li data-localize="Manual/bigbutton.rule1">If the button is blue and the button says "Abort", hold the button and refer to "Releasing a Held Button".</li><li data-localize="Manual/bigbutton.rule2">If there is more than 1 battery on the bomb and the button says "Detonate", press and immediately release the button.</li><li data-localize="Manual/bigbutton.rule3">If the button is white and there is a lit indicator with label CAR, hold the button and refer to "Releasing a Held Button".</li><li data-localize="Manual/bigbutton.rule4">If there are more than 2 batteries on the bomb and there is a lit indicator with label FRK, press and immediately release the button.</li><li data-localize="Manual/bigbutton.rule5">If the button is yellow, hold the button and refer to "Releasing a Held Button".</li><li data-localize="Manual/bigbutton.rule6">If the button is red and the button says "Hold", press and immediately release the button.</li><li data-localize="Manual/bigbutton.rule7">If none of the above apply, hold the button and refer to "Releasing a Held Button".</li></ol><h3 data-localize="bigbutton.releasingheader">Releasing a Held Button</h3>
             <p data-localize="bigbutton.releasinginstruction">If you start holding the button down, a colored strip will light up on the right side of the module. Based on its color you must release the button at a specific point in time:</p>
-            <ul>
-           		<li><em><span data-localize="Manual/bigbutton.holdrulecolor1">Blue strip:</span></em> <span data-localize="Manual/bigbutton.holdrulerelease1">release when the countdown timer has a 4 in any position.</span></li>
+            <ul><li><em><span data-localize="Manual/bigbutton.holdrulecolor1">Blue strip:</span></em> <span data-localize="Manual/bigbutton.holdrulerelease1">release when the countdown timer has a 4 in any position.</span></li>
 <li><em><span data-localize="Manual/bigbutton.holdrulecolor2">White strip:</span></em> <span data-localize="Manual/bigbutton.holdrulerelease2">release when the countdown timer has a 1 in any position.</span></li>
 <li><em><span data-localize="Manual/bigbutton.holdrulecolor3">Yellow strip:</span></em> <span data-localize="Manual/bigbutton.holdrulerelease3">release when the countdown timer has a 5 in any position.</span></li>
 <li><em><span data-localize="Manual/bigbutton.holdrulecolor4">Any other color strip:</span></em> <span data-localize="Manual/bigbutton.holdrulerelease4">release when the countdown timer has a 1 in any position.</span></li>
-            </ul>
-        </div>
-        <div class="page-footer relative-footer"></div>
+            </ul></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=6;pageCount=23">Page 6 of 23</div>
     </div>
 </div><div class="section">
-	<div class="page">
+	<div class="page page-bg-07">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.keypad">Keypads</span>
 		</div>
-	    <div class="page-footer absolute-footer"></div>
+	    		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=7;pageCount=23">Page 7 of 23</div>
 	    <div class="page-content">
-		    <img src="img/module-icons/KeypadComponent.svg" class="diagram" />
-		    <h2 data-localize="keypad.title">On the Subject of Keypads</h2>
-		    <p data-localize="keypad.flavour" class="flavour-text">
-			    I'm not sure what these symbols are, but I suspect they have something to do with occult.
-		    </p>
-			<ul>
-				<li data-localize="keypad.instruction1">
-					Only one column below has all four of the symbols from the keypad.
-				</li>
-				<li data-localize="keypad.instruction2">
-					Press the four buttons in the order their symbols appear from top to bottom within that column.
-				</li>
-			</ul>
-			<br/>
-			<br/>
-			<table class="keypad-table">
-				<tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/28-balloon.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/16-euro.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/1-copyright.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/11-six.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/24-pitchfork.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/11-six.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/13-at.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/28-balloon.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/8-pumpkin.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/21-paragraph.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/4-smileyface.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/16-euro.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/30-upsidedowny.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/23-leftc.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/26-cursive.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/31-bt.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/31-bt.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/27-tracks.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/12-squigglyn.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/26-cursive.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/5-doublek.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/7-squidknife.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/22-rightc.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/14-ae.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/7-squidknife.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/3-hollowstar.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/15-meltedthree.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/5-doublek.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/21-paragraph.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/24-pitchfork.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/9-hookn.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/9-hookn.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/30-upsidedowny.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/20-questionmark.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/19-dragon.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/18-nwithhat.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/23-leftc.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/20-questionmark.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/3-hollowstar.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/4-smileyface.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/2-filledstar.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/6-omega.png"></td></tr>			</table>
-	    </div>
-        <div class="page-footer relative-footer"></div>
+		    <img src="img/module-icons/KeypadComponent.svg" class="diagram"><h2 data-localize="keypad.title">On the Subject of Keypads</h2>
+		    <p data-localize="keypad.flavour" class="flavour-text">I'm not sure what these symbols are, but I suspect they have something to do with occult.</p>
+			<ul><li data-localize="keypad.instruction1">Only one column below has all four of the symbols from the keypad.</li><li data-localize="keypad.instruction2">Press the four buttons in the order their symbols appear from top to bottom within that column.</li></ul><br><br><table class="keypad-table"><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/28-balloon.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/16-euro.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/1-copyright.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/11-six.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/24-pitchfork.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/11-six.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/13-at.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/28-balloon.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/8-pumpkin.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/21-paragraph.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/4-smileyface.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/16-euro.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/30-upsidedowny.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/23-leftc.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/26-cursive.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/31-bt.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/31-bt.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/27-tracks.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/12-squigglyn.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/26-cursive.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/5-doublek.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/7-squidknife.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/22-rightc.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/14-ae.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/7-squidknife.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/3-hollowstar.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/15-meltedthree.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/5-doublek.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/21-paragraph.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/24-pitchfork.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/9-hookn.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/9-hookn.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/30-upsidedowny.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/20-questionmark.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/19-dragon.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/18-nwithhat.png"></td></tr><tr><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/23-leftc.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/20-questionmark.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/3-hollowstar.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/4-smileyface.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/2-filledstar.png"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img class="keypad-symbol-image" src="img/modules/keypad/6-omega.png"></td></tr></table></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=7;pageCount=23">Page 7 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page">
+    <div class="page page-bg-01">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.simon">Simon Says</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=8;pageCount=23">Page 8 of 23</div>
         <div class="page-content">
-    	    <img src="img/module-icons/SimonComponent.svg" class="diagram" />
-            <h2 data-localize="simon.title">On the Subject of Simon Says</h2>
+    	    <img src="img/module-icons/SimonComponent.svg" class="diagram"><h2 data-localize="simon.title">On the Subject of Simon Says</h2>
             <p data-localize="simon.flavour" class="flavour-text">This is like one of those toys you played with as a kid where you have to match the pattern that appears, except this one is a knockoff that was probably purchased at a dollar store.</p>
             
-			<ol>
-				<li data-localize="simon.instruction1">One of the four colored buttons will flash.</li>
-				<li data-localize="simon.instruction2">Using the correct table below, press the button with the corresponding color.</li>
-				<li data-localize="simon.instruction3">The original button will flash, followed by another. Repeat this sequence in order using the color mapping.</li>
-				<li data-localize="simon.instruction4">The sequence will lengthen by one each time you correctly enter a sequence until the module is disarmed.</li>
-			</ol>
-		    <img src="img/modules/simon/SimonComponent_ColourLegend.svg" style="height: 9em; margin: 1em auto; display: block;" alt="Top: Blue, Left: Red, Right: Yellow, Bottom: Green" />
-
-			<p data-localize="simon.instructionvowel">If the serial number contains a vowel:</p>
-                        <table class="repeaters-table">
-                <tr>
-            	    <th colspan="2" class="repeaters-spacer"></th>
+			<ol><li data-localize="simon.instruction1">One of the four colored buttons will flash.</li><li data-localize="simon.instruction2">Using the correct table below, press the button with the corresponding color.</li><li data-localize="simon.instruction3">The original button will flash, followed by another. Repeat this sequence in order using the color mapping.</li><li data-localize="simon.instruction4">The sequence will lengthen by one each time you correctly enter a sequence until the module is disarmed.</li></ol><img src="img/modules/simon/SimonComponent_ColourLegend.svg" style="height: 9em; margin: 1em auto; display: block;" alt="Top: Blue, Left: Red, Right: Yellow, Bottom: Green"><p data-localize="simon.instructionvowel">If the serial number contains a vowel:</p>
+                        <table class="repeaters-table"><tr><th colspan="2" class="repeaters-spacer"></th>
                     <th data-localize="simon.redflash">Red Flash</th>
                     <th data-localize="simon.blueflash">Blue Flash</th>
                     <th data-localize="simon.greenflash">Green Flash</th>
                     <th data-localize="simon.yellowflash">Yellow Flash</th>
-                </tr>
-                <tr><th data-localize="simon.buttontopress" rowspan="3">Button&nbsp;to&nbsp;press:</th><th data-localize="simon.nostrikes">No&nbsp;Strikes</th><td data-localize="Manual/simon.blue">Blue</td><td data-localize="Manual/simon.red">Red</td><td data-localize="Manual/simon.yellow">Yellow</td><td data-localize="Manual/simon.green">Green</td></tr>
-<tr><th data-localize="simon.1strike">1&nbsp;Strike</th><td data-localize="Manual/simon.yellow">Yellow</td><td data-localize="Manual/simon.green">Green</td><td data-localize="Manual/simon.blue">Blue</td><td data-localize="Manual/simon.red">Red</td></tr>
-<tr><th data-localize="simon.2strikes">2&nbsp;Strikes</th><td data-localize="Manual/simon.green">Green</td><td data-localize="Manual/simon.red">Red</td><td data-localize="Manual/simon.yellow">Yellow</td><td data-localize="Manual/simon.blue">Blue</td></tr>
-            </table>
-        
-    <p data-localize="simon.instructionnovowel">If the serial number does <em>not</em> contain a vowel:</p>
-            <table class="repeaters-table">
-                <tr>
-            	    <th colspan="2" class="repeaters-spacer"></th>
+                </tr><tr><th data-localize="simon.buttontopress" rowspan="3">Button&nbsp;to&nbsp;press:</th><th data-localize="simon.nostrikes">No&nbsp;Strikes</th><td data-localize="Manual/simon.blue">Blue</td><td data-localize="Manual/simon.red">Red</td><td data-localize="Manual/simon.yellow">Yellow</td><td data-localize="Manual/simon.green">Green</td></tr><tr><th data-localize="simon.1strike">1&nbsp;Strike</th><td data-localize="Manual/simon.yellow">Yellow</td><td data-localize="Manual/simon.green">Green</td><td data-localize="Manual/simon.blue">Blue</td><td data-localize="Manual/simon.red">Red</td></tr><tr><th data-localize="simon.2strikes">2&nbsp;Strikes</th><td data-localize="Manual/simon.green">Green</td><td data-localize="Manual/simon.red">Red</td><td data-localize="Manual/simon.yellow">Yellow</td><td data-localize="Manual/simon.blue">Blue</td></tr></table><p data-localize="simon.instructionnovowel">If the serial number does <em>not</em> contain a vowel:</p>
+            <table class="repeaters-table"><tr><th colspan="2" class="repeaters-spacer"></th>
                     <th data-localize="simon.redflash">Red Flash</th>
                     <th data-localize="simon.blueflash">Blue Flash</th>
                     <th data-localize="simon.greenflash">Green Flash</th>
                     <th data-localize="simon.yellowflash">Yellow Flash</th>
-                </tr>
-                <tr><th data-localize="simon.buttontopress" rowspan="3">Button&nbsp;to&nbsp;press:</th><th data-localize="simon.nostrikes">No&nbsp;Strikes</th><td data-localize="Manual/simon.blue">Blue</td><td data-localize="Manual/simon.yellow">Yellow</td><td data-localize="Manual/simon.green">Green</td><td data-localize="Manual/simon.red">Red</td></tr>
-<tr><th data-localize="simon.1strike">1&nbsp;Strike</th><td data-localize="Manual/simon.red">Red</td><td data-localize="Manual/simon.blue">Blue</td><td data-localize="Manual/simon.yellow">Yellow</td><td data-localize="Manual/simon.green">Green</td></tr>
-<tr><th data-localize="simon.2strikes">2&nbsp;Strikes</th><td data-localize="Manual/simon.yellow">Yellow</td><td data-localize="Manual/simon.green">Green</td><td data-localize="Manual/simon.blue">Blue</td><td data-localize="Manual/simon.red">Red</td></tr>
-            </table>
-        </div>
-        <div class="page-footer relative-footer"></div>
+                </tr><tr><th data-localize="simon.buttontopress" rowspan="3">Button&nbsp;to&nbsp;press:</th><th data-localize="simon.nostrikes">No&nbsp;Strikes</th><td data-localize="Manual/simon.blue">Blue</td><td data-localize="Manual/simon.yellow">Yellow</td><td data-localize="Manual/simon.green">Green</td><td data-localize="Manual/simon.red">Red</td></tr><tr><th data-localize="simon.1strike">1&nbsp;Strike</th><td data-localize="Manual/simon.red">Red</td><td data-localize="Manual/simon.blue">Blue</td><td data-localize="Manual/simon.yellow">Yellow</td><td data-localize="Manual/simon.green">Green</td></tr><tr><th data-localize="simon.2strikes">2&nbsp;Strikes</th><td data-localize="Manual/simon.yellow">Yellow</td><td data-localize="Manual/simon.green">Green</td><td data-localize="Manual/simon.blue">Blue</td><td data-localize="Manual/simon.red">Red</td></tr></table></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=8;pageCount=23">Page 8 of 23</div>
     </div>
 </div>
 <div class="section">
-    	    <div class="page">
+        <div class="page page-bg-02">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.whosonfirst">Who's on First</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=9;pageCount=23">Page 9 of 23</div>
         <div class="page-content">
-    	    <img src="img/module-icons/WhosOnFirstComponent.svg" class="diagram" />
-            <h2 data-localize="whosonfirst.title">On the Subject of Who’s on First</h2>
-            <p data-localize="whosonfirst.flavour" class="flavour-text">This contraption is like something out of a sketch comedy routine, which might be funny if it wasn't connected to a bomb. I’ll keep this brief, as words only complicate matters.</p>
-		    <ol>
-			    <li data-localize="whosonfirst.instruction1">Read the display and use step 1 to determine which button label to <u>read</u>.</li>
-			    <li data-localize="whosonfirst.instruction2">Using this button label, use step 2 determine which button to <u>push</u>.</li>
-			    <li data-localize="whosonfirst.instruction3">Repeat until the module has been disarmed.</li>
-		    </ol>
-            <h3 data-localize="whosonfirst.step1">Step 1:</h3>
+    	    <img src="img/module-icons/WhosOnFirstComponent.svg" class="diagram"><h2 data-localize="whosonfirst.title">On the Subject of Who&rsquo;s on First</h2>
+            <p data-localize="whosonfirst.flavour" class="flavour-text">This contraption is like something out of a sketch comedy routine, which might be funny if it wasn't connected to a bomb. I&rsquo;ll keep this brief, as words only complicate matters.</p>
+		    <ol><li data-localize="whosonfirst.instruction1">Read the display and use step 1 to determine which button label to <u>read</u>.</li><li data-localize="whosonfirst.instruction2">Using this button label, use step 2 determine which button to <u>push</u>.</li><li data-localize="whosonfirst.instruction3">Repeat until the module has been disarmed.</li></ol><h3 data-localize="whosonfirst.step1">Step 1:</h3>
 			<p data-localize="whosonfirst.step1details">Based on the display, <u>read</u> the label of a particular button and proceed to step 2:</p>
-			<table class="whos-on-first-step1-table">
-			<tr><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY1" class="whos-on-first-look-at-display" colspan="2">YES</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY2" class="whos-on-first-look-at-display" colspan="2">FIRST</th></tr>
-<tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY3" class="whos-on-first-look-at-display" colspan="2">DISPLAY</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY4" class="whos-on-first-look-at-display" colspan="2">OKAY</th></tr>
-<tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY5" class="whos-on-first-look-at-display" colspan="2">SAYS</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY6" class="whos-on-first-look-at-display" colspan="2">NOTHING</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td></tr><tr><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY7" class="whos-on-first-look-at-display" colspan="2"></br></th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY8" class="whos-on-first-look-at-display" colspan="2">BLANK</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY9" class="whos-on-first-look-at-display" colspan="2">NO</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY10" class="whos-on-first-look-at-display" colspan="2">LED</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY11" class="whos-on-first-look-at-display" colspan="2">LEAD</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY12" class="whos-on-first-look-at-display" colspan="2">READ</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td></tr><tr><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY13" class="whos-on-first-look-at-display" colspan="2">RED</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY14" class="whos-on-first-look-at-display" colspan="2">REED</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY15" class="whos-on-first-look-at-display" colspan="2">LEED</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY16" class="whos-on-first-look-at-display" colspan="2">HOLD ON</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY17" class="whos-on-first-look-at-display" colspan="2">YOU</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY18" class="whos-on-first-look-at-display" colspan="2">YOU ARE</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td></tr><tr><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY19" class="whos-on-first-look-at-display" colspan="2">YOUR</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY20" class="whos-on-first-look-at-display" colspan="2">YOU'RE</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY21" class="whos-on-first-look-at-display" colspan="2">UR</th></tr>
-<tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY22" class="whos-on-first-look-at-display" colspan="2">THERE</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY23" class="whos-on-first-look-at-display" colspan="2">THEY'RE</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY24" class="whos-on-first-look-at-display" colspan="2">THEIR</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td></tr><tr><td></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY25" class="whos-on-first-look-at-display" colspan="2">THEY ARE</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY26" class="whos-on-first-look-at-display" colspan="2">SEE</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY27" class="whos-on-first-look-at-display" colspan="2">C</th></tr>
-<tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr></table></td><td><table>
-<tr><th data-localize="WhosOnFirst/rule_DISPLAY28" class="whos-on-first-look-at-display" colspan="2">CEE</th></tr>
-<tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td><br /></td></tr><tr><td><br /></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;" /></td></tr></table></td>			</table>
-        </div>
-        <div class="page-footer relative-footer"></div>
+			<table class="whos-on-first-step1-table"><tr><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY1" class="whos-on-first-look-at-display" colspan="2">YES</th></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY2" class="whos-on-first-look-at-display" colspan="2">FIRST</th></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY3" class="whos-on-first-look-at-display" colspan="2">DISPLAY</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY4" class="whos-on-first-look-at-display" colspan="2">OKAY</th></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY5" class="whos-on-first-look-at-display" colspan="2">SAYS</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY6" class="whos-on-first-look-at-display" colspan="2">NOTHING</th></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></table></td></tr><tr><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY7" class="whos-on-first-look-at-display" colspan="2"></th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY8" class="whos-on-first-look-at-display" colspan="2">BLANK</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr><tr><td><br></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY9" class="whos-on-first-look-at-display" colspan="2">NO</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY10" class="whos-on-first-look-at-display" colspan="2">LED</th></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY11" class="whos-on-first-look-at-display" colspan="2">LEAD</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY12" class="whos-on-first-look-at-display" colspan="2">READ</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr><tr><td><br></td><td><br></td></tr></table></td></tr><tr><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY13" class="whos-on-first-look-at-display" colspan="2">RED</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr><tr><td><br></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY14" class="whos-on-first-look-at-display" colspan="2">REED</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY15" class="whos-on-first-look-at-display" colspan="2">LEED</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY16" class="whos-on-first-look-at-display" colspan="2">HOLD ON</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY17" class="whos-on-first-look-at-display" colspan="2">YOU</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr><tr><td><br></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY18" class="whos-on-first-look-at-display" colspan="2">YOU ARE</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr></table></td></tr><tr><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY19" class="whos-on-first-look-at-display" colspan="2">YOUR</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr><tr><td><br></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY20" class="whos-on-first-look-at-display" colspan="2">YOU'RE</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr><tr><td><br></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY21" class="whos-on-first-look-at-display" colspan="2">UR</th></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY22" class="whos-on-first-look-at-display" colspan="2">THERE</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY23" class="whos-on-first-look-at-display" colspan="2">THEY'RE</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY24" class="whos-on-first-look-at-display" colspan="2">THEIR</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr><tr><td><br></td><td><br></td></tr></table></td></tr><tr><td></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY25" class="whos-on-first-look-at-display" colspan="2">THEY ARE</th></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY26" class="whos-on-first-look-at-display" colspan="2">SEE</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY27" class="whos-on-first-look-at-display" colspan="2">C</th></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></table></td><td><table><tr><th data-localize="WhosOnFirst/rule_DISPLAY28" class="whos-on-first-look-at-display" colspan="2">CEE</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img src="img/modules/whosonfirst/eye-icon.png" alt="Look At" style="height: 1em;"></td></tr></table></td>			</tr></table></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=9;pageCount=23">Page 9 of 23</div>
     </div>
 
-    <div class="page">
+    <div class="page page-bg-03">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.whosonfirst">Who's on First</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=10;pageCount=23">Page 10 of 23</div>
         <div class="page-content">
             <h3 data-localize="whosonfirst.step2">Step 2:</h3>
             <p data-localize="whosonfirst.step2details">Using the label from step 1, <u>push the first button</u> that appears in its corresponding list:</p>
-            <table class="whos-on-first-step2-table">
-            	<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span></td></tr>
-<tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>":</th>
-<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span></td></tr>
-            </table>
-        </div>
-        <div class="page-footer relative-footer"></div>
+            <table class="whos-on-first-step2-table"><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group1_10">RIGHT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_11">MIDDLE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_6">YES</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_1">READY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_14">PRESS</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_12">OKAY</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_5">NOTHING</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_8">UHHH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_4">BLANK</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_9">LEFT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_2">FIRST</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_7">WHAT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_3">NO</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group1_13">WAIT</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span></td></tr><tr><th>"<span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>":</th>
+<td><span data-localize="WhosOnFirst/rule_KEYPAD_group2_4">YOU'RE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_11">NEXT</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_6">U</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_5">UR</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_12">HOLD</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_10">DONE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_8">UH UH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_9">WHAT?</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_7">UH HUH</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_1">YOU</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_14">LIKE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_13">SURE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_2">YOU ARE</span>, <span data-localize="WhosOnFirst/rule_KEYPAD_group2_3">YOUR</span></td></tr></table></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=10;pageCount=23">Page 10 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page">
+    <div class="page page-bg-04">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.memory">Memory</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=11;pageCount=23">Page 11 of 23</div>
         <div class="page-content">
-    	    <img src="img/module-icons/MemoryComponent.svg" class="diagram" />
-            <h2 data-localize="memory.title">On the Subject of Memory</h2>
-		    <p  data-localize="memory.flavour" class="flavour-text">Memory is a fragile thing but so is everything else when a bomb goes off, so pay attention!</p>
-		    <ul>
-				<li data-localize="memory.instruction1">Press the correct button to progress the module to the next stage. Complete all stages to disarm the module.</li>
-			    <li data-localize="memory.instruction2">Pressing an incorrect button will reset the module back to stage 1.</li>
-                <li data-localize="memory.instruction3">Button positions are ordered from left to right.</li>
-		    </ul>
-            <div class="memory-rules">
-            	<h4 data-localize="memory.stagenumber" data-args="stage=1">Stage 1:</h4><p><span data-localize="Manual/memory.rulepresssecondposition" data-args="displaydigit=1;digit=2;">If the display is 1, press the button in the second position.</span><br /><span data-localize="Manual/memory.rulepresssecondposition" data-args="displaydigit=2;digit=4;">If the display is 2, press the button in the second position.</span><br /><span data-localize="Manual/memory.rulepressthirdposition" data-args="displaydigit=3;digit=4;">If the display is 3, press the button in the third position.</span><br /><span data-localize="Manual/memory.rulepressfourthposition" data-args="displaydigit=4;digit=4;">If the display is 4, press the button in the fourth position.</span><br /></p><h4 data-localize="memory.stagenumber" data-args="stage=2">Stage 2:</h4><p><span data-localize="Manual/memory.rulepressbuttonlabelled" data-args="displaydigit=1;digit=4;stage=1;">If the display is 1, press the button labeled "4".</span><br /><span data-localize="Manual/memory.rulebuttonindexpushedinpreviousstage" data-args="displaydigit=2;digit=4;stage=1;">If the display is 2, press the button in the same position as you pressed in stage 1.</span><br /><span data-localize="Manual/memory.rulepressfirstposition" data-args="displaydigit=3;digit=3;stage=1;">If the display is 3, press the button in the first position.</span><br /><span data-localize="Manual/memory.rulebuttonindexpushedinpreviousstage" data-args="displaydigit=4;digit=3;stage=1;">If the display is 4, press the button in the same position as you pressed in stage 1.</span><br /></p><h4 data-localize="memory.stagenumber" data-args="stage=3">Stage 3:</h4><p><span data-localize="Manual/memory.rulepressbuttonlabelpushedinpreviousstage" data-args="displaydigit=1;digit=3;stage=2;">If the display is 1, press the button with the same label you pressed in stage 2.</span><br /><span data-localize="Manual/memory.rulepressbuttonlabelpushedinpreviousstage" data-args="displaydigit=2;digit=3;stage=1;">If the display is 2, press the button with the same label you pressed in stage 1.</span><br /><span data-localize="Manual/memory.rulepressthirdposition" data-args="displaydigit=3;digit=4;stage=2;">If the display is 3, press the button in the third position.</span><br /><span data-localize="Manual/memory.rulepressbuttonlabelled" data-args="displaydigit=4;digit=4;stage=1;">If the display is 4, press the button labeled "4".</span><br /></p><h4 data-localize="memory.stagenumber" data-args="stage=4">Stage 4:</h4><p><span data-localize="Manual/memory.rulebuttonindexpushedinpreviousstage" data-args="displaydigit=1;digit=4;stage=1;">If the display is 1, press the button in the same position as you pressed in stage 1.</span><br /><span data-localize="Manual/memory.rulepressfirstposition" data-args="displaydigit=2;digit=1;stage=1;">If the display is 2, press the button in the first position.</span><br /><span data-localize="Manual/memory.rulebuttonindexpushedinpreviousstage" data-args="displaydigit=3;digit=2;stage=2;">If the display is 3, press the button in the same position as you pressed in stage 2.</span><br /><span data-localize="Manual/memory.rulebuttonindexpushedinpreviousstage" data-args="displaydigit=4;digit=1;stage=2;">If the display is 4, press the button in the same position as you pressed in stage 2.</span><br /></p><h4 data-localize="memory.stagenumber" data-args="stage=5">Stage 5:</h4><p><span data-localize="Manual/memory.rulepressbuttonlabelpushedinpreviousstage" data-args="displaydigit=1;digit=4;stage=1;">If the display is 1, press the button with the same label you pressed in stage 1.</span><br /><span data-localize="Manual/memory.rulepressbuttonlabelpushedinpreviousstage" data-args="displaydigit=2;digit=3;stage=2;">If the display is 2, press the button with the same label you pressed in stage 2.</span><br /><span data-localize="Manual/memory.rulepressbuttonlabelpushedinpreviousstage" data-args="displaydigit=3;digit=1;stage=4;">If the display is 3, press the button with the same label you pressed in stage 4.</span><br /><span data-localize="Manual/memory.rulepressbuttonlabelpushedinpreviousstage" data-args="displaydigit=4;digit=1;stage=3;">If the display is 4, press the button with the same label you pressed in stage 3.</span><br /></p>            </div>
+    	    <img src="img/module-icons/MemoryComponent.svg" class="diagram"><h2 data-localize="memory.title">On the Subject of Memory</h2>
+		    <p data-localize="memory.flavour" class="flavour-text">Memory is a fragile thing but so is everything else when a bomb goes off, so pay attention!</p>
+		    <ul><li data-localize="memory.instruction1">Press the correct button to progress the module to the next stage. Complete all stages to disarm the module.</li><li data-localize="memory.instruction2">Pressing an incorrect button will reset the module back to stage 1.</li><li data-localize="memory.instruction3">Button positions are ordered from left to right.</li></ul><div class="memory-rules">
+            	<h4 data-localize="memory.stagenumber" data-args="stage=1">Stage 1:</h4><p><span data-localize="Manual/memory.rulepresssecondposition" data-args="displaydigit=1;digit=2;">If the display is 1, press the button in the second position.</span><br><span data-localize="Manual/memory.rulepresssecondposition" data-args="displaydigit=2;digit=4;">If the display is 2, press the button in the second position.</span><br><span data-localize="Manual/memory.rulepressthirdposition" data-args="displaydigit=3;digit=4;">If the display is 3, press the button in the third position.</span><br><span data-localize="Manual/memory.rulepressfourthposition" data-args="displaydigit=4;digit=4;">If the display is 4, press the button in the fourth position.</span><br></p><h4 data-localize="memory.stagenumber" data-args="stage=2">Stage 2:</h4><p><span data-localize="Manual/memory.rulepressbuttonlabelled" data-args="displaydigit=1;digit=4;stage=1;">If the display is 1, press the button labeled "4".</span><br><span data-localize="Manual/memory.rulebuttonindexpushedinpreviousstage" data-args="displaydigit=2;digit=4;stage=1;">If the display is 2, press the button in the same position as you pressed in stage 1.</span><br><span data-localize="Manual/memory.rulepressfirstposition" data-args="displaydigit=3;digit=3;stage=1;">If the display is 3, press the button in the first position.</span><br><span data-localize="Manual/memory.rulebuttonindexpushedinpreviousstage" data-args="displaydigit=4;digit=3;stage=1;">If the display is 4, press the button in the same position as you pressed in stage 1.</span><br></p><h4 data-localize="memory.stagenumber" data-args="stage=3">Stage 3:</h4><p><span data-localize="Manual/memory.rulepressbuttonlabelpushedinpreviousstage" data-args="displaydigit=1;digit=3;stage=2;">If the display is 1, press the button with the same label you pressed in stage 2.</span><br><span data-localize="Manual/memory.rulepressbuttonlabelpushedinpreviousstage" data-args="displaydigit=2;digit=3;stage=1;">If the display is 2, press the button with the same label you pressed in stage 1.</span><br><span data-localize="Manual/memory.rulepressthirdposition" data-args="displaydigit=3;digit=4;stage=2;">If the display is 3, press the button in the third position.</span><br><span data-localize="Manual/memory.rulepressbuttonlabelled" data-args="displaydigit=4;digit=4;stage=1;">If the display is 4, press the button labeled "4".</span><br></p><h4 data-localize="memory.stagenumber" data-args="stage=4">Stage 4:</h4><p><span data-localize="Manual/memory.rulebuttonindexpushedinpreviousstage" data-args="displaydigit=1;digit=4;stage=1;">If the display is 1, press the button in the same position as you pressed in stage 1.</span><br><span data-localize="Manual/memory.rulepressfirstposition" data-args="displaydigit=2;digit=1;stage=1;">If the display is 2, press the button in the first position.</span><br><span data-localize="Manual/memory.rulebuttonindexpushedinpreviousstage" data-args="displaydigit=3;digit=2;stage=2;">If the display is 3, press the button in the same position as you pressed in stage 2.</span><br><span data-localize="Manual/memory.rulebuttonindexpushedinpreviousstage" data-args="displaydigit=4;digit=1;stage=2;">If the display is 4, press the button in the same position as you pressed in stage 2.</span><br></p><h4 data-localize="memory.stagenumber" data-args="stage=5">Stage 5:</h4><p><span data-localize="Manual/memory.rulepressbuttonlabelpushedinpreviousstage" data-args="displaydigit=1;digit=4;stage=1;">If the display is 1, press the button with the same label you pressed in stage 1.</span><br><span data-localize="Manual/memory.rulepressbuttonlabelpushedinpreviousstage" data-args="displaydigit=2;digit=3;stage=2;">If the display is 2, press the button with the same label you pressed in stage 2.</span><br><span data-localize="Manual/memory.rulepressbuttonlabelpushedinpreviousstage" data-args="displaydigit=3;digit=1;stage=4;">If the display is 3, press the button with the same label you pressed in stage 4.</span><br><span data-localize="Manual/memory.rulepressbuttonlabelpushedinpreviousstage" data-args="displaydigit=4;digit=1;stage=3;">If the display is 4, press the button with the same label you pressed in stage 3.</span><br></p>            </div>
         </div>
-        <div class="page-footer relative-footer"></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=11;pageCount=23">Page 11 of 23</div>
     </div>
 </div>
 <div class="section">
-    <div class="page morse-code">
+    <div class="page morse-code page-bg-05">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.morse">Morse Code</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=12;pageCount=23">Page 12 of 23</div>
         <div class="page-content">
-    	    <img src="img/module-icons/MorseCodeComponent.svg" class="diagram" />
-            <h2 data-localize="morse.title">On the Subject of Morse Code</h2>
-		        <p  data-localize="morse.flavour" class="flavour-text">An antiquated form of naval communication? What next? At least it's genuine Morse Code, so pay attention and you might just learn something.</p>
-				<ul>
-					<li data-localize="morse.instruction1">Interpret the signal from the flashing light using the Morse Code chart to spell one of the words in the table.</li>
-					<li data-localize="morse.instruction2">The signal will loop, with a long gap between repetitions.</li>
-					<li data-localize="morse.instruction3">Once the word is identified, set the corresponding frequency and press the transmit (TX) button.</li>
-				</ul>
-			
-		    <img id="morseCodeChart" src="img/modules/morsecode/International_Morse_Code.svg"/>	
-					
-		    <table>
-			    <tr>
-					<th data-localize="morse.tableheader1">If the word is:</th>
+    	    <img src="img/module-icons/MorseCodeComponent.svg" class="diagram"><h2 data-localize="morse.title">On the Subject of Morse Code</h2>
+		        <p data-localize="morse.flavour" class="flavour-text">An antiquated form of naval communication? What next? At least it's genuine Morse Code, so pay attention and you might just learn something.</p>
+				<ul><li data-localize="morse.instruction1">Interpret the signal from the flashing light using the Morse Code chart to spell one of the words in the table.</li><li data-localize="morse.instruction2">The signal will loop, with a long gap between repetitions.</li><li data-localize="morse.instruction3">Once the word is identified, set the corresponding frequency and press the transmit (TX) button.</li></ul><img id="morseCodeChart" src="img/modules/morsecode/International_Morse_Code.svg"><table><tr><th data-localize="morse.tableheader1">If the word is:</th>
 					<th data-localize="morse.tableheader2">Respond at frequency:</th>
-				</tr>
-			    <tr><td data-localize="MorseComponent/rule_Option17">shell</td><td data-localize="morse.frequency" data-args="frequency=3.505">3.505 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option16">halls</td><td data-localize="morse.frequency" data-args="frequency=3.515">3.515 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option20">slick</td><td data-localize="morse.frequency" data-args="frequency=3.522">3.522 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option1">trick</td><td data-localize="morse.frequency" data-args="frequency=3.532">3.532 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option5">boxes</td><td data-localize="morse.frequency" data-args="frequency=3.535">3.535 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option11">leaks</td><td data-localize="morse.frequency" data-args="frequency=3.542">3.542 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option19">strobe</td><td data-localize="morse.frequency" data-args="frequency=3.545">3.545 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option18">bistro</td><td data-localize="morse.frequency" data-args="frequency=3.552">3.552 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option21">flick</td><td data-localize="morse.frequency" data-args="frequency=3.555">3.555 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option8">bombs</td><td data-localize="morse.frequency" data-args="frequency=3.565">3.565 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option14">break</td><td data-localize="morse.frequency" data-args="frequency=3.572">3.572 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option13">brick</td><td data-localize="morse.frequency" data-args="frequency=3.575">3.575 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option10">steak</td><td data-localize="morse.frequency" data-args="frequency=3.582">3.582 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option9">sting</td><td data-localize="morse.frequency" data-args="frequency=3.592">3.592 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option3">vector</td><td data-localize="morse.frequency" data-args="frequency=3.595">3.595 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option7">beats</td><td data-localize="morse.frequency" data-args="frequency=3.600">3.600 MHz</td></tr>		    </table>	
-        </div>
-        <div class="page-footer relative-footer"></div>
+				</tr><tr><td data-localize="MorseComponent/rule_Option17">shell</td><td data-localize="morse.frequency" data-args="frequency=3.505">3.505 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option16">halls</td><td data-localize="morse.frequency" data-args="frequency=3.515">3.515 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option20">slick</td><td data-localize="morse.frequency" data-args="frequency=3.522">3.522 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option1">trick</td><td data-localize="morse.frequency" data-args="frequency=3.532">3.532 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option5">boxes</td><td data-localize="morse.frequency" data-args="frequency=3.535">3.535 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option11">leaks</td><td data-localize="morse.frequency" data-args="frequency=3.542">3.542 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option19">strobe</td><td data-localize="morse.frequency" data-args="frequency=3.545">3.545 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option18">bistro</td><td data-localize="morse.frequency" data-args="frequency=3.552">3.552 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option21">flick</td><td data-localize="morse.frequency" data-args="frequency=3.555">3.555 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option8">bombs</td><td data-localize="morse.frequency" data-args="frequency=3.565">3.565 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option14">break</td><td data-localize="morse.frequency" data-args="frequency=3.572">3.572 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option13">brick</td><td data-localize="morse.frequency" data-args="frequency=3.575">3.575 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option10">steak</td><td data-localize="morse.frequency" data-args="frequency=3.582">3.582 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option9">sting</td><td data-localize="morse.frequency" data-args="frequency=3.592">3.592 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option3">vector</td><td data-localize="morse.frequency" data-args="frequency=3.595">3.595 MHz</td></tr><tr><td data-localize="MorseComponent/rule_Option7">beats</td><td data-localize="morse.frequency" data-args="frequency=3.600">3.600 MHz</td></tr></table></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=12;pageCount=23">Page 12 of 23</div>
     </div>
 </div>
 <div class="section">
-    <div class="page venn-wires">
+    <div class="page venn-wires page-bg-06">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.venn">Complicated Wires</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=13;pageCount=23">Page 13 of 23</div>
         <div class="page-content">
-    	    <img src="img/module-icons/VennWireComponent.svg" class="diagram" />
-            <h2 data-localize="venn.title">On the Subject of Complicated Wires</h2>
+    	    <img src="img/module-icons/VennWireComponent.svg" class="diagram"><h2 data-localize="venn.title">On the Subject of Complicated Wires</h2>
 		        <p data-localize="venn.flavour" class="flavour-text">These wires aren't like the others. Some have stripes! That makes them completely different. The good news is that we've found a concise set of instructions on what to do about it! Maybe too concise...</p>
-			    <ul>
-				    <li data-localize="venn.instruction1">Look at each wire: there is an LED above the wire and a space for a "&#9733" symbol below the wire.</li>
-				    <li data-localize="venn.instruction2">For <b>each</b> wire/LED/symbol combination, use the Venn diagram below to decide whether or not to cut the wire.</li>
-                    <li data-localize="venn.instruction3">Each wire may be striped with multiple colors.</li>
-			    </ul>
-			
-			
-		    
-		    <div>
+			    <ul><li data-localize="venn.instruction1">Look at each wire: there is an LED above the wire and a space for a "&#9733;" symbol below the wire.</li><li data-localize="venn.instruction2">For <b>each</b> wire/LED/symbol combination, use the Venn diagram below to decide whether or not to cut the wire.</li><li data-localize="venn.instruction3">Each wire may be striped with multiple colors.</li></ul><div>
 			    <object id="venndiagram" width="100%" height="100%" data="img/modules/venn/venndiagram.svg" type="image/svg+xml"></object>
 		    </div>
 		    <div>
 			    <object width="100%" height="100%" id="vennlegend" data="img/modules/venn/legend.svg" type="image/svg+xml"></object>
-			    <table id="venntable">
-				    <tr>
-						<th data-localize="venn.tableheaderletter">Letter</th>
+			    <table id="venntable"><tr><th data-localize="venn.tableheaderletter">Letter</th>
 						<th data-localize="venn.tableheaderinstruction">Instruction</th>
-					</tr>
-				    <tr><td data-localize="venn.symbolcut">C</td><td data-localize="venn.instructioncut">Cut the wire</td></tr>
-				    <tr><td data-localize="venn.symboldonotcut">D</td><td data-localize="venn.instructiondonotcut">Do not cut the wire</td></tr>
-				    <tr><td data-localize="venn.symbolserial">S</td><td data-localize="venn.instructionserial">Cut the wire if the last digit of the serial number is even</td></tr>
-				    <tr><td data-localize="venn.symbolparallel">P</td><td data-localize="venn.instructionparallel">Cut the wire if the bomb has a parallel port</td></tr>
-				    <tr><td data-localize="venn.symbolbattery">B</td><td data-localize="venn.instructionbatteries">Cut the wire if the bomb has two or more batteries</td></tr>
-			    </table>
-		    </div>
-		    <div style="clear:both;"/>
-            <p class="appendix-reference"><span data-localize="appendix.refb">See Appendix B for battery identification reference.</span><br /><span data-localize="appendix.refc">See Appendix C for port identification reference.</span></p>
+					</tr><tr><td data-localize="venn.symbolcut">C</td><td data-localize="venn.instructioncut">Cut the wire</td></tr><tr><td data-localize="venn.symboldonotcut">D</td><td data-localize="venn.instructiondonotcut">Do not cut the wire</td></tr><tr><td data-localize="venn.symbolserial">S</td><td data-localize="venn.instructionserial">Cut the wire if the last digit of the serial number is even</td></tr><tr><td data-localize="venn.symbolparallel">P</td><td data-localize="venn.instructionparallel">Cut the wire if the bomb has a parallel port</td></tr><tr><td data-localize="venn.symbolbattery">B</td><td data-localize="venn.instructionbatteries">Cut the wire if the bomb has two or more batteries</td></tr></table></div>
+		    <div style="clear:both;"></div>
+            <p class="appendix-reference"><span data-localize="appendix.refb">See Appendix B for battery identification reference.</span><br><span data-localize="appendix.refc">See Appendix C for port identification reference.</span></p>
         </div>
-        <div class="page-footer relative-footer"></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=13;pageCount=23">Page 13 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page wire-sequence">
+    <div class="page wire-sequence page-bg-07">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.wiresequence">Wire Sequences</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=14;pageCount=23">Page 14 of 23</div>
         <div class="page-content">
-            <img src="img/module-icons/WireSequenceComponent.svg" class="diagram" />
-            <h2 data-localize="wiresequence.title">On the Subject of Wire Sequences</h2>
+            <img src="img/module-icons/WireSequenceComponent.svg" class="diagram"><h2 data-localize="wiresequence.title">On the Subject of Wire Sequences</h2>
             <p data-localize="wiresequence.flavour" class="flavour-text">It's hard to say how this mechanism works. The engineering is pretty impressive, but there must have been an easier way to manage nine wires.</p>
-			<ul>
-			<li data-localize="wiresequence.instruction1">Within this module there are several panels with wires on them, but only one panel is visible at a time. Switch to the next panel by using the down button and the previous panel by using the up button.</li>
-			<li data-localize="wiresequence.instruction2">Do not switch to the next panel until you are sure that you have cut all necessary wires on the current panel.</li>
-			<li data-localize="wiresequence.instruction3">Cut the wires as directed by the following table. Wire occurrences are cumulative over all panels within the module.</li>
-			</ul>
-            <div style="clear:both"></div>
+			<ul><li data-localize="wiresequence.instruction1">Within this module there are several panels with wires on them, but only one panel is visible at a time. Switch to the next panel by using the down button and the previous panel by using the up button.</li><li data-localize="wiresequence.instruction2">Do not switch to the next panel until you are sure that you have cut all necessary wires on the current panel.</li><li data-localize="wiresequence.instruction3">Cut the wires as directed by the following table. Wire occurrences are cumulative over all panels within the module.</li></ul><div style="clear:both"></div>
             
-            <table class='red-table'><tr>
-<th data-localize="wiresequence.redoccurencesheader" colspan='2' class='header'>Red Wire Occurrences</th></tr>
-<tr><th data-localize="wiresequence.wireoccurrenceheader" class='first-col'>Wire Occurrence</th><th data-localize="wiresequence.cutheader" class='second-col'>Cut if connected to:</th></tr>
-<tr><td data-localize="Manual/wiresequence.redoccurrence1" class='first-col'>First red occurrence</td><td data-localize="Manual/wiresequence.rulecutc" class="second-col">C</td></tr>
-<tr><td data-localize="Manual/wiresequence.redoccurrence2" class='first-col'>Second red occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr>
-<tr><td data-localize="Manual/wiresequence.redoccurrence3" class='first-col'>Third red occurrence</td><td data-localize="Manual/wiresequence.rulecuta" class="second-col">A</td></tr>
-<tr><td data-localize="Manual/wiresequence.redoccurrence4" class='first-col'>Fourth red occurrence</td><td data-localize="Manual/wiresequence.rulecutac" class="second-col">A or C</td></tr>
-<tr><td data-localize="Manual/wiresequence.redoccurrence5" class='first-col'>Fifth red occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr>
-<tr><td data-localize="Manual/wiresequence.redoccurrence6" class='first-col'>Sixth red occurrence</td><td data-localize="Manual/wiresequence.rulecutac" class="second-col">A or C</td></tr>
-<tr><td data-localize="Manual/wiresequence.redoccurrence7" class='first-col'>Seventh red occurrence</td><td data-localize="Manual/wiresequence.rulecutabc" class="second-col">A, B or C</td></tr>
-<tr><td data-localize="Manual/wiresequence.redoccurrence8" class='first-col'>Eighth red occurrence</td><td data-localize="Manual/wiresequence.rulecutab" class="second-col">A or B</td></tr>
-<tr><td data-localize="Manual/wiresequence.redoccurrence9" class='first-col'>Ninth red occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr>
-</table><table class='blue-table'><tr>
-<th data-localize="wiresequence.blueoccurencesheader" colspan='2' class='header'>Blue Wire Occurrences</th></tr>
-<tr><th data-localize="wiresequence.wireoccurrenceheader" class='first-col'>Wire Occurrence</th><th data-localize="wiresequence.cutheader" class='second-col'>Cut if connected to:</th></tr>
-<tr><td data-localize="Manual/wiresequence.blueoccurrence1" class='first-col'>First blue occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr>
-<tr><td data-localize="Manual/wiresequence.blueoccurrence2" class='first-col'>Second blue occurrence</td><td data-localize="Manual/wiresequence.rulecutac" class="second-col">A or C</td></tr>
-<tr><td data-localize="Manual/wiresequence.blueoccurrence3" class='first-col'>Third blue occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr>
-<tr><td data-localize="Manual/wiresequence.blueoccurrence4" class='first-col'>Fourth blue occurrence</td><td data-localize="Manual/wiresequence.rulecuta" class="second-col">A</td></tr>
-<tr><td data-localize="Manual/wiresequence.blueoccurrence5" class='first-col'>Fifth blue occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr>
-<tr><td data-localize="Manual/wiresequence.blueoccurrence6" class='first-col'>Sixth blue occurrence</td><td data-localize="Manual/wiresequence.rulecutbc" class="second-col">B or C</td></tr>
-<tr><td data-localize="Manual/wiresequence.blueoccurrence7" class='first-col'>Seventh blue occurrence</td><td data-localize="Manual/wiresequence.rulecutc" class="second-col">C</td></tr>
-<tr><td data-localize="Manual/wiresequence.blueoccurrence8" class='first-col'>Eighth blue occurrence</td><td data-localize="Manual/wiresequence.rulecutac" class="second-col">A or C</td></tr>
-<tr><td data-localize="Manual/wiresequence.blueoccurrence9" class='first-col'>Ninth blue occurrence</td><td data-localize="Manual/wiresequence.rulecuta" class="second-col">A</td></tr>
-</table><table class='black-table'><tr>
-<th data-localize="wiresequence.blackoccurencesheader" colspan='2' class='header'>Black Wire Occurrences</th></tr>
-<tr><th data-localize="wiresequence.wireoccurrenceheader" class='first-col'>Wire Occurrence</th><th data-localize="wiresequence.cutheader" class='second-col'>Cut if connected to:</th></tr>
-<tr><td data-localize="Manual/wiresequence.blackoccurrence1" class='first-col'>First black occurrence</td><td data-localize="Manual/wiresequence.rulecutabc" class="second-col">A, B or C</td></tr>
-<tr><td data-localize="Manual/wiresequence.blackoccurrence2" class='first-col'>Second black occurrence</td><td data-localize="Manual/wiresequence.rulecutac" class="second-col">A or C</td></tr>
-<tr><td data-localize="Manual/wiresequence.blackoccurrence3" class='first-col'>Third black occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr>
-<tr><td data-localize="Manual/wiresequence.blackoccurrence4" class='first-col'>Fourth black occurrence</td><td data-localize="Manual/wiresequence.rulecutac" class="second-col">A or C</td></tr>
-<tr><td data-localize="Manual/wiresequence.blackoccurrence5" class='first-col'>Fifth black occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr>
-<tr><td data-localize="Manual/wiresequence.blackoccurrence6" class='first-col'>Sixth black occurrence</td><td data-localize="Manual/wiresequence.rulecutbc" class="second-col">B or C</td></tr>
-<tr><td data-localize="Manual/wiresequence.blackoccurrence7" class='first-col'>Seventh black occurrence</td><td data-localize="Manual/wiresequence.rulecutab" class="second-col">A or B</td></tr>
-<tr><td data-localize="Manual/wiresequence.blackoccurrence8" class='first-col'>Eighth black occurrence</td><td data-localize="Manual/wiresequence.rulecutc" class="second-col">C</td></tr>
-<tr><td data-localize="Manual/wiresequence.blackoccurrence9" class='first-col'>Ninth black occurrence</td><td data-localize="Manual/wiresequence.rulecutc" class="second-col">C</td></tr>
-</table>        </div>
-        <div class="page-footer relative-footer"></div>
+            <table class="red-table"><tr><th data-localize="wiresequence.redoccurencesheader" colspan="2" class="header">Red Wire Occurrences</th></tr><tr><th data-localize="wiresequence.wireoccurrenceheader" class="first-col">Wire Occurrence</th><th data-localize="wiresequence.cutheader" class="second-col">Cut if connected to:</th></tr><tr><td data-localize="Manual/wiresequence.redoccurrence1" class="first-col">First&nbsp;red occurrence</td><td data-localize="Manual/wiresequence.rulecutc" class="second-col">C</td></tr><tr><td data-localize="Manual/wiresequence.redoccurrence2" class="first-col">Second&nbsp;red occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr><tr><td data-localize="Manual/wiresequence.redoccurrence3" class="first-col">Third&nbsp;red occurrence</td><td data-localize="Manual/wiresequence.rulecuta" class="second-col">A</td></tr><tr><td data-localize="Manual/wiresequence.redoccurrence4" class="first-col">Fourth&nbsp;red occurrence</td><td data-localize="Manual/wiresequence.rulecutac" class="second-col">A or C</td></tr><tr><td data-localize="Manual/wiresequence.redoccurrence5" class="first-col">Fifth&nbsp;red occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr><tr><td data-localize="Manual/wiresequence.redoccurrence6" class="first-col">Sixth&nbsp;red occurrence</td><td data-localize="Manual/wiresequence.rulecutac" class="second-col">A or C</td></tr><tr><td data-localize="Manual/wiresequence.redoccurrence7" class="first-col">Seventh&nbsp;red occurrence</td><td data-localize="Manual/wiresequence.rulecutabc" class="second-col">A, B or C</td></tr><tr><td data-localize="Manual/wiresequence.redoccurrence8" class="first-col">Eighth&nbsp;red occurrence</td><td data-localize="Manual/wiresequence.rulecutab" class="second-col">A or B</td></tr><tr><td data-localize="Manual/wiresequence.redoccurrence9" class="first-col">Ninth&nbsp;red occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr></table><table class="blue-table"><tr><th data-localize="wiresequence.blueoccurencesheader" colspan="2" class="header">Blue Wire Occurrences</th></tr><tr><th data-localize="wiresequence.wireoccurrenceheader" class="first-col">Wire Occurrence</th><th data-localize="wiresequence.cutheader" class="second-col">Cut if connected to:</th></tr><tr><td data-localize="Manual/wiresequence.blueoccurrence1" class="first-col">First&nbsp;blue occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr><tr><td data-localize="Manual/wiresequence.blueoccurrence2" class="first-col">Second&nbsp;blue occurrence</td><td data-localize="Manual/wiresequence.rulecutac" class="second-col">A or C</td></tr><tr><td data-localize="Manual/wiresequence.blueoccurrence3" class="first-col">Third&nbsp;blue occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr><tr><td data-localize="Manual/wiresequence.blueoccurrence4" class="first-col">Fourth&nbsp;blue occurrence</td><td data-localize="Manual/wiresequence.rulecuta" class="second-col">A</td></tr><tr><td data-localize="Manual/wiresequence.blueoccurrence5" class="first-col">Fifth&nbsp;blue occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr><tr><td data-localize="Manual/wiresequence.blueoccurrence6" class="first-col">Sixth&nbsp;blue occurrence</td><td data-localize="Manual/wiresequence.rulecutbc" class="second-col">B or C</td></tr><tr><td data-localize="Manual/wiresequence.blueoccurrence7" class="first-col">Seventh&nbsp;blue occurrence</td><td data-localize="Manual/wiresequence.rulecutc" class="second-col">C</td></tr><tr><td data-localize="Manual/wiresequence.blueoccurrence8" class="first-col">Eighth&nbsp;blue occurrence</td><td data-localize="Manual/wiresequence.rulecutac" class="second-col">A or C</td></tr><tr><td data-localize="Manual/wiresequence.blueoccurrence9" class="first-col">Ninth&nbsp;blue occurrence</td><td data-localize="Manual/wiresequence.rulecuta" class="second-col">A</td></tr></table><table class="black-table"><tr><th data-localize="wiresequence.blackoccurencesheader" colspan="2" class="header">Black Wire Occurrences</th></tr><tr><th data-localize="wiresequence.wireoccurrenceheader" class="first-col">Wire Occurrence</th><th data-localize="wiresequence.cutheader" class="second-col">Cut if connected to:</th></tr><tr><td data-localize="Manual/wiresequence.blackoccurrence1" class="first-col">First&nbsp;black occurrence</td><td data-localize="Manual/wiresequence.rulecutabc" class="second-col">A, B or C</td></tr><tr><td data-localize="Manual/wiresequence.blackoccurrence2" class="first-col">Second&nbsp;black occurrence</td><td data-localize="Manual/wiresequence.rulecutac" class="second-col">A or C</td></tr><tr><td data-localize="Manual/wiresequence.blackoccurrence3" class="first-col">Third&nbsp;black occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr><tr><td data-localize="Manual/wiresequence.blackoccurrence4" class="first-col">Fourth&nbsp;black occurrence</td><td data-localize="Manual/wiresequence.rulecutac" class="second-col">A or C</td></tr><tr><td data-localize="Manual/wiresequence.blackoccurrence5" class="first-col">Fifth&nbsp;black occurrence</td><td data-localize="Manual/wiresequence.rulecutb" class="second-col">B</td></tr><tr><td data-localize="Manual/wiresequence.blackoccurrence6" class="first-col">Sixth&nbsp;black occurrence</td><td data-localize="Manual/wiresequence.rulecutbc" class="second-col">B or C</td></tr><tr><td data-localize="Manual/wiresequence.blackoccurrence7" class="first-col">Seventh&nbsp;black occurrence</td><td data-localize="Manual/wiresequence.rulecutab" class="second-col">A or B</td></tr><tr><td data-localize="Manual/wiresequence.blackoccurrence8" class="first-col">Eighth&nbsp;black occurrence</td><td data-localize="Manual/wiresequence.rulecutc" class="second-col">C</td></tr><tr><td data-localize="Manual/wiresequence.blackoccurrence9" class="first-col">Ninth&nbsp;black occurrence</td><td data-localize="Manual/wiresequence.rulecutc" class="second-col">C</td></tr></table></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=14;pageCount=23">Page 14 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page">
+    <div class="page page-bg-01">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.maze">Mazes</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=15;pageCount=23">Page 15 of 23</div>
         <div class="page-content">
-    	    <img src="img/module-icons/MazeComponent.svg" class="diagram" />
-            <h2 data-localize="maze.title">On the Subject of Mazes</h2>
+    	    <img src="img/module-icons/MazeComponent.svg" class="diagram"><h2 data-localize="maze.title">On the Subject of Mazes</h2>
             <p data-localize="maze.flavour" class="flavour-text">This seems to be some kind of maze, probably stolen off of a restaurant placemat.</p>
-            <ul>
-                <li data-localize="maze.instruction1">Find the maze with matching circular markings.</li>
-                <li data-localize="maze.instruction2">The defuser must navigate the white light to the red triangle using the arrow buttons.</li>
-                <li data-localize="maze.instruction3"><strong>Warning:</strong> Do not cross the lines shown in the maze. These lines are invisible on the bomb.</li>
-		    </ul>
-            <img class="maze" src="img/modules/maze/maze0.svg"/>
-            <img class="maze" src="img/modules/maze/maze1.svg"/>
-            <img class="maze" src="img/modules/maze/maze2.svg"/>
-            <img class="maze" src="img/modules/maze/maze3.svg"/>
-            <img class="maze" src="img/modules/maze/maze4.svg"/>
-            <img class="maze" src="img/modules/maze/maze5.svg"/>
-            <img class="maze" src="img/modules/maze/maze6.svg"/>
-            <img class="maze" src="img/modules/maze/maze7.svg"/>
-		    <img class="maze" src="img/modules/maze/maze8.svg"/>
-        </div>
-        <div class="page-footer relative-footer"></div>
+            <ul><li data-localize="maze.instruction1">Find the maze with matching circular markings.</li><li data-localize="maze.instruction2">The defuser must navigate the white light to the red triangle using the arrow buttons.</li><li data-localize="maze.instruction3"><strong>Warning:</strong> Do not cross the lines shown in the maze. These lines are invisible on the bomb.</li></ul><img class="maze" src="img/modules/maze/maze0.svg"><img class="maze" src="img/modules/maze/maze1.svg"><img class="maze" src="img/modules/maze/maze2.svg"><img class="maze" src="img/modules/maze/maze3.svg"><img class="maze" src="img/modules/maze/maze4.svg"><img class="maze" src="img/modules/maze/maze5.svg"><img class="maze" src="img/modules/maze/maze6.svg"><img class="maze" src="img/modules/maze/maze7.svg"><img class="maze" src="img/modules/maze/maze8.svg"></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=15;pageCount=23">Page 15 of 23</div>
     </div>
 </div>
 <div class="section">
-    <div class="page">
+    <div class="page page-bg-02">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.password">Passwords</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=16;pageCount=23">Page 16 of 23</div>
         <div class="page-content">
-    	    <img src="img/module-icons/PasswordComponent.svg" class="diagram" />
-            <h2 data-localize="password.title">On the Subject of Passwords</h2>
+    	    <img src="img/module-icons/PasswordComponent.svg" class="diagram"><h2 data-localize="password.title">On the Subject of Passwords</h2>
             <p data-localize="password.flavour" class="flavour-text">Fortunately this password doesn't seem to meet standard government security requirements: 22 characters, mixed case, numbers in random order without any palindromes above length 3.</p>
-			<ul>
-				<li data-localize="password.instruction1">The buttons above and below each letter will cycle through the possibilities for that position.</li>
-				<li data-localize="password.instruction2">Only one combination of the available letters will match a password below.</li>
-				<li data-localize="password.instruction3">Press the submit button once the correct word has been set.</li>
-			</ul>
-		    <table class="password-table">
-		    	<tr><td data-localize="PasswordComponent/rule_Option01">about</td><td data-localize="PasswordComponent/rule_Option02">after</td><td data-localize="PasswordComponent/rule_Option03">again</td><td data-localize="PasswordComponent/rule_Option04">below</td><td data-localize="PasswordComponent/rule_Option05">could</td></tr><tr><td data-localize="PasswordComponent/rule_Option06">every</td><td data-localize="PasswordComponent/rule_Option07">first</td><td data-localize="PasswordComponent/rule_Option08">found</td><td data-localize="PasswordComponent/rule_Option09">great</td><td data-localize="PasswordComponent/rule_Option10">house</td></tr><tr><td data-localize="PasswordComponent/rule_Option11">large</td><td data-localize="PasswordComponent/rule_Option12">learn</td><td data-localize="PasswordComponent/rule_Option13">never</td><td data-localize="PasswordComponent/rule_Option14">other</td><td data-localize="PasswordComponent/rule_Option15">place</td></tr><tr><td data-localize="PasswordComponent/rule_Option16">plant</td><td data-localize="PasswordComponent/rule_Option17">point</td><td data-localize="PasswordComponent/rule_Option18">right</td><td data-localize="PasswordComponent/rule_Option19">small</td><td data-localize="PasswordComponent/rule_Option20">sound</td></tr><tr><td data-localize="PasswordComponent/rule_Option21">spell</td><td data-localize="PasswordComponent/rule_Option22">still</td><td data-localize="PasswordComponent/rule_Option23">study</td><td data-localize="PasswordComponent/rule_Option24">their</td><td data-localize="PasswordComponent/rule_Option25">there</td></tr><tr><td data-localize="PasswordComponent/rule_Option26">these</td><td data-localize="PasswordComponent/rule_Option27">thing</td><td data-localize="PasswordComponent/rule_Option28">think</td><td data-localize="PasswordComponent/rule_Option29">three</td><td data-localize="PasswordComponent/rule_Option30">water</td></tr><tr><td data-localize="PasswordComponent/rule_Option31">where</td><td data-localize="PasswordComponent/rule_Option32">which</td><td data-localize="PasswordComponent/rule_Option33">world</td><td data-localize="PasswordComponent/rule_Option34">would</td><td data-localize="PasswordComponent/rule_Option35">write</td></tr>            </table>
-        </div>
-        <div class="page-footer relative-footer"></div>
+			<ul><li data-localize="password.instruction1">The buttons above and below each letter will cycle through the possibilities for that position.</li><li data-localize="password.instruction2">Only one combination of the available letters will match a password below.</li><li data-localize="password.instruction3">Press the submit button once the correct word has been set.</li></ul><table class="password-table"><tr><td data-localize="PasswordComponent/rule_Option01">about</td><td data-localize="PasswordComponent/rule_Option02">after</td><td data-localize="PasswordComponent/rule_Option03">again</td><td data-localize="PasswordComponent/rule_Option04">below</td><td data-localize="PasswordComponent/rule_Option05">could</td></tr><tr><td data-localize="PasswordComponent/rule_Option06">every</td><td data-localize="PasswordComponent/rule_Option07">first</td><td data-localize="PasswordComponent/rule_Option08">found</td><td data-localize="PasswordComponent/rule_Option09">great</td><td data-localize="PasswordComponent/rule_Option10">house</td></tr><tr><td data-localize="PasswordComponent/rule_Option11">large</td><td data-localize="PasswordComponent/rule_Option12">learn</td><td data-localize="PasswordComponent/rule_Option13">never</td><td data-localize="PasswordComponent/rule_Option14">other</td><td data-localize="PasswordComponent/rule_Option15">place</td></tr><tr><td data-localize="PasswordComponent/rule_Option16">plant</td><td data-localize="PasswordComponent/rule_Option17">point</td><td data-localize="PasswordComponent/rule_Option18">right</td><td data-localize="PasswordComponent/rule_Option19">small</td><td data-localize="PasswordComponent/rule_Option20">sound</td></tr><tr><td data-localize="PasswordComponent/rule_Option21">spell</td><td data-localize="PasswordComponent/rule_Option22">still</td><td data-localize="PasswordComponent/rule_Option23">study</td><td data-localize="PasswordComponent/rule_Option24">their</td><td data-localize="PasswordComponent/rule_Option25">there</td></tr><tr><td data-localize="PasswordComponent/rule_Option26">these</td><td data-localize="PasswordComponent/rule_Option27">thing</td><td data-localize="PasswordComponent/rule_Option28">think</td><td data-localize="PasswordComponent/rule_Option29">three</td><td data-localize="PasswordComponent/rule_Option30">water</td></tr><tr><td data-localize="PasswordComponent/rule_Option31">where</td><td data-localize="PasswordComponent/rule_Option32">which</td><td data-localize="PasswordComponent/rule_Option33">world</td><td data-localize="PasswordComponent/rule_Option34">would</td><td data-localize="PasswordComponent/rule_Option35">write</td></tr></table></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=16;pageCount=23">Page 16 of 23</div>
     </div>
 </div>
 <div class="section">
-    <div class="page section-title">
+    <div class="page section-title page-bg-03">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.section2">Section 2: Needy Modules</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=17;pageCount=23">Page 17 of 23</div>
         <div class="page-content">
             <div class="vertical-spacer"></div>
-	        <img src="img/module-icons/NeedyComponent.svg" class="diagram" />
-			<div class="new-block-formatting-context">
+	        <img src="img/module-icons/NeedyComponent.svg" class="diagram"><div class="new-block-formatting-context">
 				<h1 data-localize="section2.title">Section 2: Needy Modules</h1>
 				<p data-localize="section2.instruction1">Needy modules cannot be disarmed, but pose a recurrent hazard.</p>
 				<p data-localize="section2.instruction2">Needy modules can be identified as a module with a small 2&#8209;digit timer in the top center. Interacting with the bomb may cause them to become activated. Once activated, these needy modules must be tended to regularly before their timer expires in order to prevent a strike.</p>
 				<p data-localize="section2.instruction3">Stay observant: needy modules may reactivate at any time.</p>
 			</div>
         </div>
-        <div class="page-footer relative-footer"></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=17;pageCount=23">Page 17 of 23</div>
     </div>
 </div>
 <div class="section">
-    <div class="page">
+    <div class="page page-bg-04">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.needygas">Venting Gas</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=18;pageCount=23">Page 18 of 23</div>
         <div class="page-content">
-    	    <img src="img/module-icons/NeedyVentComponent.svg" class="diagram" />
-            <h2 data-localize="needygas.title">On the Subject of Venting Gas</h2>
+    	    <img src="img/module-icons/NeedyVentComponent.svg" class="diagram"><h2 data-localize="needygas.title">On the Subject of Venting Gas</h2>
             <p data-localize="needygas.flavour" class="flavour-text">Computer hacking is hard work! Well, it usually is. This job could probably be performed by a simple drinking bird pressing the same key over and over again.</p>
-			<ul>
-				<li data-localize="needygas.instruction1">Respond to the computer prompts by pressing "Y" for "Yes" or "N" for "No".</li>
-			</ul>
-        </div>
-        <div class="page-footer relative-footer"></div>
+			<ul><li data-localize="needygas.instruction1">Respond to the computer prompts by pressing "Y" for "Yes" or "N" for "No".</li></ul></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=18;pageCount=23">Page 18 of 23</div>
     </div>
 </div>
 <div class="section">
-    <div class="page">
+    <div class="page page-bg-05">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.needycap">Capacitor Discharge</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=19;pageCount=23">Page 19 of 23</div>
         <div class="page-content">
-    	    <img src="img/module-icons/NeedyDischargeComponent.svg" class="diagram" />
-            <h2 data-localize="needycap.title">On the Subject of Capacitor Discharge</h2>
+    	    <img src="img/module-icons/NeedyDischargeComponent.svg" class="diagram"><h2 data-localize="needycap.title">On the Subject of Capacitor Discharge</h2>
             <p data-localize="needycap.flavour" class="flavour-text">I'm going to guess that this is just meant to occupy your attention, because otherwise this is some shoddy electronics work.</p>
-            <ul>
-				<li data-localize="needycap.instruction1">Discharge the capacitor before it overloads by holding down the lever.</li>
-			</ul>
-        </div>
-        <div class="page-footer relative-footer"></div>
+            <ul><li data-localize="needycap.instruction1">Discharge the capacitor before it overloads by holding down the lever.</li></ul></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=19;pageCount=23">Page 19 of 23</div>
     </div>
 </div>
 <div class="section">
-    <div class="page needy-knob">
+    <div class="page needy-knob page-bg-06">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.needyknob">Knobs</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=20;pageCount=23">Page 20 of 23</div>
         <div class="page-content">
-    	    <img src="img/module-icons/NeedyKnobComponent.svg" class="diagram" />
-            <h2 data-localize="needyknob.title">On the Subject of Knobs</h2>
+    	    <img src="img/module-icons/NeedyKnobComponent.svg" class="diagram"><h2 data-localize="needyknob.title">On the Subject of Knobs</h2>
             <p data-localize="needyknob.flavour" class="flavour-text">Needlessly complicated and endlessly needy. Imagine if such expertise were used to make something other than diabolical puzzles.</p>
-			<ul>
-				<li data-localize="needyknob.instruction1">The knob can be turned to one of four different positions.</li>
-				<li data-localize="needyknob.instruction2">The knob must be in the correct position when this module's timer hits zero.</li>
-				<li data-localize="needyknob.instruction3">The correct position can be determined by the on/off configuration of the twelve LEDs.</li>
-				<li data-localize="needyknob.instruction4">Knob positions are relative to the "UP" label, which may be rotated.</li>
-			</ul>
-            <h3  data-localize="needyknob.ledconfigs">LED Configurations</h3>
+			<ul><li data-localize="needyknob.instruction1">The knob can be turned to one of four different positions.</li><li data-localize="needyknob.instruction2">The knob must be in the correct position when this module's timer hits zero.</li><li data-localize="needyknob.instruction3">The correct position can be determined by the on/off configuration of the twelve LEDs.</li><li data-localize="needyknob.instruction4">Knob positions are relative to the "UP" label, which may be rotated.</li></ul><h3 data-localize="needyknob.ledconfigs">LED Configurations</h3>
             
-            <h4 data-localize="Manual/needyknob.positionup">Up Position:</h4><table style="display: inline-table"><tr><td> </td><td> </td><td>X</td><td> </td><td>X</td><td>X</td></tr><tr><td>X</td><td>X</td><td>X</td><td>X</td><td> </td><td>X</td></tr></table><table style="display: inline-table"><tr><td>X</td><td> </td><td>X</td><td> </td><td>X</td><td> </td></tr><tr><td> </td><td>X</td><td>X</td><td> </td><td>X</td><td>X</td></tr></table><h4 data-localize="Manual/needyknob.positiondown">Down Position:</h4><table style="display: inline-table"><tr><td> </td><td>X</td><td>X</td><td> </td><td> </td><td>X</td></tr><tr><td>X</td><td>X</td><td>X</td><td>X</td><td> </td><td>X</td></tr></table><table style="display: inline-table"><tr><td>X</td><td> </td><td>X</td><td> </td><td>X</td><td> </td></tr><tr><td> </td><td>X</td><td> </td><td> </td><td> </td><td>X</td></tr></table><h4 data-localize="Manual/needyknob.positionleft">Left Position:</h4><table style="display: inline-table"><tr><td> </td><td> </td><td> </td><td> </td><td>X</td><td> </td></tr><tr><td>X</td><td> </td><td> </td><td>X</td><td>X</td><td>X</td></tr></table><table style="display: inline-table"><tr><td> </td><td> </td><td> </td><td> </td><td>X</td><td> </td></tr><tr><td> </td><td> </td><td> </td><td>X</td><td>X</td><td> </td></tr></table><h4 data-localize="Manual/needyknob.positionright">Right Position:</h4><table style="display: inline-table"><tr><td>X</td><td> </td><td>X</td><td>X</td><td>X</td><td>X</td></tr><tr><td>X</td><td>X</td><td>X</td><td> </td><td>X</td><td> </td></tr></table><table style="display: inline-table"><tr><td>X</td><td> </td><td>X</td><td>X</td><td> </td><td> </td></tr><tr><td>X</td><td>X</td><td>X</td><td> </td><td>X</td><td> </td></tr></table>            <br>
-            <br>
-            <p  data-localize="needyknob.symbollegend" class="needy-diagram-label">X = Lit LED</p>
+            <h4><span data-localize="Manual/needyknob.positionup">Up Position</span>:</h4><table style="display: inline-table"><tr><td> </td><td> </td><td>X</td><td> </td><td>X</td><td>X</td></tr><tr><td>X</td><td>X</td><td>X</td><td>X</td><td> </td><td>X</td></tr></table><table style="display: inline-table"><tr><td>X</td><td> </td><td>X</td><td> </td><td>X</td><td> </td></tr><tr><td> </td><td>X</td><td>X</td><td> </td><td>X</td><td>X</td></tr></table><h4><span data-localize="Manual/needyknob.positiondown">Down Position</span>:</h4><table style="display: inline-table"><tr><td> </td><td>X</td><td>X</td><td> </td><td> </td><td>X</td></tr><tr><td>X</td><td>X</td><td>X</td><td>X</td><td> </td><td>X</td></tr></table><table style="display: inline-table"><tr><td>X</td><td> </td><td>X</td><td> </td><td>X</td><td> </td></tr><tr><td> </td><td>X</td><td> </td><td> </td><td> </td><td>X</td></tr></table><h4><span data-localize="Manual/needyknob.positionleft">Left Position</span>:</h4><table style="display: inline-table"><tr><td> </td><td> </td><td> </td><td> </td><td>X</td><td> </td></tr><tr><td>X</td><td> </td><td> </td><td>X</td><td>X</td><td>X</td></tr></table><table style="display: inline-table"><tr><td> </td><td> </td><td> </td><td> </td><td>X</td><td> </td></tr><tr><td> </td><td> </td><td> </td><td>X</td><td>X</td><td> </td></tr></table><h4><span data-localize="Manual/needyknob.positionright">Right Position</span>:</h4><table style="display: inline-table"><tr><td>X</td><td> </td><td>X</td><td>X</td><td>X</td><td>X</td></tr><tr><td>X</td><td>X</td><td>X</td><td> </td><td>X</td><td> </td></tr></table><table style="display: inline-table"><tr><td>X</td><td> </td><td>X</td><td>X</td><td> </td><td> </td></tr><tr><td>X</td><td>X</td><td>X</td><td> </td><td>X</td><td> </td></tr></table><br><br><p data-localize="needyknob.symbollegend" class="needy-diagram-label">X = Lit LED</p>
         </div>
-        <div class="page-footer relative-footer"></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=20;pageCount=23">Page 20 of 23</div>
     </div>
 </div>
 <div class="section">
-    <div class="page appendix-indicators">
+    <div class="page appendix-indicators page-bg-07">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.appendixa">Appendix A</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=21;pageCount=23">Page 21 of 23</div>
         <div class="page-content">
             <h2 data-localize="indicators.title">Appendix A: Indicator Identification Reference</h2>
             <p data-localize="indicators.description">Labelled indicator lights can be found on the sides of the bomb casing.</p>
-            <img src="img/appendix/indicators/IndicatorWidget.svg" style="height: 5em; display:block; margin: .6em 0 0;" />
-            <h3 data-localize="indicators.headercommon">Common Indicators</h3>
-			<ul>
-                <li data-localize="indicators.label1">SND</li>
-                <li data-localize="indicators.label2">CLR</li>
-                <li data-localize="indicators.label3">CAR</li>
-                <li data-localize="indicators.label4">IND</li>
-                <li data-localize="indicators.label5">FRQ</li>
-                <li data-localize="indicators.label6">SIG</li>
-                <li data-localize="indicators.label7">NSA</li>
-                <li data-localize="indicators.label8">MSA</li>
-                <li data-localize="indicators.label9">TRN</li>
-                <li data-localize="indicators.label10">BOB</li>
-                <li data-localize="indicators.label11">FRK</li>
-			</ul>
-        </div>
-        <div class="page-footer relative-footer"></div>
+            <img src="img/appendix/indicators/IndicatorWidget.svg" style="height: 5em; display:block; margin: .6em 0 0;"><h3 data-localize="indicators.headercommon">Common Indicators</h3>
+			<ul><li data-localize="indicators.label1">SND</li><li data-localize="indicators.label2">CLR</li><li data-localize="indicators.label3">CAR</li><li data-localize="indicators.label4">IND</li><li data-localize="indicators.label5">FRQ</li><li data-localize="indicators.label6">SIG</li><li data-localize="indicators.label7">NSA</li><li data-localize="indicators.label8">MSA</li><li data-localize="indicators.label9">TRN</li><li data-localize="indicators.label10">BOB</li><li data-localize="indicators.label11">FRK</li></ul></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=21;pageCount=23">Page 21 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page appendix-batteries">
+    <div class="page appendix-batteries page-bg-01">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.appendixb">Appendix B</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=22;pageCount=23">Page 22 of 23</div>
         <div class="page-content">
             <h2 data-localize="batteries.title">Appendix B: Battery Identification Reference</h2>
             <p data-localize="batteries.description">Common battery types can be found within enclosures on the sides of the bomb casing.</p>
-			<table style="margin-top: 1em;">
-				<tr>
-					<th data-localize="batteries.headerbattery">Battery</th>
+			<table style="margin-top: 1em;"><tr><th data-localize="batteries.headerbattery">Battery</th>
 					<th data-localize="batteries.headertype">Type</th>
-				</tr>
-				<tr><td><img src="img/appendix/batteries/Battery-AA.svg" style="width: 4.09375em; height: 6.18125em;"></td>
+				</tr><tr><td><img src="img/appendix/batteries/Battery-AA.svg" style="width: 4.09375em; height: 6.18125em;"></td>
 				<td data-localize="batteries.labelAA">AA</td>
-				</tr> 
-				<tr><td><img src="img/appendix/batteries/Battery-D.svg" style="width: 4.09375em; height: 5.553125em;"></td>
+				</tr><tr><td><img src="img/appendix/batteries/Battery-D.svg" style="width: 4.09375em; height: 5.553125em;"></td>
 				<td data-localize="batteries.labelD">D</td>
-				</tr> 
-			</table>
-        </div>
-        <div class="page-footer relative-footer"></div>
+				</tr></table></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=22;pageCount=23">Page 22 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page appendix/ports">
+    <div class="page appendix-ports page-bg-02">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.documenttitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.appendixc">Appendix C</span>
 		</div>
-        <div class="page-footer absolute-footer"></div>
+        		<div class="page-footer absolute-footer" data-localize="common.pagecount" data-args="pageNum=23;pageCount=23">Page 23 of 23</div>
         <div class="page-content">
             <h2 data-localize="ports.title">Appendix C: Port Identification Reference</h2>
             <p data-localize="ports.description">Digital and analog ports can be found on sides of the bomb casing.</p>
-			<table>
-				<tr>
-					<th data-localize="ports.headerport">Port</th>
+			<table><tr><th data-localize="ports.headerport">Port</th>
 					<th data-localize="ports.headername">Name</th>
-				</tr>
-				
-				<tr>
-					<td><img src="img/appendix/ports/DVI.svg" style="width: 10.15em;"></td>
+				</tr><tr><td><img src="img/appendix/ports/DVI.svg" style="width: 10.15em;"></td>
 					<td data-localize="ports.labeldvid">DVI-D</td>
-				</tr>	
-				<tr>
-					<td><img src="img/appendix/ports/Parallel.svg" style="width: 16.1em;"></td>
+				</tr><tr><td><img src="img/appendix/ports/Parallel.svg" style="width: 16.1em;"></td>
 					<td data-localize="ports.labelparallel">Parallel</td>
-				</tr>
-				<tr>
-					<td><img src="img/appendix/ports/PS2.svg" style="width: 5.55em;"></td>
-					<td data-localize="ports.labelps2">PS/2</td></tr>
-				<tr>
-					<td><img src="img/appendix/ports/RJ45.svg" style="width: 5.2em;"></td>
-					<td data-localize="ports.labelrj45">RJ-45</td></tr>
-				<tr>
-					<td><img src="img/appendix/ports/Serial.svg" style="width: 8.35em;"></td>
+				</tr><tr><td><img src="img/appendix/ports/PS2.svg" style="width: 5.55em;"></td>
+					<td data-localize="ports.labelps2">PS/2</td></tr><tr><td><img src="img/appendix/ports/RJ45.svg" style="width: 5.2em;"></td>
+					<td data-localize="ports.labelrj45">RJ-45</td></tr><tr><td><img src="img/appendix/ports/Serial.svg" style="width: 8.35em;"></td>
 					<td data-localize="ports.labelserial">Serial</td>
-				</tr>
-				<tr>
-					<td><img src="img/appendix/ports/StereoRCA.svg" style="width: 5em;"></td>
+				</tr><tr><td><img src="img/appendix/ports/StereoRCA.svg" style="width: 5em;"></td>
 					<td data-localize="ports.labelrca">Stereo RCA</td>
-				</tr>
-			</table>
-        </div>
-        <div class="page-footer relative-footer"></div>
+				</tr></table></div>
+				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=23;pageCount=23">Page 23 of 23</div>
     </div>
 </div>    </div>
-</body>
-</html>
+</body></html>
