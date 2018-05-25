@@ -175,11 +175,11 @@ http://keith-wood.name/localisation.html
 	  
 	  if (errorCount > 0)
 	  {
-		setStatus("Localize complete (" + lang + ") [<span class=\"error-highlight\">" + errorCount + " missing strings</span>]");
+		setStatus("Localize from Google Sheets complete [" + lang + "] [<span class=\"error-highlight\">" + errorCount + " missing strings</span>]");
 	  }
 	  else
 	  {
-		  setStatus("Localize complete (" + lang + ")");
+		  setStatus("Localize from Google Sheets  complete [" + lang + "] [No missing strings]");
 	  }		  
     };
     localizeElement = function(elem, key, value) {

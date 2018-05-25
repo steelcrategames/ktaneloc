@@ -1,0 +1,25 @@
+/* ja overrides */
+
+.title1 {
+	font-size: 12em; 
+	line-height: 1.13em;
+}
+
+.title2 {
+	font-size: 12em; 
+	line-height: 1.1em;
+}
+
+.title3 {
+	font-size: 8.2em; 
+	line-height: 1.1em;
+}
+
+.whos-on-first-step2-table {
+	width: 110%;
+	margin-left: -5%;
+}
+
+.whos-on-first-step2-table td {
+    font-size: .70em;
+}

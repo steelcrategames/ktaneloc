@@ -340,11 +340,24 @@ td, th {
 /* ==========================================================================
    Section-specific
    ========================================================================== */
-   
+
+/* === Front Matter === */
+.logo {
+	margin: 1em auto .2em; 
+	width: 42em;
+}
+
 .title {
 	font-size: 1em; 
 	font-weight: normal;
 	text-transform: uppercase;
+}
+
+
+.title h1 {
+	font-size: 1em; 
+	font-weight: normal; 
+	margin:  3.85em auto 0;
 }
 
 .versioning {
@@ -359,6 +372,11 @@ td, th {
 	font-weight: normal;
 }
 
+.intro p,
+.intro em {
+	font-style: italic;
+}
+
 .bomb-diagram {
     text-align: center;
     margin: 0 auto;
@@ -371,9 +389,6 @@ td, th {
 
 .bomb-diagram-side {
 	width: 5.3895625em; /* Hardcoding for IE */
-}
-
-.diagram-label {
 }
 
 .bomb-diagram img {
@@ -416,17 +431,57 @@ td, th {
     height: 20.5em;
 }
 
-.music-image {
-    height: 45em;
+.flavour-text
+{
+	font-style: italic;
+	font-size:75%;
+    margin-top: .5em;
 }
 
-.music-table td, .music-table th {
-    padding: 0;
+
+/* === MODULES === */
+
+/* WIRES */
+.wire-header {
+	font-weight: bold;
+	font-style:normal;
+    text-decoration:underline;
 }
 
-.password-table {
+
+/* KEYPAD */
+.keypad-table {
     margin-left: auto;
     margin-right: auto;
+    font-family: Arial, sans-serif;
+    font-size: 2.2em;
+    border-style: none;
+    text-align: center;
+}
+
+.keypad-table-column {
+    background-color: #FFF; /*For ensuring photocopy noise doesn't affect symbols*/
+	padding: .1em;
+}
+
+.keypad-table-spacer {
+	border-style: none;
+}
+
+.keypad-symbol-image {
+	height:1.9em;
+}
+
+
+/* SIMON */
+#simon-legend {
+	height: 9em; 
+	margin: 1em auto; 
+	display: block;
+}
+
+.repeaters-spacer {
+	border:none;
 }
 
 .repeaters-table {
@@ -436,10 +491,8 @@ td, th {
     margin-right: auto;
 }
 
-.repeaters-spacer {
-	border:none;
-}
 
+/* WHO'S ON FIRST */
 .whos-on-first-step1-table, .whos-on-first-step1-table td  {
     margin-left: auto;
     margin-right: auto;
@@ -462,6 +515,10 @@ td, th {
 .whos-on-first-look-at-display  {
 	background-color: black;
 	color: white;
+}
+
+.whos-on-first-look-at img {
+	height: 1em;
 }
                             
 .whos-on-first-step1-table td table td
@@ -502,40 +559,14 @@ td, th {
     font-size: .78em;
 }
 
-.wire-header {
-	font-weight: bold;
-	font-style:normal;
-    text-decoration:underline;
+
+/* MEMORY */
+.memory-rules p {
+    margin-top: .3em;
+    font-size: 0.95em; /* TODO: Remove this, it's a quick hack to get printing looking nicer with our placeholder graphic design. */
 }
 
-.keypad-table {
-    margin-left: auto;
-    margin-right: auto;
-    font-family: Arial, sans-serif;
-    font-size: 2.2em;
-    border-style: none;
-    text-align: center;
-}
-
-.keypad-table-column {
-    background-color: #FFF; /*For ensuring photocopy noise doesn't affect symbols*/
-	padding: .1em;
-}
-
-.keypad-table-spacer {
-	border-style: none;
-}
-
-.keypad-symbol-image {
-	height:1.9em;
-}
-
-.maze {
-	width:11em;
-	height:11em;
-	margin:.1em;
-}
-
+/* MORSE CODE */
 #morseCodeChart {
 	float: left;
 	margin-right: 1em;
@@ -555,6 +586,8 @@ td, th {
 	text-align: center;
 }
 
+
+/* VENN WIRES */
 .venn-wires table th {
 	font-size: 1.2em;
 	font-weight: bold;
@@ -597,41 +630,15 @@ td, th {
     position:relative;
 }
 
-.appendix-ports table {
-    margin-top: 1em;
-}
 
-.appendix-ports img {
-	height: 5em;
-}
-
-.appendix-ports table td {
-	text-align: center;
-}
-
-.appendix-ports table th {
-	font-size: 1.2em;
-	font-weight: bold;
-}
-
-.needy-knob table {
-    margin-left: 1.3em;
-    margin-right: 1.3em;
-}
-
-.needy-knob table td, .needy-knob table th {
-    width: 1.5em;
-    text-align:center;
-}
-
-.needy-diagram-label {
-	text-align:left;
+/* WIRE SEQUENCE */
+.wire-sequence .table-container {
+	text-align: center; /* center the inline tables */
 }
 
 .wire-sequence table {
     display: inline-table;
-    margin-top: 1em;
-    margin-bottom: 1em;
+	margin: 1em auto;
     width: 15.3em;
     font-size: 0.9em;
 }
@@ -639,6 +646,10 @@ td, th {
 .wire-sequence td, .wire-sequence th {
     padding-left: 0.4em;
     padding-right: 0.4em;
+}
+
+.wire-sequence td {
+	text-align: left;
 }
 
 .wire-sequence table .header {
@@ -656,56 +667,169 @@ td, th {
     width: 5em;
 }
 
-.memory-rules p {
-    margin-top: .3em;
-    font-size: 0.95em; /* TODO: Remove this, it's a quick hack to get printing looking nicer with our placeholder graphic design. */
+
+/* MAZE */
+.maze {
+	width: 12em;
+	height: 12em;
+	margin: 0.4em;
 }
 
-.rhythm-heaven .sub-components {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+.maze-grid {
+	text-align: center;
+	margin-top: 3em;
 }
 
-.rhythm-heaven .sub-components img {
-    width: 5em;
-    max-height: 4em;
+/* PASSWORD */
+.password-table {
+	margin: 3em auto 0 auto;
+	font-size: 1.2em;
 }
 
-.rhythm-heaven .example {
-    width: 29em;
-    float: right;
-    position: relative;
-    top: -2.9em;
+.password-table td {
+	padding: 0.75em 1em;
 }
 
-.rhythm-heaven .example td, .rhythm-heaven .example th {
-    padding: .15em .7em;
+
+/* === NEEDY MODULES === */
+
+.needy-diagram-label {
+	text-align:left;
 }
 
-.flavour-text
-{
-	font-style: italic;
-	font-size:75%;
-    margin-top: .5em;
+/* NEEDY KNOB */
+.needy-knob table {
+	display: inline-table;
+    margin-left: 1.3em;
+    margin-right: 1.3em;
 }
 
+.needy-knob table td, .needy-knob table th {
+    width: 1.5em;
+    text-align:center;
+}
+
+
+
+/* === APPENDIX === */
+
+/* INDICATORS */
+#appendix-indicator-img {
+	height: 5em; 
+	display:block; 
+	margin: .6em 0 0;
+}
+
+/* BATTERIES */
+.appendix-batteries table {
+	margin-top: 1em;
+}
+
+/* Hardcoded width/height for IE */
+#appendix-battery-AA-img {
+	width: 4.09375em; 
+	height: 6.18125em;
+}
+
+/* Hardcoded width/height for IE */
+#appendix-battery-D-img {
+	width: 4.09375em; 
+	height: 5.553125em;
+}
+
+/* PORTS */
+.appendix-ports table {
+    margin-top: 1em;
+}
+
+.appendix-ports img {
+	height: 5em;
+}
+
+#appendix-ports-dvi-img {
+	width: 10.15em;
+}
+
+#appendix-ports-parallel-img {
+	width: 16.1em;
+}
+
+#appendix-ports-ps2-img {
+	width: 5.55em;
+}
+
+#appendix-ports-rj45-img {
+	width: 5.2em;
+}
+
+#appendix-ports-serial-img {
+	width: 8.35em;
+}
+
+#appendix-ports-rca-img {
+	width: 5em;
+}
+
+.appendix-ports table td {
+	text-align: center;
+}
+
+.appendix-ports table th {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+
+
+
+.error-highlight {
+	text-decoration: underline wavy red;
+}
+
+
+
+/* Localize tools */
 .error-highlight {
 	text-decoration: underline wavy red;
 }
 
 .localize-header {
 	width: 100%;
-	height: 60px;
+	height: 80px;
 	background: #F0F8FF;
-	position: fixed;
 	z-index: 9999;
 	padding: 5px;
 	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	position: fixed;
+}
+
+.localize-header .row {
+
 }
 
 #ManualContent {
-	padding-top: 60px;
+	padding-top: 80px;
+}
+
+.localize-header .column {
+	height: 80px;	
+    float: left;
+    width: 40%;
+	overflow: auto;
+	margin: 0 2em;
+}
+
+/* Clear floats after the columns */
+.localize-header .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.version-notes {
+	font-size: 0.7em;
 }
 
 /* ==========================================================================
