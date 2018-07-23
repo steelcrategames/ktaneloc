@@ -813,6 +813,16 @@ td, th {
 	padding-top: 80px;
 }
 
+@media print {
+    .localize-header {
+        display: none;
+        visibility: hidden;
+    }
+	#ManualContent {
+		padding-top: 0;
+	}
+}
+
 .localize-header .column {
 	height: 80px;	
     float: left;
