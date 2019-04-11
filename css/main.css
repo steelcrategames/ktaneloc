@@ -230,6 +230,7 @@ td, th {
     background-size: 100%;
     width: 51em; /* = 8.5in at 12pt (1em) */
     min-height: 66em; /* = 11in at 12pt (1em) */
+    max-height: 66em;
 }
 @media print {
     .page {
@@ -353,7 +354,6 @@ td, th {
 	text-transform: uppercase;
 }
 
-
 .title h1 {
 	font-size: 1em; 
 	font-weight: normal; 
@@ -361,7 +361,7 @@ td, th {
 }
 
 .versioning {
-	margin: 1.2em auto; 
+	margin: 1.2em auto 0; 
 	text-decoration: none; 
 	line-height: 1em; 
 	font-size: 2.8em;
@@ -780,7 +780,19 @@ td, th {
 }
 
 
-
+@media not print
+{
+	.pre-release-warning {
+		display: block;
+		font-size: 1em;
+		margin:0;
+		padding: .5em;
+		background-color: red;
+		color: white;
+		font-weight: bold;
+		text-align: center;
+	}
+}
 
 .error-highlight {
 	text-decoration: underline wavy red;

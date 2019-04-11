@@ -10,8 +10,8 @@
 
 	</script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script></head><body>
 	<script src="./js/jquery.localize.js"></script><script type="text/javascript" charset="utf-8">
-	var lastLang = "";
 	var shortLang = "en";
+	
 	function changeLang(lang) {
 		if (history.pushState) {
 			var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?&lang=' + lang;
@@ -22,19 +22,15 @@
 	}
 	
 	function refreshLang() {
-		langHandler(lastLang);
+		langHandler(shortLang);
 	}
 		
 	function langHandler(lang) {
-		lastLang = lang;	
+		shortLang = lang;	
 		var showTerms = GET["showTerms"]
 		// Run the localization function with the chosen language
-		$("[data-localize]").localize("https://script.google.com/macros/s/AKfycbzCoMHUnq9_RQsU518ito33Gq03py8YgzcgLnvBeoW5pctQZgk/exec", { language: lang, showTerms: showTerms });
+		$("[data-localize]").localize("https://script.google.com/macros/s/AKfycbzCoMHUnq9_RQsU518ito33Gq03py8YgzcgLnvBeoW5pctQZgk/exec", { language: shortLang, showTerms: showTerms });
 
-		if 		(lastLang == "English") { shortLang = "en"; }
-		else if	(lastLang == "French") 	{ shortLang = "fr"; }
-		else if	(lastLang == "Japanese"){ shortLang = "ja"; }
-		
 		$('#languageCSS').attr('href', "css/" + shortLang + '.css');
 		
 		overrideImgs();
@@ -118,16 +114,28 @@
 	
 	<div class="row">
 		<div class="column">
-			<button onclick="changeLang('English')">English</button>
-			<button onclick="changeLang('French')">Fran&ccedil;ais</button>
-			<button onclick="changeLang('Japanese')">Japanese</button>
+			<button onclick="changeLang('en')">English</button>
+			<button onclick="changeLang('ar')">Arabic</button>
+			<button onclick="changeLang('nl')">Dutch</button>
+			<button onclick="changeLang('eo')">Esperanto</button>
+			<button onclick="changeLang('fr')">Fran&ccedil;ais</button>
+			<button onclick="changeLang('de')">German</button>
+			<button onclick="changeLang('he')">Hebrew</button>
+			<button onclick="changeLang('hr')">Hungarian</button>
+			<button onclick="changeLang('it')">Italian</button>
+			<button onclick="changeLang('ja')">Japanese</button>
+			<button onclick="changeLang('es')">Spanish</button>
+			<button onclick="changeLang('th')">Thai</button>
+			<button onclick="changeLang('tr')">Turkish</button>
 			<button onclick="refreshLang()">Reload Current Language</button>
 			<div>
 				<p>Status: <span id="localize-status"></span></p>
 			</div>
 		</div>
 		<div class="column version-notes">
-		<p>Version: 1.0.2</p>
+		<p>Version: 1.0.3</p>
+<ul><li>Added ar, de, eo, es, he, hu, it, nl, th, tr</li>
+</ul><p>Version: 1.0.2</p>
 <ul><li>Updated images 2018-07-23</li>
 <li>Hide localizer toolbar when printing</li>
 </ul><p>Version: 1.0.1</p>
@@ -142,7 +150,7 @@
     <div class="section">
     
     <div class="page section-title page-bg-01">
-					<div data-localize="title.revision" data-args="revision=3" class="page-footer absolute-footer no-auto-footer">Revision 3</div>
+					<div data-localize="title.revision" data-args="revision=4" class="page-footer absolute-footer no-auto-footer">Revision 4</div>
 		        <div class="page-content">
 			<img src="img/ktane-logo.png" data-localize="common.gametitle" class="logo" alt="Keep Talking and Nobody Explodes"><div class="title">
 				<h1>
@@ -155,7 +163,7 @@
 				</h2>
 						
         </div>
-					<div data-localize="title.revision" data-args="revision=3" class="page-footer relative-footer no-auto-footer">Revision 3</div>
+					<div data-localize="title.revision" data-args="revision=4" class="page-footer relative-footer no-auto-footer">Revision 4</div>
 		    </div>
 </div><div class="section">
     <div class="page section-title page-bg-02">

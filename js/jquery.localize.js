@@ -15,7 +15,7 @@ http://keith-wood.name/localisation.html
  */
 (function($) {
   var showTerms = false;
-  $.defaultLanguage = "English";
+  $.defaultLanguage = "en";
   $.localize = function(pkg, options) {
     var defaultCallback, deferred, fileExtension, intermediateLangData, jsonCall, lang, loadLanguage, localizeElement, localizeForSpecialKeys, localizeImageElement, localizeInputElement, localizeOptgroupElement, notifyDelegateLanguageLoaded, regexify, setAttrFromValueForKey, setTextFromValueForKey, valueForKey, wrappedSet;
     if (options == null) {
@@ -26,6 +26,7 @@ http://keith-wood.name/localisation.html
     fileExtension = options.fileExtension || "json";
     deferred = $.Deferred();
     loadLanguage = function(pkg, lang, level) {
+		console.log("loadLanguage: " + lang + " pkg:" + pkg + " level:" + level);
       var file;
       if (level == null) {
         level = 1;
@@ -73,11 +74,11 @@ http://keith-wood.name/localisation.html
             }
             break;
         case 3:
-            if (lang.length >= 5) {
+            //if (lang.length >= 5) {
                 //file = "" + pkg + "-" + (lang.substring(0, 5)) + "." + fileExtension;
                 file = pkg;
                 return jsonCall(file, pkg, lang, level);
-            }
+            //}
 		default:
           return deferred.resolve();
       }
@@ -294,6 +295,7 @@ http://keith-wood.name/localisation.html
       }
     };
     lang = (options.language ? options.language : $.defaultLanguage);
+	console.log("jquery.localize lang is: " + lang);
 	showTerms = (options.showTerms ? true : false);
     if (options.skipLanguage && lang.match(regexify(options.skipLanguage))) {
       deferred.resolve();
