@@ -26,7 +26,7 @@ http://keith-wood.name/localisation.html
     fileExtension = options.fileExtension || "json";
     deferred = $.Deferred();
     loadLanguage = function(pkg, lang, level) {
-		console.log("loadLanguage: " + lang + " pkg:" + pkg + " level:" + level);
+	  console.log("loadLanguage: " + lang + " pkg:" + pkg + " level:" + level);
       var file;
       if (level == null) {
         level = 1;
@@ -116,7 +116,7 @@ http://keith-wood.name/localisation.html
       }
 	  
 	  console.log(ajaxOptions)
-	  setStatus("Getting " + lang + " strings from Google Sheets...");
+	  setStatus("Getting [" + lang + "] strings from Google Sheets...");
       return $.ajax(ajaxOptions);
     };
     notifyDelegateLanguageLoaded = function(data) {
@@ -295,7 +295,6 @@ http://keith-wood.name/localisation.html
       }
     };
     lang = (options.language ? options.language : $.defaultLanguage);
-	console.log("jquery.localize lang is: " + lang);
 	showTerms = (options.showTerms ? true : false);
     if (options.skipLanguage && lang.match(regexify(options.skipLanguage))) {
       deferred.resolve();
