@@ -11,7 +11,113 @@
 	</script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script></head><body>
 	<script src="./js/jquery.localize.js"></script><script type="text/javascript" charset="utf-8">
 	var shortLang = "en";
-	
+
+	var allMetadata = {
+  "en": {
+    "ManualVersion": "1",
+    "LockCode": "241",
+    "LanguageCode": "en",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "4"
+  },
+  "ar": {
+    "ManualVersion": "1-ar",
+    "LockCode": "002",
+    "LanguageCode": "ar",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "nl": {
+    "ManualVersion": "1-nl",
+    "LockCode": "003",
+    "LanguageCode": "nl",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "eo": {
+    "ManualVersion": "1-eo",
+    "LockCode": "004",
+    "LanguageCode": "eo",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "fr": {
+    "ManualVersion": "1-fr",
+    "LockCode": "001",
+    "LanguageCode": "fr",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "de": {
+    "ManualVersion": "1-de",
+    "LockCode": "005",
+    "LanguageCode": "de",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "he": {
+    "ManualVersion": "1-he",
+    "LockCode": "006",
+    "LanguageCode": "he",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "hu": {
+    "ManualVersion": "1-hu",
+    "LockCode": "007",
+    "LanguageCode": "hu",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "it": {
+    "ManualVersion": "1-it",
+    "LockCode": "008",
+    "LanguageCode": "it",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "ja": {
+    "ManualVersion": "1-ja",
+    "LockCode": "122",
+    "LanguageCode": "ja",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "es": {
+    "ManualVersion": "1-es",
+    "LockCode": "009",
+    "LanguageCode": "es",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "th": {
+    "ManualVersion": "1-th",
+    "LockCode": "010",
+    "LanguageCode": "th",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "tr": {
+    "ManualVersion": "1-tr",
+    "LockCode": "011",
+    "LanguageCode": "tr",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  }
+}	
 	function changeLang(lang) {
 		if (history.pushState) {
 			var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?&lang=' + lang;
@@ -26,16 +132,33 @@
 	}
 		
 	function langHandler(lang) {
+		console.log("langHandler(" + lang + ")");
+		
 		shortLang = lang;	
 		var showTerms = GET["showTerms"]
+		
+		var ver = "???"
+		var code = "???"
+		rev = "???";
+		
+		var metadata = allMetadata[shortLang]
+		if (metadata != null)
+		{
+			ver = metadata["ManualVersion"];
+			code = metadata["LockCode"];
+			rev = metadata["Revision"];
+		}
+		
+		console.log("Calling jquery localize with ver: " + ver + ", code: " + code + ", rev: " + rev);
+		
 		// Run the localization function with the chosen language
-		$("[data-localize]").localize("https://script.google.com/macros/s/AKfycbzCoMHUnq9_RQsU518ito33Gq03py8YgzcgLnvBeoW5pctQZgk/exec", { language: shortLang, showTerms: showTerms });
+		$("[data-localize]").localize("https://script.google.com/macros/s/AKfycbzCoMHUnq9_RQsU518ito33Gq03py8YgzcgLnvBeoW5pctQZgk/exec", { language: shortLang, showTerms: showTerms, version: ver, verificationCode: code, revision: rev });
 
 		$('#languageCSS').attr('href', "css/" + shortLang + '.css');
 		
 		overrideImgs();
 	}
-	
+
 	function overrideImgs() {
 		//Replace all img paths
 		if (shortLang != "" && shortLang != null)
@@ -126,7 +249,9 @@
 			</div>
 		</div>
 		<div class="column version-notes">
-		<p>Version: 1.0.3</p>
+		<p>Version: 1.0.4</p>
+<ul><li>Version/UnlockCode/Revision now populated with proper value per-language.</li>
+</ul><p>Version: 1.0.3</p>
 <ul><li>Added ar, de, eo, es, he, hu, it, nl, th, tr</li>
 </ul><p>Version: 1.0.2</p>
 <ul><li>Updated images 2018-07-23</li>

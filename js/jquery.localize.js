@@ -235,11 +235,27 @@ http://keith-wood.name/localisation.html
 	  
 	  //Ben edit: do some basic argument substitution from data-args="1;2;3" attribute
 	  var args = elem.attr("data-args");
-	  if (args != null)
+	  if (args != null && value != null)
 	  {
-	  	//console.log("Formatting " + value + " with args: " + args);
-	  	value = strFormat(value, args.split(";"));
-	  	//console.log("result is: " + value);
+			//Ben: hack in support for per-language options so that the HTML/PHP can remain unchanged
+		  if (key == "version")
+		  {
+			  value = value.replace("{version}", options.version);
+		  }
+		  else if (key == "verificationcode")
+		  {
+			  value = value.replace("{verificationCode}", options.verificationCode);
+		  }
+		  else if (key == "revision")
+		  {
+			  value = value.replace("{revision}", options.revision);
+		  }
+		  else
+		  {
+			//console.log("Formatting " + value + " with args: " + args);
+			value = strFormat(value, args.split(";"));
+			//console.log("result is: " + value);
+		  }
 	  }
 	  
       return value;
