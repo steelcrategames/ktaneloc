@@ -230,20 +230,10 @@
 	
 	<div class="row">
 		<div class="column">
-			<button onclick="changeLang('en')">English</button>
-			<button onclick="changeLang('ar')">Arabic</button>
-			<button onclick="changeLang('nl')">Dutch</button>
-			<button onclick="changeLang('eo')">Esperanto</button>
-			<button onclick="changeLang('fr')">Fran&ccedil;ais</button>
-			<button onclick="changeLang('de')">German</button>
-			<button onclick="changeLang('he')">Hebrew</button>
-			<button onclick="changeLang('hr')">Hungarian</button>
-			<button onclick="changeLang('it')">Italian</button>
-			<button onclick="changeLang('ja')">Japanese</button>
-			<button onclick="changeLang('es')">Spanish</button>
-			<button onclick="changeLang('th')">Thai</button>
-			<button onclick="changeLang('tr')">Turkish</button>
-			<button onclick="refreshLang()">Reload Current Language</button>
+		
+			<p>Language: 
+				<select id="langSelect" onchange="changeLang(this.value);"><option value="en">en</option><option value="ar">ar</option><option value="de">de</option><option value="eo">eo</option><option value="es">es</option><option value="fr">fr</option><option value="he">he</option><option value="hu">hu</option><option value="it">it</option><option value="ja">ja</option><option value="nl">nl</option><option value="th">th</option><option value="tr">tr</option></select>&nbsp;<button onclick="refreshLang()">Reload Current Language</button>
+			</p>
 			<div>
 				<p>Status: <span id="localize-status"></span></p>
 			</div>
@@ -251,6 +241,7 @@
 		<div class="column version-notes">
 		<p>Version: 1.0.4</p>
 <ul><li>Version/UnlockCode/Revision now populated with proper value per-language.</li>
+<li>Change language select to a dropdown for scalability!</li>
 </ul><p>Version: 1.0.3</p>
 <ul><li>Added ar, de, eo, es, he, hu, it, nl, th, tr</li>
 </ul><p>Version: 1.0.2</p>
