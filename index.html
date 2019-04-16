@@ -93,6 +93,14 @@
     "IsValid": true,
     "Revision": "1"
   },
+  "pl": {
+    "ManualVersion": "1-pl",
+    "LockCode": "012",
+    "LanguageCode": "pl",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
   "es": {
     "ManualVersion": "1-es",
     "LockCode": "009",
@@ -232,14 +240,16 @@
 		<div class="column">
 		
 			<p>Language: 
-				<select id="langSelect" onchange="changeLang(this.value);"><option value="en">en</option><option value="ar">ar</option><option value="de">de</option><option value="eo">eo</option><option value="es">es</option><option value="fr">fr</option><option value="he">he</option><option value="hu">hu</option><option value="it">it</option><option value="ja">ja</option><option value="nl">nl</option><option value="th">th</option><option value="tr">tr</option></select>&nbsp;<button onclick="refreshLang()">Reload Current Language</button>
+				<select id="langSelect" onchange="changeLang(this.value);"><option value="en">en</option><option value="ar">ar</option><option value="de">de</option><option value="eo">eo</option><option value="es">es</option><option value="fr">fr</option><option value="he">he</option><option value="hu">hu</option><option value="it">it</option><option value="ja">ja</option><option value="nl">nl</option><option value="pl">pl</option><option value="th">th</option><option value="tr">tr</option></select>&nbsp;<button onclick="refreshLang()">Reload Current Language</button>
 			</p>
 			<div>
 				<p>Status: <span id="localize-status"></span></p>
 			</div>
 		</div>
 		<div class="column version-notes">
-		<p>Version: 1.0.4</p>
+		<p>Version: 1.0.5</p>
+<ul><li>Added pl</li>
+</ul><p>Version: 1.0.4</p>
 <ul><li>Version/UnlockCode/Revision now populated with proper value per-language.</li>
 <li>Change language select to a dropdown for scalability!</li>
 </ul><p>Version: 1.0.3</p>
