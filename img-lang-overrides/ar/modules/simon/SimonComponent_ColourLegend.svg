@@ -37,8 +37,8 @@
 	<text fill="#000000" font-family="Special Elite" text-anchor="start" x="688" y="103" font-size="42px">
 		<tspan>&#x623;&#x632;&#x631;&#x642;</tspan>
 	</text>
-	<text fill="#000000" font-family="sans-serif" text-anchor="start" x="688" y="186" font-size="42px">
-		<tspan fill="#ff0000">[MISSING: Manual/simon.yellow]</tspan>
+	<text fill="#000000" font-family="Special Elite" text-anchor="start" x="688" y="186" font-size="42px">
+		<tspan>&#x623;&#x635;&#x641;&#x631;</tspan>
 	</text>
 	<text fill="#000000" font-family="Special Elite" text-anchor="end" x="299" y="185" font-size="42px">
 		<tspan>&#x623;&#x62D;&#x645;&#x631;</tspan>

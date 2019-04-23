@@ -214,6 +214,11 @@ td, th {
     margin-bottom: 1em;
 }
 
+[dir='rtl'] .diagram {
+    float: left;
+    margin-right: 1em;
+}
+
 .diagram-label {
 	text-align:center;
 }
@@ -293,15 +298,18 @@ td, th {
     top: 1.5em; /* = 0.25in at 12pt (1em) */
     margin: 0 5.88%; /* = ~0.5in at 12pt (1em) */
 }
-/*.page-first .page-header {
-    display: none;
-}*/
+
 .page-header-section-title {
     position: relative;
     height: 0;
     top: 0;
     float: right;
 }
+
+[dir='rtl'] .page-header-section-title {
+    float: left;
+}
+
 .page-header-doc-title {
     position: relative;
     height: 0;
@@ -414,6 +422,10 @@ td, th {
     width: 5em;
     padding: 0;
     margin: 0 0 2em 2em;
+}
+
+[dir='rtl'] .timer-diagram {
+    float: left;
 }
 
 .timer-diagram img {
@@ -576,6 +588,11 @@ td, th {
 	background-color:#ffffff;
 }
 
+[dir='rtl'] #morseCodeChart {
+	float: right;
+	margin-left: 1em;
+}
+
 .morse-code table th {
 	font-size: 1.2em;
 	font-weight: bold;
@@ -613,6 +630,10 @@ td, th {
 	float: left;
     position:relative;
     top: -0.7em;
+}
+
+[dir='rtl'] #vennlegend {
+	float: right;
 }
 
 #venntable {

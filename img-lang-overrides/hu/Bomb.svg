@@ -363,11 +363,11 @@
   <g
      id="text171"
      style="font-size:42px;font-family:'DejaVu Sans', sans-serif;text-anchor:middle;fill:#000000"
-     aria-label="[SZÖVEG]">
+     aria-label="[ SZÖVEG ]">
     <path
        id="path181"
        style=""
-       d="m 481.38867,216.08984 h 8.69531 v 2.93262 h -4.92187 v 31.58203 h 4.92187 v 2.93262 h -8.69531 z" />
+       d="m 468.01758,216.08984 h 8.69531 v 2.93262 h -4.92187 v 31.58203 h 4.92187 v 2.93262 h -8.69531 z" />
     <path
        id="path183"
        style=""
@@ -395,6 +395,6 @@
     <path
        id="path195"
        style=""
-       d="m 682.59082,216.08984 v 37.44727 h -8.69531 v -2.93262 h 4.90136 v -31.58203 h -4.90136 v -2.93262 z" />
+       d="m 695.96191,216.08984 v 37.44727 h -8.69531 v -2.93262 h 4.90137 v -31.58203 h -4.90137 v -2.93262 z" />
   </g>
 </svg>
