@@ -38,8 +38,21 @@ textarea {
     }
 }
 
+@font-face {
+	font-family: 'special_eliteregular';
+	src: url('../fonts/SpecialElite-webfont.eot');
+	src: url('../fonts/SpecialElite-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/SpecialElite-webfont.woff2') format('woff2'),
+		 url('../fonts/SpecialElite-webfont.woff') format('woff'),
+		 url('../fonts/SpecialElite-webfont.ttf') format('truetype'),
+		 url('../fonts/SpecialElite-webfont.svg#special_eliteregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 html {
-    font-family: 'Special Elite', 'Courier New', monospace;
+    font-family: 'special_eliteregular', 'Courier New', monospace;
     font-size: 1em;
     line-height: 1.4;
 	font-variant-ligatures: none;
@@ -107,7 +120,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+   
 html {
     margin: 0;
     padding: 0;
