@@ -39,9 +39,11 @@ textarea {
 }
 
 @font-face {
-	font-family: 'special_eliteregular';
-	src: url('../fonts/SpecialElite-webfont.eot');
-	src: url('../fonts/SpecialElite-webfont.eot?#iefix') format('embedded-opentype'),
+	font-family: 'Special Elite';
+	src: local('Special Elite'), 
+		 local('Special Elite Regular'),
+		 url('../fonts/SpecialElite-webfont.eot'),
+		 url('../fonts/SpecialElite-webfont.eot?#iefix') format('embedded-opentype'),
 		 url('../fonts/SpecialElite-webfont.woff2') format('woff2'),
 		 url('../fonts/SpecialElite-webfont.woff') format('woff'),
 		 url('../fonts/SpecialElite-webfont.ttf') format('truetype'),
@@ -52,7 +54,7 @@ textarea {
 
 
 html {
-    font-family: 'special_eliteregular', 'Courier New', monospace;
+    font-family: 'Special Elite', 'Courier New', monospace;
     font-size: 1em;
     line-height: 1.4;
 	font-variant-ligatures: none;
@@ -592,7 +594,7 @@ td, th {
 }
 
 /* MORSE CODE */
-#morseCodeChart {
+.morse-signal-table {
 	float: left;
 	margin-right: 1em;
     height: 32em;
@@ -600,24 +602,48 @@ td, th {
 	border:1px solid #021a40;
 	background-color:#ffffff;
 }
-
-[dir='rtl'] #morseCodeChart {
+[dir='rtl'] .morse-signal-table {
 	float: right;
 	margin-left: 1em;
 }
 
-.morse-code table th {
+.morse-signal-table td, .morse-signal-table th {
+	border: none;
+}
+
+#morseSignalImg {
+	width: 100%;
+}
+
+.morse-interpret th, .morse-interpret td {
+	padding: 0.4em 0.3em;
+}
+
+.morse-interpret th {
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.morse-interpret p {
+	margin: 0 1em;
+	font-size: 0.8em;
+}
+
+.morse-frequency-table th {
 	font-size: 1.2em;
 	font-weight: bold;
 	width: 5.5em;
 }
 
-.morse-code table td {
+.morse-frequency-table td {
 	text-align: center;
 }
 
-
 /* VENN WIRES */
+.venn-wires table {
+	border-width: 0.2em;
+}
+
 .venn-wires table th {
 	font-size: 1.2em;
 	font-weight: bold;
@@ -625,6 +651,7 @@ td, th {
 
 .venn-wires table td {
 	text-align: center;
+	font-size: 0.85em;
 }
 
 #venndiagram {
@@ -638,25 +665,40 @@ td, th {
 }
 
 
-#vennlegend {
-	width: 20em;
+#vennlegendtable {
+	width: 18em;
 	float: left;
     position:relative;
+	margin-right: 1em;
     top: -0.7em;
 }
 
-[dir='rtl'] #vennlegend {
+#vennlegendtable td {
+	border: none;
+	padding-top: 0.75em;
+	padding-bottom: 0.75em;
+}
+
+#vennlegendtable td img {
+	text-align: center;
+}
+
+[dir='rtl'] #vennlegendtable {
 	float: right;
 }
 
-#venntable {
-	border-width: 0.2em;
-    position:relative;
-    top: -0.7em;
+.venn-legend-line {
+	margin: 1em 0;
+	width: 10em;
 }
 
-#venntable td {
-	font-size: 0.75em;
+.venn-wires table td.venn-legend-text {
+	text-align: left;
+}
+
+#venninstructiontable {
+    position:relative;
+    top: -0.7em;
 }
 
 .venn-wires .appendix-reference {
