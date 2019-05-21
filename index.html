@@ -101,6 +101,14 @@
     "IsValid": true,
     "Revision": "1"
   },
+  "ro": {
+    "ManualVersion": "1-ro",
+    "LockCode": "013",
+    "LanguageCode": "ro",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
   "es": {
     "ManualVersion": "1-es",
     "LockCode": "009",
@@ -250,14 +258,16 @@
 		<div class="column">
 		
 			<p>Language: 
-				<select id="langSelect" onchange="changeLang(this.value);"><option value="en">en</option><option value="ar">ar</option><option value="de">de</option><option value="eo">eo</option><option value="es">es</option><option value="fr">fr</option><option value="he">he</option><option value="hu">hu</option><option value="it">it</option><option value="ja">ja</option><option value="nl">nl</option><option value="pl">pl</option><option value="th">th</option><option value="tr">tr</option></select>&nbsp;<button onclick="refreshLang()">Reload Current Language</button>
+				<select id="langSelect" onchange="changeLang(this.value);"><option value="en">en</option><option value="ar">ar</option><option value="de">de</option><option value="eo">eo</option><option value="es">es</option><option value="fr">fr</option><option value="he">he</option><option value="hu">hu</option><option value="it">it</option><option value="ja">ja</option><option value="nl">nl</option><option value="pl">pl</option><option value="ro">ro</option><option value="th">th</option><option value="tr">tr</option></select>&nbsp;<button onclick="refreshLang()">Reload Current Language</button>
 			</p>
 			<div>
 				<p>Status: <span id="localize-status"></span></p>
 			</div>
 		</div>
 		<div class="column version-notes">
-		<p>Version: 1.0.10</p>
+		<p>Version: 1.0.11</p>
+<ul><li>Add support for ro.</li>
+</ul><p>Version: 1.0.10</p>
 <ul><li>Add Morse Code signals for characters in Spanish. Add Japanese logo.</li>
 </ul><p>Version: 1.0.9</p>
 <ul><li>Add Morse Code signals for characters in Esperanto, Polish, and Turkish.</li>
@@ -290,7 +300,7 @@
     <div id="ManualContent">
     <div class="section">
     
-    <div class="page section-title page-bg-01">
+    <div id="TitlePage" class="page section-title page-bg-01">
 					<div data-localize="title.revision" data-args="revision=4" class="page-footer absolute-footer no-auto-footer">Revision 4</div>
 		        <div class="page-content">
 			<img src="img/ktane-logo.png" data-localize="common.gametitle" class="logo" alt="Keep Talking and Nobody Explodes"><div class="title">
@@ -324,7 +334,7 @@
 				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=2;pageCount=23">Page 2 of 23</div>
     </div>
 
-    <div class="page page-bg-03">
+    <div id="DefusingBombs" class="page page-bg-03">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="intro.header-defusing-bombs">Defusing Bombs</span>
@@ -355,7 +365,7 @@
     </div>
 </div>
 <div class="section">
-    <div class="page section-title page-bg-04">
+    <div id="Section1" class="page section-title page-bg-04">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.section1">Section 1: Modules</span>
@@ -372,7 +382,7 @@
 				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=4;pageCount=23">Page 4 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page page-bg-05">
+    <div id="Wires" class="page page-bg-05">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.wires">Wires</span>
@@ -407,7 +417,7 @@
 				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=5;pageCount=23">Page 5 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page page-bg-06">
+    <div id="TheButton" class="page page-bg-06">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.bigbutton">The Button</span>
@@ -428,7 +438,7 @@
 				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=6;pageCount=23">Page 6 of 23</div>
     </div>
 </div><div class="section">
-	<div class="page page-bg-07">
+	<div id="Keypads" class="page page-bg-07">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.keypad">Keypads</span>
@@ -441,7 +451,7 @@
 				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=7;pageCount=23">Page 7 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page page-bg-01">
+    <div id="SimonSays" class="page page-bg-01">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.simon">Simon Says</span>
@@ -468,7 +478,7 @@
     </div>
 </div>
 <div class="section">
-        <div class="page page-bg-02">
+        <div id="WhosOnFirst" class="page page-bg-02">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.whosonfirst">Who's on First</span>
@@ -524,7 +534,7 @@
 				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=10;pageCount=23">Page 10 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page page-bg-04">
+    <div id="Memory" class="page page-bg-04">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.memory">Memory</span>
@@ -540,7 +550,7 @@
     </div>
 </div>
 <div class="section">
-    <div class="page morse-code page-bg-05">
+    <div id="MorseCode" class="page morse-code page-bg-05">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.morse">Morse Code</span>
@@ -563,7 +573,7 @@
     </div>
 </div>
 <div class="section">
-    <div class="page venn-wires page-bg-06">
+    <div id="ComplicatedWires" class="page venn-wires page-bg-06">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.venn">Complicated Wires</span>
@@ -587,7 +597,7 @@
 				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=13;pageCount=23">Page 13 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page wire-sequence page-bg-07">
+    <div id="WireSequences" class="page wire-sequence page-bg-07">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.wiresequence">Wire Sequences</span>
@@ -602,7 +612,7 @@
 				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=14;pageCount=23">Page 14 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page page-bg-01">
+    <div id="Mazes" class="page page-bg-01">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.maze">Mazes</span>
@@ -618,7 +628,7 @@
     </div>
 </div>
 <div class="section">
-    <div class="page page-bg-02">
+    <div id="Passwords" class="page page-bg-02">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.password">Passwords</span>
@@ -632,7 +642,7 @@
     </div>
 </div>
 <div class="section">
-    <div class="page section-title page-bg-03">
+    <div id="Section2" class="page section-title page-bg-03">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.section2">Section 2: Needy Modules</span>
@@ -651,7 +661,7 @@
     </div>
 </div>
 <div class="section">
-    <div class="page page-bg-04">
+    <div id="VentingGas" class="page page-bg-04">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.needygas">Venting Gas</span>
@@ -665,7 +675,7 @@
     </div>
 </div>
 <div class="section">
-    <div class="page page-bg-05">
+    <div id="CapacitorDischarge" class="page page-bg-05">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.needycap">Capacitor Discharge</span>
@@ -679,7 +689,7 @@
     </div>
 </div>
 <div class="section">
-    <div class="page needy-knob page-bg-06">
+    <div id="Knobs" class="page needy-knob page-bg-06">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.needyknob">Knobs</span>
@@ -696,7 +706,7 @@
     </div>
 </div>
 <div class="section">
-    <div class="page appendix-indicators page-bg-07">
+    <div id="AppendixA" class="page appendix-indicators page-bg-07">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.appendixa">Appendix A</span>
@@ -710,7 +720,7 @@
 				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=21;pageCount=23">Page 21 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page appendix-batteries page-bg-01">
+    <div id="AppendixB" class="page appendix-batteries page-bg-01">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.appendixb">Appendix B</span>
@@ -729,7 +739,7 @@
 				<div class="page-footer relative-footer" data-localize="common.pagecount" data-args="pageNum=22;pageCount=23">Page 22 of 23</div>
     </div>
 </div><div class="section">
-    <div class="page appendix-ports page-bg-02">
+    <div id="AppendixC" class="page appendix-ports page-bg-02">
         		<div class="page-header">
 			<span class="page-header-doc-title" data-localize="common.gametitlewithversion" data-args="version=1">Keep Talking and Nobody Explodes v. 1</span>
 			<span class="page-header-section-title" data-localize="pageheader.appendixc">Appendix C</span>
