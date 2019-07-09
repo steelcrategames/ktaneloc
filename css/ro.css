@@ -1,0 +1,18 @@
+/* ro overrides */
+
+/* extra space for word list to fit on page */
+.whos-on-first-step2-table {
+	width: 110%;
+	margin-left: -1.7em;
+	font-size: 0.97em;
+}
+
+/* shrink text to allow rules to fit on page */
+.memory-rules p {
+    font-size: 0.895em;
+}
+
+/* consistent row height */
+.wire-sequence table td {
+	height: 3em;
+}

@@ -1,0 +1,23 @@
+/* pl overrides */
+
+/* small decrease to page horizontal margins to fit lengthier text overall */
+.page-content {
+    margin: 0 7.5% 0;
+}
+
+/* shrink the legend to provide more vertical room for the bigger tables */
+#simon-legend {
+	height: 7em; 
+}
+
+/* Remove the vertical margin, shrink text, and compensate the width to keep the original horizontal size */
+.wire-sequence table {
+	font-size: 0.85em;
+	width: 16.2em;
+	margin: 0em auto;
+}
+
+/* squish the table text a bit to buy more room */
+.wire-sequence table td {
+	line-height: 1.2em;
+}

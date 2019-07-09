@@ -1,16 +1,17 @@
 /* es overrides */
 
-.title1 {
-	font-size: 8.0em; 
-	line-height: 1.13em;
+/* extra space for word list to fit on page */
+.whos-on-first-step2-table {
+	width: 106%;
+	margin-left: -1em;
 }
 
-.title2 {
-	font-size: 5.5em; 
-	line-height: 1em;
+/* shrink text to allow rules to fit on page */
+.memory-rules p {
+    font-size: 0.9em;
 }
 
-.title3 {
-	font-size: 8.0em; 
-	line-height: 1.1em;
+/* increase header size to make all headers use two lines */
+.wire-sequence table .header {
+	font-size: 1.05em;
 }

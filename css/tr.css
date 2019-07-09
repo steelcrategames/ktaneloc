@@ -1,0 +1,13 @@
+/* tr overrides */
+
+/* extra space for word list to fit on page */
+.whos-on-first-step2-table {
+	width: 110%;
+	margin-left: -1.7em;
+}
+
+/* more room for the second column to prevent odd breaks and increase row height */
+.wire-sequence .table-container .second-col {
+	width: 6em;
+	height: 2em;
+}

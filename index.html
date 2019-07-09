@@ -21,17 +21,9 @@
     "IsValid": true,
     "Revision": "4"
   },
-  "ar": {
-    "ManualVersion": "1-ar",
-    "LockCode": "002",
-    "LanguageCode": "ar",
-    "Seed": 1,
-    "IsValid": true,
-    "Revision": "1"
-  },
   "nl": {
     "ManualVersion": "1-nl",
-    "LockCode": "003",
+    "LockCode": "541",
     "LanguageCode": "nl",
     "Seed": 1,
     "IsValid": true,
@@ -39,8 +31,56 @@
   },
   "eo": {
     "ManualVersion": "1-eo",
-    "LockCode": "004",
+    "LockCode": "136",
     "LanguageCode": "eo",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "ja": {
+    "ManualVersion": "1-ja",
+    "LockCode": "122",
+    "LanguageCode": "ja",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "pl": {
+    "ManualVersion": "1-pl",
+    "LockCode": "529",
+    "LanguageCode": "pl",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "ro": {
+    "ManualVersion": "1-ro",
+    "LockCode": "626",
+    "LanguageCode": "ro",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "es": {
+    "ManualVersion": "1-es",
+    "LockCode": "925",
+    "LanguageCode": "es",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "tr": {
+    "ManualVersion": "1-tr",
+    "LockCode": "993",
+    "LanguageCode": "tr",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "ar": {
+    "ManualVersion": "1-ar",
+    "LockCode": "002",
+    "LanguageCode": "ar",
     "Seed": 1,
     "IsValid": true,
     "Revision": "1"
@@ -85,34 +125,10 @@
     "IsValid": true,
     "Revision": "1"
   },
-  "ja": {
-    "ManualVersion": "1-ja",
-    "LockCode": "122",
-    "LanguageCode": "ja",
-    "Seed": 1,
-    "IsValid": true,
-    "Revision": "1"
-  },
-  "pl": {
-    "ManualVersion": "1-pl",
-    "LockCode": "012",
-    "LanguageCode": "pl",
-    "Seed": 1,
-    "IsValid": true,
-    "Revision": "1"
-  },
-  "ro": {
-    "ManualVersion": "1-ro",
-    "LockCode": "013",
-    "LanguageCode": "ro",
-    "Seed": 1,
-    "IsValid": true,
-    "Revision": "1"
-  },
-  "es": {
-    "ManualVersion": "1-es",
-    "LockCode": "009",
-    "LanguageCode": "es",
+  "ru": {
+    "ManualVersion": "1-ru",
+    "LockCode": "015",
+    "LanguageCode": "ru",
     "Seed": 1,
     "IsValid": true,
     "Revision": "1"
@@ -121,14 +137,6 @@
     "ManualVersion": "1-th",
     "LockCode": "010",
     "LanguageCode": "th",
-    "Seed": 1,
-    "IsValid": true,
-    "Revision": "1"
-  },
-  "tr": {
-    "ManualVersion": "1-tr",
-    "LockCode": "011",
-    "LanguageCode": "tr",
     "Seed": 1,
     "IsValid": true,
     "Revision": "1"
@@ -266,14 +274,18 @@
 		<div class="column">
 		
 			<p>Language: 
-				<select id="langSelect" onchange="changeLang(this.value);"><option value="en">en</option><option value="ar">ar</option><option value="de">de</option><option value="eo">eo</option><option value="es">es</option><option value="fr">fr</option><option value="he">he</option><option value="hu">hu</option><option value="it">it</option><option value="ja">ja</option><option value="nl">nl</option><option value="pl">pl</option><option value="ro">ro</option><option value="th">th</option><option value="tr">tr</option><option value="uk">uk</option></select>&nbsp;<button onclick="refreshLang()">Reload Current Language</button>
+				<select id="langSelect" onchange="changeLang(this.value);"><option value="en">en</option><option value="ar">ar</option><option value="de">de</option><option value="eo">eo</option><option value="es">es</option><option value="fr">fr</option><option value="he">he</option><option value="hu">hu</option><option value="it">it</option><option value="ja">ja</option><option value="nl">nl</option><option value="pl">pl</option><option value="ro">ro</option><option value="ru">ru</option><option value="th">th</option><option value="tr">tr</option><option value="uk">uk</option></select>&nbsp;<button onclick="refreshLang()">Reload Current Language</button>
 			</p>
 			<div>
 				<p>Status: <span id="localize-status"></span></p>
 			</div>
 		</div>
 		<div class="column version-notes">
-		<p>Version: 1.0.12</p>
+		<p>Version: 1.0.13</p>
+<ul><li>Updated title page.</li>
+<li>Fixed sizing issues in es, eo, nl, pl, ro, tr.</li>
+<li>Add support for ru.</li>
+</ul><p>Version: 1.0.12</p>
 <ul><li>Add support for uk.</li>
 </ul><p>Version: 1.0.11</p>
 <ul><li>Add support for ro.</li>
@@ -311,21 +323,23 @@
     <div class="section">
     
     <div id="TitlePage" class="page section-title page-bg-01">
-					<div data-localize="title.revision" data-args="revision=4" class="page-footer absolute-footer no-auto-footer">Revision 4</div>
-		        <div class="page-content">
+		<div class="page-footer absolute-footer" data-args="pageNum=1;pageCount=23"><span data-localize="title.gamedisclaimer" class="gamedisclaimer">Video game companion manual. Find out more at www.keeptalkinggame.com</span></div>
+        <div class="page-content">
 			<img src="img/ktane-logo.png" data-localize="common.gametitle" class="logo" alt="Keep Talking and Nobody Explodes"><div class="title">
 				<h1>
-					<span data-localize="title.line1" class="title1">BOMB</span><br><span data-localize="title.line2" class="title2">DEFUSAL</span><br><span data-localize="title.line3" class="title3">MANUAL</span>
+					<span data-localize="title.manual">Bomb Defusal Manual</span>
 				</h1>
 			</div>
+			
+			<h2 class="website">www.keeptalkinggame.com</h2>
 			
 							<h2 class="versioning"><span data-localize="title.version" data-args="version=1">Version 1</span>
 				<br><span data-localize="title.verificationcode" data-args="verificationCode=241" class="verification-code">Verification Code: 241</span>
 				</h2>
 						
         </div>
-					<div data-localize="title.revision" data-args="revision=4" class="page-footer relative-footer no-auto-footer">Revision 4</div>
-		    </div>
+		<div class="page-footer relative-footer" data-args="pageNum=1;pageCount=23"><span data-localize="title.gamedisclaimer" class="gamedisclaimer">Video game companion manual. Find out more at www.keeptalkinggame.com</span></div>
+    </div>
 </div><div class="section">
     <div class="page section-title page-bg-02">
         		<div class="page-header">
