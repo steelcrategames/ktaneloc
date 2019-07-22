@@ -11,7 +11,14 @@
     font-size: 0.9em;
 }
 
-/* increase header size to make all headers use two lines */
+/* make all headers consistent */
 .wire-sequence table .header {
-	font-size: 1.05em;
+	height: 2em;
+}
+
+/* Remove the vertical margin, shrink text, and compensate the width to keep the original horizontal size */
+.wire-sequence table {
+	font-size: 0.85em;
+	width: 16.2em;
+	margin: 0em auto;
 }

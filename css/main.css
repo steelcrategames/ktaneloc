@@ -877,6 +877,12 @@ td, th {
 	font-weight: bold;
 }
 
+@media print
+{
+	.pre-release-warning {
+		display: none;
+	}
+}
 
 @media not print
 {
@@ -889,6 +895,7 @@ td, th {
 		color: white;
 		font-weight: bold;
 		text-align: center;
+		min-width: 51em;
 	}
 }
 
