@@ -85,6 +85,14 @@
     "IsValid": true,
     "Revision": "1"
   },
+  "fi": {
+    "ManualVersion": "1-fi",
+    "LockCode": "016",
+    "LanguageCode": "fi",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
   "fr": {
     "ManualVersion": "1-fr",
     "LockCode": "001",
@@ -125,10 +133,26 @@
     "IsValid": true,
     "Revision": "1"
   },
+  "pt-BR": {
+    "ManualVersion": "1-pt-BR",
+    "LockCode": "017",
+    "LanguageCode": "pt-BR",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
   "ru": {
     "ManualVersion": "1-ru",
     "LockCode": "015",
     "LanguageCode": "ru",
+    "Seed": 1,
+    "IsValid": true,
+    "Revision": "1"
+  },
+  "sv": {
+    "ManualVersion": "1-sv",
+    "LockCode": "018",
+    "LanguageCode": "sv",
     "Seed": 1,
     "IsValid": true,
     "Revision": "1"
@@ -274,14 +298,16 @@
 		<div class="column">
 		
 			<p>Language: 
-				<select id="langSelect" onchange="changeLang(this.value);"><option value="en">en</option><option value="ar">ar</option><option value="de">de</option><option value="eo">eo</option><option value="es">es</option><option value="fr">fr</option><option value="he">he</option><option value="hu">hu</option><option value="it">it</option><option value="ja">ja</option><option value="nl">nl</option><option value="pl">pl</option><option value="ro">ro</option><option value="ru">ru</option><option value="th">th</option><option value="tr">tr</option><option value="uk">uk</option></select>&nbsp;<button onclick="refreshLang()">Reload Current Language</button>
+				<select id="langSelect" onchange="changeLang(this.value);"><option value="en">en</option><option value="ar">ar</option><option value="de">de</option><option value="eo">eo</option><option value="es">es</option><option value="fi">fi</option><option value="fr">fr</option><option value="he">he</option><option value="hu">hu</option><option value="it">it</option><option value="ja">ja</option><option value="nl">nl</option><option value="pl">pl</option><option value="pt-BR">pt-BR</option><option value="ro">ro</option><option value="ru">ru</option><option value="sv">sv</option><option value="th">th</option><option value="tr">tr</option><option value="uk">uk</option></select>&nbsp;<button onclick="refreshLang()">Reload Current Language</button>
 			</p>
 			<div>
 				<p>Status: <span id="localize-status"></span></p>
 			</div>
 		</div>
 		<div class="column version-notes">
-		<p>Version: 1.0.13</p>
+		<p>Version: 1.0.14</p>
+<ul><li>Add support for fi, pt-BR, and sv.</li>
+</ul><p>Version: 1.0.13</p>
 <ul><li>Updated title page.</li>
 <li>Fixed sizing issues in es, eo, nl, pl, ro, tr.</li>
 <li>Add support for ru.</li>
