@@ -886,17 +886,40 @@ td, th {
 
 @media not print
 {
-	.pre-release-warning {
-		display: block;
-		font-size: 1em;
-		margin:0;
-		padding: .5em;
-		background-color: red;
-		color: white;
-		font-weight: bold;
+    .pre-release-warning {
+        display: block;
+        margin:0;
+        padding: 12px;
+        background-color: #ba4423;
+        color: #fbf8f8;
+        font-size: 1.5em;
+
+        line-height: normal;
+        font-family: 'Cabin', sans-serif;
 		text-align: center;
 		min-width: 51em;
-	}
+    }
+    
+    .pre-release-warning a {
+        padding: 0.2em 1em;
+        background-color: #fbf8f8;
+        color: #ba4423;
+        display: inline-block;
+        margin-top: 7px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .pre-release-warning a:hover {
+        background-color: #e0dcdc;
+        color: #ba4423;
+    }
+    
+    .rounded {
+        -webkit-border-radius: 2.5em;
+        -moz-border-radius: 2.5em;
+        border-radius: 2.5em;
+    }
 }
 
 .error-highlight {

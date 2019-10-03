@@ -1,4 +1,4 @@
-/* fr overrides */
+/* ru overrides */
 
 .page-content {
     margin: 0 7.5% 0;
@@ -11,4 +11,8 @@
 
 .whos-on-first-step2-table td {
     font-size: .70em;
+}
+
+#vennlegendtable {
+    width: 20em;
 }
