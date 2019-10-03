@@ -1,5 +1,9 @@
 /* ru overrides */
 
+q {
+	quotes: "«" "»" "‹" "›";
+}
+
 .page-content {
     margin: 0 7.5% 0;
 }

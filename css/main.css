@@ -204,6 +204,18 @@ td, th {
     padding: .3em .6em .2em;
 }
 
+q::before {
+  content: open-quote;
+}
+q:after {
+  content: close-quote;
+}
+
+q {
+	quotes: '"' '"' "'" "'";
+}
+
+
 .new-block-formatting-context {
      /* Starts a new block formatting context which will prevent text from wrapping tightly around
         an image, etc.
