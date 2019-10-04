@@ -20,3 +20,15 @@ q {
 #vennlegendtable {
     width: 20em;
 }
+
+.wire-sequence table {
+    width: 15.9em;
+}
+
+.wire-sequence td {
+    height: 2.8em;
+}
+
+#TheButton ul {
+    width: 40em;
+}
