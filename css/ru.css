@@ -21,12 +21,14 @@ q {
     width: 20em;
 }
 
-.wire-sequence table {
-    width: 15.9em;
-}
-
 .wire-sequence td {
     height: 2.8em;
+}
+
+.wire-sequence th.header {
+    height: 2.8em;
+    vertical-align:bottom;
+    
 }
 
 #TheButton ul {
