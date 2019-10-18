@@ -1,14 +1,17 @@
 /* fr overrides */
 
+q {
+	quotes: "«\00a0" "\00a0»" "‹\00a0" "\00a0›";
+}
+
 .page-content {
     margin: 0 7.5% 0;
 }
 
-.whos-on-first-step2-table {
-	width: 110%;
-	margin-left: -5%;
-}
-
 .whos-on-first-step2-table td {
     font-size: .70em;
+}
+
+.wire-sequence td {
+    height: 2.8em;
 }
