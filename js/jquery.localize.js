@@ -94,7 +94,8 @@ http://keith-wood.name/localisation.html
         notifyDelegateLanguageLoaded(intermediateLangData);
         return loadLanguage(pkg, lang, level + 1);
       };
-      errorFunc = function() {
+      errorFunc = function(xhr, status, error) {
+		  setStatus("Error getting [" + lang + "] strings from Google Sheets: "  + status + " (" + error + ")");
 		  console.log("error on level " + level);
         if (level === 2 && lang.indexOf('-') > -1) {
           return loadLanguage(pkg, lang, level + 1);
@@ -105,15 +106,15 @@ http://keith-wood.name/localisation.html
       ajaxOptions = {
         url: file,
         async: true,
-        timeout: options.timeout != null ? options.timeout : 10000,
+        timeout: options.timeout != null ? options.timeout : 30000,
         success: successFunc,
         error: errorFunc
       };
-      if (window.location.protocol === "file:") {
-        ajaxOptions.error = function(xhr) {
-          return successFunc($.parseJSON(xhr.responseText));
-        };
-      }
+      // if (window.location.protocol === "file:") {
+        // ajaxOptions.error = function(xhr) {
+          // return successFunc($.parseJSON(xhr.responseText));
+        // };
+      // }
 	  
 	  console.log(ajaxOptions)
 	  setStatus("Getting [" + lang + "] strings from Google Sheets...");
