@@ -15,6 +15,7 @@ http://keith-wood.name/localisation.html
  */
 (function($) {
   var showTerms = false;
+  var isRTL = false;
   $.defaultLanguage = "en";
   $.localize = function(pkg, options) {
     var defaultCallback, deferred, fileExtension, intermediateLangData, jsonCall, lang, loadLanguage, localizeElement, localizeForSpecialKeys, localizeImageElement, localizeInputElement, localizeOptgroupElement, notifyDelegateLanguageLoaded, regexify, setAttrFromValueForKey, setTextFromValueForKey, valueForKey, wrappedSet;
@@ -193,9 +194,11 @@ http://keith-wood.name/localisation.html
         localizeImageElement(elem, key, value);
       } else if (elem.is('optgroup')) {
         localizeOptgroupElement(elem, key, value);
-      } else if (!$.isPlainObject(value)) {
+      } else if (elem.is('tspan')) {
+        localizeSVGTextElement(elem, key, value);
+	  } else if (!$.isPlainObject(value)) {
         elem.html(value);
-      }
+	  }
       if ($.isPlainObject(value)) {
         return localizeForSpecialKeys(elem, value);
       }
@@ -219,8 +222,27 @@ http://keith-wood.name/localisation.html
     };
     localizeImageElement = function(elem, key, value) {
       setAttrFromValueForKey(elem, "alt", value);
-      return setAttrFromValueForKey(elem, "src", value);
+      return setAttrFromValueForKey(elem, "text", value);
     };
+	
+	localizeSVGTextElement = function(elem, key, value) {
+		
+		//Switch the start/end anchor for SVG text if using a RTL language
+		if (isRTL)
+		{
+			if (elem.parent().attr('text-anchor') == 'start')
+			{
+				elem.parent().attr('text-anchor', 'end');
+			}
+			else if (elem.parent().attr('text-anchor') == 'end')
+			{
+				elem.parent().attr('text-anchor', 'start');
+			}
+		}
+		
+		return elem.html(value);
+	}
+	
     valueForKey = function(key, data, elem) {
       var keys, value, _i, _len;
 	  
@@ -313,6 +335,13 @@ http://keith-wood.name/localisation.html
     };
     lang = (options.language ? options.language : $.defaultLanguage);
 	showTerms = (options.showTerms ? true : false);
+	
+	var rtlLangs = [ "ar", "he" ];
+	if (rtlLangs.includes(lang))
+	{
+		isRTL = true;
+	}
+	
     if (options.skipLanguage && lang.match(regexify(options.skipLanguage))) {
       deferred.resolve();
     } else {
