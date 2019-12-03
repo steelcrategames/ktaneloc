@@ -60,6 +60,6 @@
 		<tspan data-localize="morse.frequency" data-args="frequency=3.500">3.500 MHz</tspan>
 	</text>
 	<text fill="#000000" font-family="DejaVu Sans, sans-serif" text-anchor="middle" x="162" y="315" font-size="20px">
-		<tspan data-localize="MorseComponent/button_transmit">TX</tspan>
+		<tspan data-localize="MorseComponent/button_transmit" data-autosize="6">TX</tspan>
 	</text>
 </svg>

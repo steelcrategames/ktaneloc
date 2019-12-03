@@ -35,7 +35,7 @@
 		<path stroke="#000000" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="butt" d="m84.14173 63.422573l92.25196 0l0 7.748028l-92.25196 0z" fill-rule="nonzero"/>
 	</g>
 	<text fill="#000000" font-family="DejaVu Sans, sans-serif" text-anchor="middle" x="131" y="203" font-size="42px">
-		<tspan data-localize="bigbutton.moduleicontext">[ TEXT ]</tspan>
+		<tspan data-localize="bigbutton.moduleicontext"  data-autosize="8">[ TEXT ]</tspan>
 	</text>
 </svg>
 

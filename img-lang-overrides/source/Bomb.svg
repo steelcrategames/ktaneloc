@@ -87,7 +87,7 @@
 		<path stroke="#000000" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="butt" d="m901.7139 646.66c46.126038 -8.542603 94.6983 5.857666 139.20209 20.690247c8.912476 2.970459 16.02478 -11.53241 25.393677 -12.225708c14.25708 -1.0549927 28.499268 2.8215332 42.795288 2.8215332" fill-rule="evenodd"/>
 	</g>
 		<text fill="#000000" font-family="DejaVu Sans, sans-serif" text-anchor="middle" x="582" y="248" font-size="42px">
-			<tspan data-localize="bigbutton.moduleicontext">[ TEXT ]</tspan>
+			<tspan data-localize="bigbutton.moduleicontext" data-autosize="8">[ TEXT ]</tspan>
 		</text>
 </svg>
 

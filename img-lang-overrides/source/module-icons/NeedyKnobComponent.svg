@@ -63,7 +63,7 @@
 		<path stroke="#000000" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="butt" d="m283.7756 71.58137l39.685028 -54.078743" fill-rule="nonzero"/>
 	</g>
 	<text fill="#000000" font-family="DejaVu Sans, sans-serif" text-anchor="middle" x="174" y="110" font-size="20px">
-		<tspan data-localize="NeedyKnobComponent/label_up">UP</tspan>
+		<tspan data-localize="NeedyKnobComponent/label_up" data-autosize="4">UP</tspan>
 	</text>
 </svg>
 

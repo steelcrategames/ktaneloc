@@ -50,7 +50,7 @@
 		<path stroke="#000000" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="butt" d="m289.4042 31.199474l0 355.65356l-67.55907 0l0 -355.65356z" fill-rule="nonzero"/>
 	</g>
 	<text fill="#000000" font-family="DejaVu Sans, sans-serif" transform="rotate(90)" text-anchor="middle" x="211" y="-245"  font-size="30px">
-		<tspan data-localize="intro.label-serialnumber">[SERIAL NUMBER]</tspan>
+		<tspan data-localize="intro.label-serialnumber"  data-autosize="20">[SERIAL NUMBER]</tspan>
 	</text>
 </svg>
 

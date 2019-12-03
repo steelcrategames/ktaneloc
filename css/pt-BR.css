@@ -1,0 +1,25 @@
+/* es overrides */
+
+/* extra space for word list to fit on page */
+.whos-on-first-step2-table {
+	width: 110%;
+	margin-left: -1.7em;
+    font-size: .95em;
+}
+
+/* shrink text to allow rules to fit on page */
+.memory-rules p {
+    font-size: 0.84em;
+}
+
+/* make all headers consistent */
+.wire-sequence table .header {
+	height: 2em;
+}
+
+/* Remove the vertical margin, shrink text, and compensate the width to keep the original horizontal size */
+.wire-sequence table {
+	font-size: 0.85em;
+	width: 16.2em;
+	margin: 0em auto;
+}

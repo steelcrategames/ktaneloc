@@ -44,7 +44,7 @@
 		<path stroke="#000000" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="butt" d="m282.8084 305.50656l0 0c0 -2.3569946 1.9107056 -4.2677307 4.2677 -4.2677307l0 0c1.1318665 0 2.2173767 0.449646 3.0177307 1.25c0.800354 0.800354 1.25 1.8858643 1.25 3.0177307l0 0c0 2.3569946 -1.9107361 4.2677307 -4.2677307 4.2677307l0 0c-2.3569946 0 -4.2677 -1.9107361 -4.2677 -4.2677307z" fill-rule="nonzero"/>
 	</g>
 	<text fill="#ffffff" font-family="DejaVu Sans, sans-serif" text-anchor="middle" x="174" y="138" font-size="42px">
-		<tspan data-localize="needygas.moduleicontext">[ TEXT ]</tspan>
+		<tspan data-localize="needygas.moduleicontext" data-autosize="10">[ TEXT ]</tspan>
 	</text>
 	<text fill="#000000" font-family="DejaVu Sans, sans-serif" text-anchor="middle" x="138" y="297" font-size="24px">
 		<tspan data-localize="NeedyVentComponent/button_y">Y</tspan>

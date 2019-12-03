@@ -147,11 +147,11 @@
   <g
      id="text63"
      style="font-size:32px;font-family:'DejaVu Sans', sans-serif;text-anchor:middle;fill:#ffffff"
-     aria-label="[EKRAN]">
+     aria-label="[ EKRAN ]">
     <path
        id="path97"
        style=""
-       d="m 86.25,45.6875 h 6.625 v 2.234375 h -3.75 v 24.0625 h 3.75 V 74.21875 H 86.25 Z" />
+       d="m 76.0625,45.6875 h 6.625 v 2.234375 h -3.75 v 24.0625 h 3.75 v 2.234375 h -6.625 z" />
     <path
        id="path99"
        style=""
@@ -175,16 +175,16 @@
     <path
        id="path109"
        style=""
-       d="m 213.73438,45.6875 v 28.53125 h -6.625 v -2.234375 h 3.73437 v -24.0625 h -3.73437 V 45.6875 Z" />
+       d="m 223.92188,45.6875 v 28.53125 h -6.625 v -2.234375 h 3.73437 v -24.0625 h -3.73437 V 45.6875 Z" />
   </g>
   <g
      id="text67"
      style="font-size:20px;font-family:'DejaVu Sans', sans-serif;text-anchor:middle;fill:#000000"
-     aria-label="[YAZI]">
+     aria-label="[ YAZI ]">
     <path
        id="path112"
        style=""
-       d="m 58.933594,138.80469 h 4.140625 v 1.39648 h -2.34375 v 15.03906 h 2.34375 v 1.39649 h -4.140625 z" />
+       d="m 52.566406,138.80469 h 4.140625 v 1.39648 h -2.34375 v 15.03906 h 2.34375 v 1.39649 h -4.140625 z" />
     <path
        id="path114"
        style=""
@@ -204,16 +204,16 @@
     <path
        id="path122"
        style=""
-       d="m 115.05664,138.80469 v 17.83203 h -4.14062 v -1.39649 H 113.25 v -15.03906 h -2.33398 v -1.39648 z" />
+       d="m 121.42383,138.80469 v 17.83203 h -4.14063 v -1.39649 h 2.33399 v -15.03906 h -2.33399 v -1.39648 z" />
   </g>
   <g
      id="text71"
      style="font-size:20px;font-family:'DejaVu Sans', sans-serif;text-anchor:middle;fill:#000000"
-     aria-label="[YAZI]">
+     aria-label="[ YAZI ]">
     <path
        id="path125"
        style=""
-       d="m 58.933594,215.80469 h 4.140625 v 1.39648 h -2.34375 v 15.03906 h 2.34375 v 1.39649 h -4.140625 z" />
+       d="m 52.566406,215.80469 h 4.140625 v 1.39648 h -2.34375 v 15.03906 h 2.34375 v 1.39649 h -4.140625 z" />
     <path
        id="path127"
        style=""
@@ -233,16 +233,16 @@
     <path
        id="path135"
        style=""
-       d="m 115.05664,215.80469 v 17.83203 h -4.14062 v -1.39649 H 113.25 v -15.03906 h -2.33398 v -1.39648 z" />
+       d="m 121.42383,215.80469 v 17.83203 h -4.14063 v -1.39649 h 2.33399 v -15.03906 h -2.33399 v -1.39648 z" />
   </g>
   <g
      id="text75"
      style="font-size:20px;font-family:'DejaVu Sans', sans-serif;text-anchor:middle;fill:#000000"
-     aria-label="[YAZI]">
+     aria-label="[ YAZI ]">
     <path
        id="path138"
        style=""
-       d="m 58.933594,283.80469 h 4.140625 v 1.39648 h -2.34375 v 15.03906 h 2.34375 v 1.39649 h -4.140625 z" />
+       d="m 52.566406,283.80469 h 4.140625 v 1.39648 h -2.34375 v 15.03906 h 2.34375 v 1.39649 h -4.140625 z" />
     <path
        id="path140"
        style=""
@@ -262,16 +262,16 @@
     <path
        id="path148"
        style=""
-       d="m 115.05664,283.80469 v 17.83203 h -4.14062 v -1.39649 H 113.25 v -15.03906 h -2.33398 v -1.39648 z" />
+       d="m 121.42383,283.80469 v 17.83203 h -4.14063 v -1.39649 h 2.33399 v -15.03906 h -2.33399 v -1.39648 z" />
   </g>
   <g
      id="text79"
      style="font-size:20px;font-family:'DejaVu Sans', sans-serif;text-anchor:middle;fill:#000000"
-     aria-label="[YAZI]">
+     aria-label="[ YAZI ]">
     <path
        id="path151"
        style=""
-       d="m 181.93359,138.80469 h 4.14063 v 1.39648 h -2.34375 v 15.03906 h 2.34375 v 1.39649 h -4.14063 z" />
+       d="m 175.56641,138.80469 h 4.14062 v 1.39648 h -2.34375 v 15.03906 h 2.34375 v 1.39649 h -4.14062 z" />
     <path
        id="path153"
        style=""
@@ -291,16 +291,16 @@
     <path
        id="path161"
        style=""
-       d="m 238.05664,138.80469 v 17.83203 h -4.14062 v -1.39649 H 236.25 v -15.03906 h -2.33398 v -1.39648 z" />
+       d="m 244.42383,138.80469 v 17.83203 h -4.14063 v -1.39649 h 2.33399 v -15.03906 h -2.33399 v -1.39648 z" />
   </g>
   <g
      id="text83"
      style="font-size:20px;font-family:'DejaVu Sans', sans-serif;text-anchor:middle;fill:#000000"
-     aria-label="[YAZI]">
+     aria-label="[ YAZI ]">
     <path
        id="path164"
        style=""
-       d="m 181.93359,215.80469 h 4.14063 v 1.39648 h -2.34375 v 15.03906 h 2.34375 v 1.39649 h -4.14063 z" />
+       d="m 175.56641,215.80469 h 4.14062 v 1.39648 h -2.34375 v 15.03906 h 2.34375 v 1.39649 h -4.14062 z" />
     <path
        id="path166"
        style=""
@@ -320,16 +320,16 @@
     <path
        id="path174"
        style=""
-       d="m 238.05664,215.80469 v 17.83203 h -4.14062 v -1.39649 H 236.25 v -15.03906 h -2.33398 v -1.39648 z" />
+       d="m 244.42383,215.80469 v 17.83203 h -4.14063 v -1.39649 h 2.33399 v -15.03906 h -2.33399 v -1.39648 z" />
   </g>
   <g
      id="text87"
      style="font-size:20px;font-family:'DejaVu Sans', sans-serif;text-anchor:middle;fill:#000000"
-     aria-label="[YAZI]">
+     aria-label="[ YAZI ]">
     <path
        id="path177"
        style=""
-       d="m 181.93359,283.80469 h 4.14063 v 1.39648 h -2.34375 v 15.03906 h 2.34375 v 1.39649 h -4.14063 z" />
+       d="m 175.56641,283.80469 h 4.14062 v 1.39648 h -2.34375 v 15.03906 h 2.34375 v 1.39649 h -4.14062 z" />
     <path
        id="path179"
        style=""
@@ -349,6 +349,6 @@
     <path
        id="path187"
        style=""
-       d="m 238.05664,283.80469 v 17.83203 h -4.14062 v -1.39649 H 236.25 v -15.03906 h -2.33398 v -1.39648 z" />
+       d="m 244.42383,283.80469 v 17.83203 h -4.14063 v -1.39649 h 2.33399 v -15.03906 h -2.33399 v -1.39648 z" />
   </g>
 </svg>

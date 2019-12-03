@@ -807,6 +807,10 @@ q {
 	text-align:left;
 }
 
+[dir='rtl'] .needy-diagram-label {
+	text-align:right;
+}
+
 /* NEEDY KNOB */
 .needy-knob table {
 	display: inline-table;

@@ -13,7 +13,7 @@
 		<path stroke="#000000" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="butt" d="m36.0 58.0l0 0c0 -14.907341 12.084785 -26.992126 26.992126 -26.992126l0 0c7.15876 0 14.024307 2.8438072 19.086311 7.9058113c5.0620117 5.062004 7.905815 11.927559 7.905815 19.086315l0 0c0 14.907341 -12.084785 26.992126 -26.992126 26.992126l0 0c-14.907341 0 -26.992126 -12.084785 -26.992126 -26.992126z" fill-rule="nonzero"/>
 	</g>
 	<text fill="#ffffff" font-family="DejaVu Sans, sans-serif" text-anchor="middle" x="187" y="70" font-size="32px">
-		<tspan data-localize="indicators.labeltxt">[TXT]</tspan>
+		<tspan data-localize="indicators.labeltxt"  data-autosize="6">[TXT]</tspan>
 	</text>
 </svg>
 
