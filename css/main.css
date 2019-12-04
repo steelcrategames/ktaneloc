@@ -187,6 +187,14 @@ li ul {
     margin: 0;
 }
 
+[dir='rtl'] menu,
+[dir='rtl'] ol,
+[dir='rtl'] ul {
+    padding: 0 2.5em 0 0;
+    padding-left: 0px;
+    padding-right: 2.5em;
+}
+
 table {
     border-collapse:collapse;
 }
@@ -236,9 +244,12 @@ q {
 
 .diagram {
     width: 9em;
+    margin-bottom: 1em;
+}
+
+[dir='ltr'] .diagram {
     float: right;
     margin-left: 1em;
-    margin-bottom: 1em;
 }
 
 [dir='rtl'] .diagram {
@@ -330,6 +341,9 @@ q {
     position: relative;
     height: 0;
     top: 0;
+}
+
+[dir='ltr'] .page-header-section-title {
     float: right;
 }
 
@@ -460,10 +474,13 @@ q {
 .timer-diagram {
     text-align: center;
     display: block;
-    float: right;
     width: 5em;
     padding: 0;
     margin: 0 0 2em 2em;
+}
+
+[dir='ltr'] .timer-diagram {
+    float: right;
 }
 
 [dir='rtl'] .timer-diagram {
@@ -629,13 +646,17 @@ q {
 
 /* MORSE CODE */
 .morse-signal-table {
-	float: left;
-	margin-right: 1em;
     height: 32em;
 	width: 24.8270625em; /* Hardcode for IE */
 	border:1px solid #021a40;
 	background-color:#ffffff;
 }
+
+[dir='ltr'] .morse-signal-table {
+	float: left;
+	margin-right: 1em;
+}
+
 [dir='rtl'] .morse-signal-table {
 	float: right;
 	margin-left: 1em;
@@ -673,6 +694,10 @@ q {
 	text-align: center;
 }
 
+.morse-frequency-response {
+	direction: ltr; /* even RTL languages seem to use "3.505 MHz" for this column, so treat it as LTR */
+}
+
 /* VENN WIRES */
 .venn-wires table {
 	border-width: 0.2em;
@@ -701,10 +726,18 @@ q {
 
 #vennlegendtable {
 	width: 18em;
-	float: left;
     position:relative;
-	margin-right: 1em;
     top: -0.7em;
+}
+
+[dir='ltr'] #vennlegendtable {
+	float: left;
+	margin-right: 1em;
+}
+
+[dir='rtl'] #vennlegendtable {
+	float: right;
+	margin-left: 1em;
 }
 
 #vennlegendtable td {
@@ -717,17 +750,17 @@ q {
 	text-align: center;
 }
 
-[dir='rtl'] #vennlegendtable {
-	float: right;
-}
-
 .venn-legend-line {
 	margin: 1em 0;
 	width: 10em;
 }
 
-.venn-wires table td.venn-legend-text {
+[dir='ltr'] .venn-wires table td.venn-legend-text {
 	text-align: left;
+}
+
+[dir='rtl'] .venn-wires table td.venn-legend-text {
+	text-align: right;
 }
 
 #venninstructiontable {
@@ -758,8 +791,12 @@ q {
     padding-right: 0.4em;
 }
 
-.wire-sequence td {
+[dir='ltr'] .wire-sequence td {
 	text-align: left;
+}
+
+[dir='rtl'] .wire-sequence td {
+	text-align: right;
 }
 
 .wire-sequence table .header {
@@ -803,7 +840,7 @@ q {
 
 /* === NEEDY MODULES === */
 
-.needy-diagram-label {
+[dir='ltr'] .needy-diagram-label {
 	text-align:left;
 }
 
