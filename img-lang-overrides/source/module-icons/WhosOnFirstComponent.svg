@@ -33,7 +33,7 @@
 		<path stroke="#000000" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="butt" d="m290.06036 281.32285l27.46457 0l0 16.472443l-27.46457 0z" fill-rule="nonzero"/>
 	</g>
 	<text fill="#ffffff" font-family="DejaVu Sans, sans-serif" text-anchor="middle" x="150" y="70" font-size="32px">
-		<tspan data-localize="whosonfirst.moduleicondisplay" data-autosize="11">[ DISPLAY ]</tspan>
+		<tspan data-localize="whosonfirst.moduleicondisplay" data-autosize="10">[ DISPLAY ]</tspan>
 	</text>
 	<text fill="#000000" font-family="DejaVu Sans, sans-serif" text-anchor="middle" x="87" y="154" font-size="20px">
 		<tspan data-localize="whosonfirst.moduleicontext" data-autosize="8">[ TEXT ]</tspan>
