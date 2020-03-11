@@ -1,4 +1,4 @@
-/* ru overrides */
+/* uk overrides */
 
 /* cyrillic */
 @font-face {
@@ -57,11 +57,6 @@ q {
 
 .title h1 {
 	font-size: 3.6em;
-}
-
-.whos-on-first-step2-table {
-	width: 110%;
-	margin-left: -5%;
 }
 
 .whos-on-first-step2-table th {

@@ -1,0 +1,25 @@
+/* de overrides */
+
+.title h1 {
+    font-size:3.4em;
+}
+
+.memory-rules p {
+    letter-spacing: -0.4px; font-size: 0.9em
+}
+
+.venn-wires .diagram {
+    margin-bottom: 0.4em;
+}
+
+.venn-wires table td {
+    font-size: 0.85em;
+}
+
+.venn-wires table th {
+    font-size: 1.0em;
+}
+
+.wire-sequence td, .wire-sequence .second-col {
+    letter-spacing: -0.4px;  font-size: 0.9em
+}
