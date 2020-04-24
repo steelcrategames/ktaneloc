@@ -3,3 +3,7 @@
 .morse-frequency-table {
     font-size:.98em;
 }
+
+.memory-rules p {
+    letter-spacing: -0.4px; font-size: 0.9em
+}
