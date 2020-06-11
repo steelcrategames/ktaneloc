@@ -1,0 +1,12 @@
+/* sv overrides */
+
+.title h1 {
+    font-size:2.8em;
+	padding: 1em 0;
+}
+
+/* extra space for word list to fit on page */
+.whos-on-first-step2-table {
+	width: 110%;
+	margin-left: -1.7em;
+}

@@ -6,6 +6,10 @@
 	margin-left: -1.7em;
 }
 
+.wire-sequence table td {
+	height: 3em;
+}
+
 /* more room for the second column to prevent odd breaks and increase row height */
 .wire-sequence .table-container .second-col {
 	width: 6em;

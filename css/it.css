@@ -1,0 +1,5 @@
+/* it overrides */
+
+.wire-sequence table td {
+	height: 3em;
+}

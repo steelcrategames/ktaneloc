@@ -1,0 +1,36 @@
+/* pt-PT overrides */
+
+/* small decrease to page horizontal margins to fit lengthier text overall */
+.page-content {
+    margin: 0 7.5% 0;
+}
+
+/* reduce header margins on the intro page as it runs just a tiny bit too long otherwise */
+#DefusingBombs h3 {
+	margin: 0.5em 0 0;
+}
+
+/* extra space for word list to fit on page */
+.whos-on-first-step2-table {
+	width: 110%;
+	margin-left: -1.7em;
+    font-size: .94em;
+}
+
+/* make all headers consistent */
+.wire-sequence table .header {
+	height: 2em;
+}
+
+/* increase available space for the three tables */
+.wire-sequence .table-container {
+	width: 110%;
+	margin: 0 -1.5em;
+}
+
+/* Remove the vertical margin, shrink text, and increase the width to fit */
+.wire-sequence table {
+	font-size: 0.8em;
+	width: 18.2em;
+	margin: 0em auto;
+}
