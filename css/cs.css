@@ -1,0 +1,23 @@
+/* cs overrides */
+
+.memory-rules p {
+	font-size: 0.87em
+}
+
+/* Remove the vertical margin, shrink text, and compensate the width to keep the original horizontal size */
+.wire-sequence table {
+	letter-spacing: -0.4px; 
+	font-size: 0.85em;
+	width: 16.2em;
+	margin: 0em auto;
+}
+
+.wire-sequence .table-container {
+	width: 120%;
+	margin-left: -3.7em;
+}
+
+/* consistent row height */
+.wire-sequence table td {
+	height: 3em;
+}

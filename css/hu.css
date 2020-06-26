@@ -1,0 +1,37 @@
+/* hu overrides */
+
+.page-content {
+    margin: 0 7.5% 0;
+}
+
+.memory-rules p {
+	letter-spacing: -0.4px; 
+	font-size: 0.87em
+}
+
+/* Remove the vertical margin, shrink text, and compensate the width to keep the original horizontal size */
+.wire-sequence table {
+	letter-spacing: -0.4px; 
+	font-size: 0.85em;
+	width: 18.2em;
+	margin: 0em auto;
+}
+
+/* consistent row height */
+.wire-sequence table td {
+	height: 4.2em;
+}
+
+.wire-sequence li {
+	letter-spacing: -0.4px; 
+	font-size: 0.85em;
+}
+
+.wire-sequence .table-container {
+	width: 120%;
+	margin-left: -3.7em;
+}
+
+.wire-sequence .first-col {
+	width: 35%;
+}
