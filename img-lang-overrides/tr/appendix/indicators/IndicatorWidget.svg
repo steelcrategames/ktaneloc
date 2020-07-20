@@ -36,57 +36,69 @@
      id="g19"
      clip-path="url(#p.0)">
     <path
-       style="fill:#000000;fill-opacity:0;fill-rule:nonzero"
        id="path5"
-       d="M 0,0 H 288 V 115 H 0 Z" />
+       fill-rule="nonzero"
+       d="M 0,0 H 288 V 115 H 0 Z"
+       fill-opacity="0"
+       fill="#000000" />
     <path
-       style="fill:#ffffff;fill-rule:nonzero"
        id="path7"
-       d="M 12,8.503937 H 276 V 107.49607 H 12 Z" />
+       fill-rule="nonzero"
+       d="M 12,8.503937 H 276 V 107.49607 H 12 Z"
+       fill="#ffffff" />
     <path
-       style="fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round"
        id="path9"
-       d="M 12,8.503937 H 276 V 107.49607 H 12 Z" />
+       fill-rule="nonzero"
+       d="M 12,8.503937 H 276 V 107.49607 H 12 Z"
+       stroke-linecap="butt"
+       stroke-linejoin="round"
+       stroke-width="2"
+       stroke="#000000" />
     <path
-       style="fill:#000000;fill-rule:nonzero"
        id="path11"
-       d="M 114,32 H 259.00787 V 85.984253 H 114 Z" />
+       fill-rule="nonzero"
+       d="M 114,32 H 259.00787 V 85.984253 H 114 Z"
+       fill="#000000" />
     <path
-       style="fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round"
        id="path13"
-       d="M 114,32 H 259.00787 V 85.984253 H 114 Z" />
+       fill-rule="nonzero"
+       d="M 114,32 H 259.00787 V 85.984253 H 114 Z"
+       stroke-linecap="butt"
+       stroke-linejoin="round"
+       stroke-width="2"
+       stroke="#000000" />
     <path
-       style="fill:#ffffff;fill-rule:nonzero"
        id="path15"
-       d="m 36,58 v 0 C 36,43.092659 48.084785,31.007874 62.992126,31.007874 v 0 c 7.15876,0 14.024307,2.843807 19.086311,7.905811 C 87.140449,43.975689 89.984252,50.841244 89.984252,58 v 0 c 0,14.907341 -12.084785,26.992126 -26.992126,26.992126 v 0 C 48.084785,84.992126 36,72.907341 36,58 Z" />
+       fill-rule="nonzero"
+       d="m 36,58 v 0 C 36,43.092659 48.084785,31.007874 62.992126,31.007874 v 0 c 7.15876,0 14.024307,2.843807 19.086311,7.905811 C 87.140449,43.975689 89.984252,50.841244 89.984252,58 v 0 c 0,14.907341 -12.084785,26.992126 -26.992126,26.992126 v 0 C 48.084785,84.992126 36,72.907341 36,58 Z"
+       fill="#ffffff" />
     <path
-       style="fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round"
        id="path17"
-       d="m 36,58 v 0 C 36,43.092659 48.084785,31.007874 62.992126,31.007874 v 0 c 7.15876,0 14.024307,2.843807 19.086311,7.905811 C 87.140449,43.975689 89.984252,50.841244 89.984252,58 v 0 c 0,14.907341 -12.084785,26.992126 -26.992126,26.992126 v 0 C 48.084785,84.992126 36,72.907341 36,58 Z" />
+       fill-rule="nonzero"
+       d="m 36,58 v 0 C 36,43.092659 48.084785,31.007874 62.992126,31.007874 v 0 c 7.15876,0 14.024307,2.843807 19.086311,7.905811 C 87.140449,43.975689 89.984252,50.841244 89.984252,58 v 0 c 0,14.907341 -12.084785,26.992126 -26.992126,26.992126 v 0 C 48.084785,84.992126 36,72.907341 36,58 Z"
+       stroke-linecap="butt"
+       stroke-linejoin="round"
+       stroke-width="2"
+       stroke="#000000" />
   </g>
   <g
-     id="text23"
      style="font-size:32px;font-family:'DejaVu Sans', sans-serif;text-anchor:middle;fill:#ffffff"
+     id="text23"
      aria-label="[TXT]">
     <path
        id="path33"
-       style=""
        d="m 147,45.6875 h 6.625 v 2.234375 h -3.75 v 24.0625 h 3.75 V 74.21875 H 147 Z" />
     <path
        id="path35"
-       style=""
-       d="m 156.65625,46.671875 h 19.73438 v 2.65625 h -8.28125 V 70 H 164.9375 V 49.328125 h -8.28125 z" />
+       d="m 156.65625,46.671875 h 19.73437 v 2.65625 h -8.28125 V 70 H 164.9375 V 49.328125 h -8.28125 z" />
     <path
        id="path37"
-       style=""
-       d="m 178.32813,46.671875 h 3.39062 l 5.79688,8.671875 5.82812,-8.671875 h 3.39063 l -7.5,11.203125 8,12.125 h -3.39063 L 187.28125,60.078125 180.67188,70 h -3.40625 l 8.32812,-12.453125 z" />
+       d="m 178.32812,46.671875 h 3.39063 l 5.79687,8.671875 5.82813,-8.671875 h 3.39062 l -7.5,11.203125 8,12.125 h -3.39062 L 187.28125,60.078125 180.67187,70 h -3.40625 l 8.32813,-12.453125 z" />
     <path
        id="path39"
-       style=""
-       d="m 197.59375,46.671875 h 19.73438 v 2.65625 h -8.28125 V 70 H 205.875 V 49.328125 h -8.28125 z" />
+       d="m 197.59375,46.671875 h 19.73437 v 2.65625 h -8.28125 V 70 H 205.875 V 49.328125 h -8.28125 z" />
     <path
        id="path41"
-       style=""
-       d="m 226.98438,45.6875 v 28.53125 h -6.625 v -2.234375 h 3.73437 v -24.0625 h -3.73437 V 45.6875 Z" />
+       d="m 226.98437,45.6875 v 28.53125 h -6.625 v -2.234375 h 3.73438 v -24.0625 h -3.73438 V 45.6875 Z" />
   </g>
 </svg>
